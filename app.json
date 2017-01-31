@@ -1,0 +1,43 @@
+{
+  "name": "freeCodeCamp",
+  "description": "freeCodeCamp projects and test",
+  "scripts": {
+  },
+  "env": {
+    "BUTTER_TOKEN": {
+      "required": true
+    },
+    "GITHUB_USERNAME": {
+      "required": true
+    },
+    "IPINVESTIGATOR_API_KEY": {
+      "required": true
+    },
+    "IPINVESTIGATOR_CLIENT_ID": {
+      "required": true
+    },
+    "JAWSDB_BLUE_URL": {
+      "required": true
+    },
+    "REALEMAIL_API_KEY": {
+      "required": true
+    },
+    "REALEMAIL_CLIENT_ID": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+    "butter",
+    "ipinvestigator",
+    "jawsdb",
+    "pointdns",
+    "realemail"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/php"
+    }
+  ]
+}
