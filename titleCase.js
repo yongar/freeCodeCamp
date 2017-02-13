@@ -1,26 +1,13 @@
+function upperCaseFirstLetter (txt){
+	console.log("input: "+txt);
+	console.log(txt.charAt(0).toUpperCase());
+	console.log(txt.charAt(1).toLowerCase());
+	return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+}
 
 function titleCase(str) {
-	var theFirstLetter = /[[A-Z]|[a-z]/i;
-	var n = str.search(theFirstLetter);
-	var nextLetter = /\s[[A-Z]|[a-z]]/ig;
-	console.log(n);
-	var o = str.search(nextLetter);
-	console.log(o);
-
-	var result ="";
-	
-
-	var p = str.match(nextLetter);
-	for (int i = 0; i > p.length; i++){
-		result = str.replace(o[i], o[i].toUpperCase());
-
-	}
-	var uppper = nextLetter.toUpperCase();
-
-
-	console.log(p);
-  	console.log(res);
-  	console.log(upper);
+	var result = str.replace(/\w\S*/g, upperCaseFirstLetter);
+  	console.log("result "+ result);
   	return str;
 }
 
