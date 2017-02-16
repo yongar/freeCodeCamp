@@ -1,3 +1,6 @@
+function removeItem(value, item){
+	return value!==item;
+}
 
 function destroyer(arr) {
 	var result = arguments;
@@ -6,7 +9,7 @@ function destroyer(arr) {
 	for( var i =1; i<arguments.length; i++){
 		console.log(arguments[i]);
 
-		ar.splice(0, 1, arguments[i]);	
+		ar.filter(removeItem(arguments[i]));
 	}
 	console.log(ar);
 
@@ -18,4 +21,4 @@ function destroyer(arr) {
 }
 
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);
-
+destroyer([1, 2, 3, 5, 1, 2, 3], 2, 3);
