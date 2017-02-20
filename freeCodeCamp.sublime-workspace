@@ -55,10 +55,18 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 167.0,
-		"last_filter": "instal",
+		"height": 107.0,
+		"last_filter": "remove",
 		"selected_items":
 		[
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
 			[
 				"instal",
 				"Package Control: Install Package"
@@ -70,10 +78,6 @@
 			[
 				"install",
 				"Package Control: Install Package"
-			],
-			[
-				"remove",
-				"Package Control: Remove Package"
 			],
 			[
 				"",
@@ -100,10 +104,31 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/yongar/freecodecampprojectsforyong"
+		"/Users/yongar/freecodecampprojectsforyong",
+		"/Users/yongar/freecodecampprojectsforyong/project",
+		"/Users/yongar/freecodecampprojectsforyong/project/bootstrap",
+		"/Users/yongar/freecodecampprojectsforyong/project/bootstrap/img",
+		"/Users/yongar/freecodecampprojectsforyong/project/bootstrap/img/portfolio",
+		"/Users/yongar/freecodecampprojectsforyong/project/bootstrap/img/portfolio/thumbnails",
+		"/Users/yongar/freecodecampprojectsforyong/project/bootstrap/vendor",
+		"/Users/yongar/freecodecampprojectsforyong/project/bootstrap/vendor/bootstrap",
+		"/Users/yongar/freecodecampprojectsforyong/project/bootstrap/vendor/bootstrap/css",
+		"/Users/yongar/freecodecampprojectsforyong/project/bootstrap/vendor/magnific-popup",
+		"/Users/yongar/freecodecampprojectsforyong/project/randomQoute",
+		"/Users/yongar/freecodecampprojectsforyong/project/randomQoute/css"
 	],
 	"file_history":
 	[
+		"/Users/yongar/freecodecampprojectsforyong/project/randomQoute/css/randomQuote.css",
+		"/Users/yongar/freecodecampprojectsforyong/project/randomQoute/index.html",
+		"/Users/yongar/freecodecampprojectsforyong/project/bootstrap/index.html",
+		"/Users/yongar/Documents/BTTSetting",
+		"/Users/yongar/freecodecampprojectsforyong/gitDone.sh",
+		"/Users/yongar/freecodecampprojectsforyong/project/bootstrap/img/portfolio/thumbnails/3.jpg",
+		"/Users/yongar/freecodecampprojectsforyong/.git/MERGE_MSG",
+		"/Users/yongar/freecodecampprojectsforyong/index.php",
+		"/Users/yongar/freecodecampprojectsforyong/analyticstracking.php",
+		"/Users/yongar/freecodecampprojectsforyong/excercise/arrayMap.ts",
 		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/Compare Side-By-Side/SBSCompare.sublime-settings",
 		"/Users/yongar/bashprofile/.bash_profile",
 		"/Users/yongar/freecodecampprojectsforyong/helloWorld.js",
@@ -135,11 +160,9 @@
 		"/Users/yongar/freecodecampprojectsforyong/prop.js",
 		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/GoTools.sublime-settings",
 		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/GoTools/GoTools.sublime-settings",
-		"/Users/yongar/freecodecampprojectsforyong/project/bootstrap/index.html",
 		"/Users/yongar/Downloads/bookmarks_2_1_17.html",
 		"/Users/yongar/freecodecampprojectsforyong/blackJackCardCounting.js",
 		"/Users/yongar/bashprofile/.git/MERGE_MSG",
-		"/Users/yongar/freecodecampprojectsforyong/.git/MERGE_MSG",
 		"/Users/yongar/freecodecampprojectsforyong/.gitignore",
 		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/Side Bar.sublime-settings",
 		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
@@ -149,12 +172,11 @@
 		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/bh_core.sublime-settings",
 		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/BracketHighlighter/bh_core.sublime-settings",
 		"/Users/yongar/freecodecampprojectsforyong/freeCodeCampJS.js",
-		"/Users/yongar/freecodecampprojectsforyong/index.php",
 		"/Users/yongar/freecodecampprojectsforyong/freeCodeCamp.sublime-project"
 	],
 	"find":
 	{
-		"height": 172.0
+		"height": 42.0
 	},
 	"find_in_files":
 	{
@@ -223,6 +245,10 @@
 	},
 	"menu_visible": true,
 	"output.CSS Extended Completions":
+	{
+		"height": 0.0
+	},
+	"output.doc":
 	{
 		"height": 0.0
 	},
