@@ -9,38 +9,41 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="row"
-				<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-12 panel-heading">
 					<div class="jumbotron text-center">
-						<h1>RandomWikiAriticlier</h1>
-						<p>Randome Wikipedia Aritcle</P>
-						<P>free Code Camp  Project</P>
+						<h1>RandomWikiAriticlier<BR></BR><small>Randome Wikipedia Aritcle<br>free Code Camp  Project</small>
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-2-md col-md-pull-10">
-					<h3>RandomWikiAriclier</h3>
-					<button type="button" class="btn btn-lg btn-success">Random Wikipedia Aritcle</button>
-
-				</div>
-				<div class="col-6-md col-md-offset-3 col-md-push-2">
-					<div class="well">
-						<p>Enter Search for Wikipedia</p>
-						<form class="form-inline" action="http://www.wikipedia.org/search-redirect.php" method="get">
+				<div class="col-md-5 text-center">
+					<div class="well well-lg">
+						<h3>RandomWikiAriclier</h3>
+							<button type="button" class="btn btn-lg btn-success" onclick="parent.open('https://en.wikipedia.org/wiki/Special:Random')">Random Wikipedia Aritcle</button>
+						</div>
+					</div>
+				<div class="col-md-7">
+					<div class="well well-lg">
+						<p><span class="glyphicon glyphicon-search"> </span> Enter Search for Wikipedia</p>
+						<form class="form-inline" action="https://wikipedia.org/search-redirect.php" method="get" id="searchform">
 							<div class="form-group">
 								<div class="input-group">
 									<span class="input-group-addon">
 										Search
 									</span>
-									<input type="text" id="searchString" class="form-control" name="searchBox" placeholder="search wikipedia"></div>									<button type="submit" class="btn btn-default">Submit</button>
-
+									<input type="text" id="searchString" class="form-control" name="search" placeholder="search wikipedia">
+								</div><input type="hidden" name="language" value="en">
+								<button type="submit" name="go" class="btn btn-default">Submit</button>
 							</div>
 						</form>
 					</div>
 				</div>
 			</div>
+			<div class="row col-md-12 text-center">Created by <a href="http://www.yongar.xyz">Yong CHOI</a>
+			</div>
 		</div>
+
 	</body>
 </html>
 
