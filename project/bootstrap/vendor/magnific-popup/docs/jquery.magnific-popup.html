@@ -1,0 +1,2691 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>jquery.magnific-popup.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page_wrapper">
+            <div id="jump_page">
+              
+                
+                <a class="source" href="jquery.magnific-popup.html">
+                  jquery.magnific-popup.js
+                </a>
+              
+                
+                <a class="source" href="jquery.magnific-popup.min.html">
+                  jquery.magnific-popup.min.js
+                </a>
+              
+            </div>
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>jquery.magnific-popup.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-comment">/*! Magnific Popup - v1.1.0 - 2016-02-20
+* http://dimsemenov.com/plugins/magnific-popup/
+* Copyright (c) 2016 Dmitry Semenov; */</span>
+;(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">factory</span>) </span>{ 
+<span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> define === <span class="hljs-string">'function'</span> &amp;&amp; define.amd) {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <p>AMD. Register as an anonymous module. </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre> define([<span class="hljs-string">'jquery'</span>], factory); 
+ } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> exports === <span class="hljs-string">'object'</span>) {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <p>Node/CommonJS </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre> factory(<span class="hljs-built_in">require</span>(<span class="hljs-string">'jquery'</span>)); 
+ } <span class="hljs-keyword">else</span> {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <p>Browser globals </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre> factory(<span class="hljs-built_in">window</span>.jQuery || <span class="hljs-built_in">window</span>.Zepto); 
+ } 
+ }(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">$</span>) </span>{ 
+
+<span class="hljs-comment">/*&gt;&gt;core*/</span>
+<span class="hljs-comment">/**
+ * 
+ * Magnific Popup Core JS file
+ * 
+ */</span>
+
+
+<span class="hljs-comment">/**
+ * Private static constants
+ */</span>
+<span class="hljs-keyword">var</span> CLOSE_EVENT = <span class="hljs-string">'Close'</span>,
+	BEFORE_CLOSE_EVENT = <span class="hljs-string">'BeforeClose'</span>,
+	AFTER_CLOSE_EVENT = <span class="hljs-string">'AfterClose'</span>,
+	BEFORE_APPEND_EVENT = <span class="hljs-string">'BeforeAppend'</span>,
+	MARKUP_PARSE_EVENT = <span class="hljs-string">'MarkupParse'</span>,
+	OPEN_EVENT = <span class="hljs-string">'Open'</span>,
+	CHANGE_EVENT = <span class="hljs-string">'Change'</span>,
+	NS = <span class="hljs-string">'mfp'</span>,
+	EVENT_NS = <span class="hljs-string">'.'</span> + NS,
+	READY_CLASS = <span class="hljs-string">'mfp-ready'</span>,
+	REMOVING_CLASS = <span class="hljs-string">'mfp-removing'</span>,
+	PREVENT_CLOSE_CLASS = <span class="hljs-string">'mfp-prevent-close'</span>;
+
+
+<span class="hljs-comment">/**
+ * Private vars 
+ */</span>
+<span class="hljs-comment">/*jshint -W079 */</span>
+<span class="hljs-keyword">var</span> mfp, <span class="hljs-comment">// As we have only one instance of MagnificPopup object, we define it locally to not to use 'this'</span>
+	MagnificPopup = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{},
+	_isJQ = !!(<span class="hljs-built_in">window</span>.jQuery),
+	_prevStatus,
+	_window = $(<span class="hljs-built_in">window</span>),
+	_document,
+	_prevContentType,
+	_wrapClasses,
+	_currPopupType;
+
+
+<span class="hljs-comment">/**
+ * Private functions
+ */</span>
+<span class="hljs-keyword">var</span> _mfpOn = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">name, f</span>) </span>{
+		mfp.ev.on(NS + name + EVENT_NS, f);
+	},
+	_getEl = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">className, appendTo, html, raw</span>) </span>{
+		<span class="hljs-keyword">var</span> el = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'div'</span>);
+		el.className = <span class="hljs-string">'mfp-'</span>+className;
+		<span class="hljs-keyword">if</span>(html) {
+			el.innerHTML = html;
+		}
+		<span class="hljs-keyword">if</span>(!raw) {
+			el = $(el);
+			<span class="hljs-keyword">if</span>(appendTo) {
+				el.appendTo(appendTo);
+			}
+		} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(appendTo) {
+			appendTo.appendChild(el);
+		}
+		<span class="hljs-keyword">return</span> el;
+	},
+	_mfpTrigger = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e, data</span>) </span>{
+		mfp.ev.triggerHandler(NS + e, data);
+
+		<span class="hljs-keyword">if</span>(mfp.st.callbacks) {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>converts “mfpEventName” to “eventName” callback and triggers it if it’s present</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			e = e.charAt(<span class="hljs-number">0</span>).toLowerCase() + e.slice(<span class="hljs-number">1</span>);
+			<span class="hljs-keyword">if</span>(mfp.st.callbacks[e]) {
+				mfp.st.callbacks[e].apply(mfp, $.isArray(data) ? data : [data]);
+			}
+		}
+	},
+	_getCloseBtn = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">type</span>) </span>{
+		<span class="hljs-keyword">if</span>(type !== _currPopupType || !mfp.currTemplate.closeBtn) {
+			mfp.currTemplate.closeBtn = $( mfp.st.closeMarkup.replace(<span class="hljs-string">'%title%'</span>, mfp.st.tClose ) );
+			_currPopupType = type;
+		}
+		<span class="hljs-keyword">return</span> mfp.currTemplate.closeBtn;
+	},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <p>Initialize Magnific Popup only when called at least once</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	_checkInstance = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		<span class="hljs-keyword">if</span>(!$.magnificPopup.instance) {
+			<span class="hljs-comment">/*jshint -W020 */</span>
+			mfp = <span class="hljs-keyword">new</span> MagnificPopup();
+			mfp.init();
+			$.magnificPopup.instance = mfp;
+		}
+	},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>CSS transition detection, <a href="http://stackoverflow.com/questions/7264899/detect-css-transitions-using-javascript-and-without-modernizr">http://stackoverflow.com/questions/7264899/detect-css-transitions-using-javascript-and-without-modernizr</a></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	supportsTransitions = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		<span class="hljs-keyword">var</span> s = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'p'</span>).style, <span class="hljs-comment">// 's' for style. better to create an element if body yet to exist</span>
+			v = [<span class="hljs-string">'ms'</span>,<span class="hljs-string">'O'</span>,<span class="hljs-string">'Moz'</span>,<span class="hljs-string">'Webkit'</span>]; <span class="hljs-comment">// 'v' for vendor</span>
+
+		<span class="hljs-keyword">if</span>( s[<span class="hljs-string">'transition'</span>] !== <span class="hljs-literal">undefined</span> ) {
+			<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>; 
+		}
+			
+		<span class="hljs-keyword">while</span>( v.length ) {
+			<span class="hljs-keyword">if</span>( v.pop() + <span class="hljs-string">'Transition'</span> <span class="hljs-keyword">in</span> s ) {
+				<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+			}
+		}
+				
+		<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+	};
+
+
+
+<span class="hljs-comment">/**
+ * Public functions
+ */</span>
+MagnificPopup.prototype = {
+
+	<span class="hljs-attr">constructor</span>: MagnificPopup,
+
+	<span class="hljs-comment">/**
+	 * Initializes Magnific Popup plugin. 
+	 * This function is triggered only once when $.fn.magnificPopup or $.magnificPopup is executed
+	 */</span>
+	init: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		<span class="hljs-keyword">var</span> appVersion = navigator.appVersion;
+		mfp.isLowIE = mfp.isIE8 = <span class="hljs-built_in">document</span>.all &amp;&amp; !<span class="hljs-built_in">document</span>.addEventListener;
+		mfp.isAndroid = (<span class="hljs-regexp">/android/gi</span>).test(appVersion);
+		mfp.isIOS = (<span class="hljs-regexp">/iphone|ipad|ipod/gi</span>).test(appVersion);
+		mfp.supportsTransition = supportsTransitions();</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <p>We disable fixed positioned lightbox on devices that don’t handle it nicely.
+If you know a better way of detecting this - let me know.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		mfp.probablyMobile = (mfp.isAndroid || mfp.isIOS || <span class="hljs-regexp">/(Opera Mini)|Kindle|webOS|BlackBerry|(Opera Mobi)|(Windows Phone)|IEMobile/i</span>.test(navigator.userAgent) );
+		_document = $(<span class="hljs-built_in">document</span>);
+
+		mfp.popupsCache = {};
+	},
+
+	<span class="hljs-comment">/**
+	 * Opens popup
+	 * @param  data [description]
+	 */</span>
+	open: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>) </span>{
+
+		<span class="hljs-keyword">var</span> i;
+
+		<span class="hljs-keyword">if</span>(data.isObj === <span class="hljs-literal">false</span>) {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <p>convert jQuery collection to array to avoid conflicts later</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			mfp.items = data.items.toArray();
+
+			mfp.index = <span class="hljs-number">0</span>;
+			<span class="hljs-keyword">var</span> items = data.items,
+				item;
+			<span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>; i &lt; items.length; i++) {
+				item = items[i];
+				<span class="hljs-keyword">if</span>(item.parsed) {
+					item = item.el[<span class="hljs-number">0</span>];
+				}
+				<span class="hljs-keyword">if</span>(item === data.el[<span class="hljs-number">0</span>]) {
+					mfp.index = i;
+					<span class="hljs-keyword">break</span>;
+				}
+			}
+		} <span class="hljs-keyword">else</span> {
+			mfp.items = $.isArray(data.items) ? data.items : [data.items];
+			mfp.index = data.index || <span class="hljs-number">0</span>;
+		}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
+              </div>
+              <p>if popup is already opened - we just update the content</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		<span class="hljs-keyword">if</span>(mfp.isOpen) {
+			mfp.updateItemHTML();
+			<span class="hljs-keyword">return</span>;
+		}
+		
+		mfp.types = []; 
+		_wrapClasses = <span class="hljs-string">''</span>;
+		<span class="hljs-keyword">if</span>(data.mainEl &amp;&amp; data.mainEl.length) {
+			mfp.ev = data.mainEl.eq(<span class="hljs-number">0</span>);
+		} <span class="hljs-keyword">else</span> {
+			mfp.ev = _document;
+		}
+
+		<span class="hljs-keyword">if</span>(data.key) {
+			<span class="hljs-keyword">if</span>(!mfp.popupsCache[data.key]) {
+				mfp.popupsCache[data.key] = {};
+			}
+			mfp.currTemplate = mfp.popupsCache[data.key];
+		} <span class="hljs-keyword">else</span> {
+			mfp.currTemplate = {};
+		}
+
+
+
+		mfp.st = $.extend(<span class="hljs-literal">true</span>, {}, $.magnificPopup.defaults, data ); 
+		mfp.fixedContentPos = mfp.st.fixedContentPos === <span class="hljs-string">'auto'</span> ? !mfp.probablyMobile : mfp.st.fixedContentPos;
+
+		<span class="hljs-keyword">if</span>(mfp.st.modal) {
+			mfp.st.closeOnContentClick = <span class="hljs-literal">false</span>;
+			mfp.st.closeOnBgClick = <span class="hljs-literal">false</span>;
+			mfp.st.showCloseBtn = <span class="hljs-literal">false</span>;
+			mfp.st.enableEscapeKey = <span class="hljs-literal">false</span>;
+		}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-11">&#182;</a>
+              </div>
+              <p>Building markup
+main containers are created only once</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		<span class="hljs-keyword">if</span>(!mfp.bgOverlay) {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-12">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-12">&#182;</a>
+              </div>
+              <p>Dark overlay</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			mfp.bgOverlay = _getEl(<span class="hljs-string">'bg'</span>).on(<span class="hljs-string">'click'</span>+EVENT_NS, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+				mfp.close();
+			});
+
+			mfp.wrap = _getEl(<span class="hljs-string">'wrap'</span>).attr(<span class="hljs-string">'tabindex'</span>, <span class="hljs-number">-1</span>).on(<span class="hljs-string">'click'</span>+EVENT_NS, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+				<span class="hljs-keyword">if</span>(mfp._checkIfClose(e.target)) {
+					mfp.close();
+				}
+			});
+
+			mfp.container = _getEl(<span class="hljs-string">'container'</span>, mfp.wrap);
+		}
+
+		mfp.contentContainer = _getEl(<span class="hljs-string">'content'</span>);
+		<span class="hljs-keyword">if</span>(mfp.st.preloader) {
+			mfp.preloader = _getEl(<span class="hljs-string">'preloader'</span>, mfp.container, mfp.st.tLoading);
+		}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-13">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-13">&#182;</a>
+              </div>
+              <p>Initializing modules</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		<span class="hljs-keyword">var</span> modules = $.magnificPopup.modules;
+		<span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>; i &lt; modules.length; i++) {
+			<span class="hljs-keyword">var</span> n = modules[i];
+			n = n.charAt(<span class="hljs-number">0</span>).toUpperCase() + n.slice(<span class="hljs-number">1</span>);
+			mfp[<span class="hljs-string">'init'</span>+n].call(mfp);
+		}
+		_mfpTrigger(<span class="hljs-string">'BeforeOpen'</span>);
+
+
+		<span class="hljs-keyword">if</span>(mfp.st.showCloseBtn) {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-14">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-14">&#182;</a>
+              </div>
+              <p>Close button</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="hljs-keyword">if</span>(!mfp.st.closeBtnInside) {
+				mfp.wrap.append( _getCloseBtn() );
+			} <span class="hljs-keyword">else</span> {
+				_mfpOn(MARKUP_PARSE_EVENT, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e, template, values, item</span>) </span>{
+					values.close_replaceWith = _getCloseBtn(item.type);
+				});
+				_wrapClasses += <span class="hljs-string">' mfp-close-btn-in'</span>;
+			}
+		}
+
+		<span class="hljs-keyword">if</span>(mfp.st.alignTop) {
+			_wrapClasses += <span class="hljs-string">' mfp-align-top'</span>;
+		}
+
+	
+
+		<span class="hljs-keyword">if</span>(mfp.fixedContentPos) {
+			mfp.wrap.css({
+				<span class="hljs-attr">overflow</span>: mfp.st.overflowY,
+				<span class="hljs-attr">overflowX</span>: <span class="hljs-string">'hidden'</span>,
+				<span class="hljs-attr">overflowY</span>: mfp.st.overflowY
+			});
+		} <span class="hljs-keyword">else</span> {
+			mfp.wrap.css({ 
+				<span class="hljs-attr">top</span>: _window.scrollTop(),
+				<span class="hljs-attr">position</span>: <span class="hljs-string">'absolute'</span>
+			});
+		}
+		<span class="hljs-keyword">if</span>( mfp.st.fixedBgPos === <span class="hljs-literal">false</span> || (mfp.st.fixedBgPos === <span class="hljs-string">'auto'</span> &amp;&amp; !mfp.fixedContentPos) ) {
+			mfp.bgOverlay.css({
+				<span class="hljs-attr">height</span>: _document.height(),
+				<span class="hljs-attr">position</span>: <span class="hljs-string">'absolute'</span>
+			});
+		}
+
+		
+
+		<span class="hljs-keyword">if</span>(mfp.st.enableEscapeKey) {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-15">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-15">&#182;</a>
+              </div>
+              <p>Close on ESC key</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			_document.on(<span class="hljs-string">'keyup'</span> + EVENT_NS, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+				<span class="hljs-keyword">if</span>(e.keyCode === <span class="hljs-number">27</span>) {
+					mfp.close();
+				}
+			});
+		}
+
+		_window.on(<span class="hljs-string">'resize'</span> + EVENT_NS, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			mfp.updateSize();
+		});
+
+
+		<span class="hljs-keyword">if</span>(!mfp.st.closeOnContentClick) {
+			_wrapClasses += <span class="hljs-string">' mfp-auto-cursor'</span>;
+		}
+		
+		<span class="hljs-keyword">if</span>(_wrapClasses)
+			mfp.wrap.addClass(_wrapClasses);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-16">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-16">&#182;</a>
+              </div>
+              <p>this triggers recalculation of layout, so we get it once to not to trigger twice</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		<span class="hljs-keyword">var</span> windowHeight = mfp.wH = _window.height();
+
+		
+		<span class="hljs-keyword">var</span> windowStyles = {};
+
+		<span class="hljs-keyword">if</span>( mfp.fixedContentPos ) {
+            <span class="hljs-keyword">if</span>(mfp._hasScrollBar(windowHeight)){
+                <span class="hljs-keyword">var</span> s = mfp._getScrollbarSize();
+                <span class="hljs-keyword">if</span>(s) {
+                    windowStyles.marginRight = s;
+                }
+            }
+        }
+
+		<span class="hljs-keyword">if</span>(mfp.fixedContentPos) {
+			<span class="hljs-keyword">if</span>(!mfp.isIE7) {
+				windowStyles.overflow = <span class="hljs-string">'hidden'</span>;
+			} <span class="hljs-keyword">else</span> {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-17">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-17">&#182;</a>
+              </div>
+              <p>ie7 double-scroll bug</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				$(<span class="hljs-string">'body, html'</span>).css(<span class="hljs-string">'overflow'</span>, <span class="hljs-string">'hidden'</span>);
+			}
+		}
+
+		
+		
+		<span class="hljs-keyword">var</span> classesToadd = mfp.st.mainClass;
+		<span class="hljs-keyword">if</span>(mfp.isIE7) {
+			classesToadd += <span class="hljs-string">' mfp-ie7'</span>;
+		}
+		<span class="hljs-keyword">if</span>(classesToadd) {
+			mfp._addClassToMFP( classesToadd );
+		}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-18">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-18">&#182;</a>
+              </div>
+              <p>add content</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		mfp.updateItemHTML();
+
+		_mfpTrigger(<span class="hljs-string">'BuildControls'</span>);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-19">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-19">&#182;</a>
+              </div>
+              <p>remove scrollbar, add margin e.t.c</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		$(<span class="hljs-string">'html'</span>).css(windowStyles);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-20">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-20">&#182;</a>
+              </div>
+              <p>add everything to DOM</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		mfp.bgOverlay.add(mfp.wrap).prependTo( mfp.st.prependTo || $(<span class="hljs-built_in">document</span>.body) );</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-21">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-21">&#182;</a>
+              </div>
+              <p>Save last focused element</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		mfp._lastFocusedEl = <span class="hljs-built_in">document</span>.activeElement;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-22">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-22">&#182;</a>
+              </div>
+              <p>Wait for next cycle to allow CSS transition</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			
+			<span class="hljs-keyword">if</span>(mfp.content) {
+				mfp._addClassToMFP(READY_CLASS);
+				mfp._setFocus();
+			} <span class="hljs-keyword">else</span> {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-23">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-23">&#182;</a>
+              </div>
+              <p>if content is not defined (not loaded e.t.c) we add class only for BG</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				mfp.bgOverlay.addClass(READY_CLASS);
+			}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-24">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-24">&#182;</a>
+              </div>
+              <p>Trap the focus in popup</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			_document.on(<span class="hljs-string">'focusin'</span> + EVENT_NS, mfp._onFocusIn);
+
+		}, <span class="hljs-number">16</span>);
+
+		mfp.isOpen = <span class="hljs-literal">true</span>;
+		mfp.updateSize(windowHeight);
+		_mfpTrigger(OPEN_EVENT);
+
+		<span class="hljs-keyword">return</span> data;
+	},
+
+	<span class="hljs-comment">/**
+	 * Closes the popup
+	 */</span>
+	close: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		<span class="hljs-keyword">if</span>(!mfp.isOpen) <span class="hljs-keyword">return</span>;
+		_mfpTrigger(BEFORE_CLOSE_EVENT);
+
+		mfp.isOpen = <span class="hljs-literal">false</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-25">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-25">&#182;</a>
+              </div>
+              <p>for CSS3 animation</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		<span class="hljs-keyword">if</span>(mfp.st.removalDelay &amp;&amp; !mfp.isLowIE &amp;&amp; mfp.supportsTransition )  {
+			mfp._addClassToMFP(REMOVING_CLASS);
+			setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+				mfp._close();
+			}, mfp.st.removalDelay);
+		} <span class="hljs-keyword">else</span> {
+			mfp._close();
+		}
+	},
+
+	<span class="hljs-comment">/**
+	 * Helper for close() function
+	 */</span>
+	_close: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		_mfpTrigger(CLOSE_EVENT);
+
+		<span class="hljs-keyword">var</span> classesToRemove = REMOVING_CLASS + <span class="hljs-string">' '</span> + READY_CLASS + <span class="hljs-string">' '</span>;
+
+		mfp.bgOverlay.detach();
+		mfp.wrap.detach();
+		mfp.container.empty();
+
+		<span class="hljs-keyword">if</span>(mfp.st.mainClass) {
+			classesToRemove += mfp.st.mainClass + <span class="hljs-string">' '</span>;
+		}
+
+		mfp._removeClassFromMFP(classesToRemove);
+
+		<span class="hljs-keyword">if</span>(mfp.fixedContentPos) {
+			<span class="hljs-keyword">var</span> windowStyles = {<span class="hljs-attr">marginRight</span>: <span class="hljs-string">''</span>};
+			<span class="hljs-keyword">if</span>(mfp.isIE7) {
+				$(<span class="hljs-string">'body, html'</span>).css(<span class="hljs-string">'overflow'</span>, <span class="hljs-string">''</span>);
+			} <span class="hljs-keyword">else</span> {
+				windowStyles.overflow = <span class="hljs-string">''</span>;
+			}
+			$(<span class="hljs-string">'html'</span>).css(windowStyles);
+		}
+		
+		_document.off(<span class="hljs-string">'keyup'</span> + EVENT_NS + <span class="hljs-string">' focusin'</span> + EVENT_NS);
+		mfp.ev.off(EVENT_NS);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-26">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-26">&#182;</a>
+              </div>
+              <p>clean up DOM elements that aren’t removed</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		mfp.wrap.attr(<span class="hljs-string">'class'</span>, <span class="hljs-string">'mfp-wrap'</span>).removeAttr(<span class="hljs-string">'style'</span>);
+		mfp.bgOverlay.attr(<span class="hljs-string">'class'</span>, <span class="hljs-string">'mfp-bg'</span>);
+		mfp.container.attr(<span class="hljs-string">'class'</span>, <span class="hljs-string">'mfp-container'</span>);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-27">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-27">&#182;</a>
+              </div>
+              <p>remove close button from target element</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		<span class="hljs-keyword">if</span>(mfp.st.showCloseBtn &amp;&amp;
+		(!mfp.st.closeBtnInside || mfp.currTemplate[mfp.currItem.type] === <span class="hljs-literal">true</span>)) {
+			<span class="hljs-keyword">if</span>(mfp.currTemplate.closeBtn)
+				mfp.currTemplate.closeBtn.detach();
+		}
+
+
+		<span class="hljs-keyword">if</span>(mfp.st.autoFocusLast &amp;&amp; mfp._lastFocusedEl) {
+			$(mfp._lastFocusedEl).focus(); <span class="hljs-comment">// put tab focus back</span>
+		}
+		mfp.currItem = <span class="hljs-literal">null</span>;	
+		mfp.content = <span class="hljs-literal">null</span>;
+		mfp.currTemplate = <span class="hljs-literal">null</span>;
+		mfp.prevHeight = <span class="hljs-number">0</span>;
+
+		_mfpTrigger(AFTER_CLOSE_EVENT);
+	},
+	
+	<span class="hljs-attr">updateSize</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">winHeight</span>) </span>{
+
+		<span class="hljs-keyword">if</span>(mfp.isIOS) {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-28">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-28">&#182;</a>
+              </div>
+              <p>fixes iOS nav bars <a href="https://github.com/dimsemenov/Magnific-Popup/issues/2">https://github.com/dimsemenov/Magnific-Popup/issues/2</a></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="hljs-keyword">var</span> zoomLevel = <span class="hljs-built_in">document</span>.documentElement.clientWidth / <span class="hljs-built_in">window</span>.innerWidth;
+			<span class="hljs-keyword">var</span> height = <span class="hljs-built_in">window</span>.innerHeight * zoomLevel;
+			mfp.wrap.css(<span class="hljs-string">'height'</span>, height);
+			mfp.wH = height;
+		} <span class="hljs-keyword">else</span> {
+			mfp.wH = winHeight || _window.height();
+		}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-29">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-29">&#182;</a>
+              </div>
+              <p>Fixes #84: popup incorrectly positioned with position:relative on body</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		<span class="hljs-keyword">if</span>(!mfp.fixedContentPos) {
+			mfp.wrap.css(<span class="hljs-string">'height'</span>, mfp.wH);
+		}
+
+		_mfpTrigger(<span class="hljs-string">'Resize'</span>);
+
+	},
+
+	<span class="hljs-comment">/**
+	 * Set content of popup based on current index
+	 */</span>
+	updateItemHTML: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		<span class="hljs-keyword">var</span> item = mfp.items[mfp.index];</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-30">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-30">&#182;</a>
+              </div>
+              <p>Detach and perform modifications</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		mfp.contentContainer.detach();
+
+		<span class="hljs-keyword">if</span>(mfp.content)
+			mfp.content.detach();
+
+		<span class="hljs-keyword">if</span>(!item.parsed) {
+			item = mfp.parseEl( mfp.index );
+		}
+
+		<span class="hljs-keyword">var</span> type = item.type;
+
+		_mfpTrigger(<span class="hljs-string">'BeforeChange'</span>, [mfp.currItem ? mfp.currItem.type : <span class="hljs-string">''</span>, type]);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-31">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-31">&#182;</a>
+              </div>
+              <p>BeforeChange event works like so:
+_mfpOn(‘BeforeChange’, function(e, prevType, newType) { });</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+		mfp.currItem = item;
+
+		<span class="hljs-keyword">if</span>(!mfp.currTemplate[type]) {
+			<span class="hljs-keyword">var</span> markup = mfp.st[type] ? mfp.st[type].markup : <span class="hljs-literal">false</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-32">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-32">&#182;</a>
+              </div>
+              <p>allows to modify markup</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			_mfpTrigger(<span class="hljs-string">'FirstMarkupParse'</span>, markup);
+
+			<span class="hljs-keyword">if</span>(markup) {
+				mfp.currTemplate[type] = $(markup);
+			} <span class="hljs-keyword">else</span> {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-33">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-33">&#182;</a>
+              </div>
+              <p>if there is no markup found we just define that template is parsed</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				mfp.currTemplate[type] = <span class="hljs-literal">true</span>;
+			}
+		}
+
+		<span class="hljs-keyword">if</span>(_prevContentType &amp;&amp; _prevContentType !== item.type) {
+			mfp.container.removeClass(<span class="hljs-string">'mfp-'</span>+_prevContentType+<span class="hljs-string">'-holder'</span>);
+		}
+
+		<span class="hljs-keyword">var</span> newContent = mfp[<span class="hljs-string">'get'</span> + type.charAt(<span class="hljs-number">0</span>).toUpperCase() + type.slice(<span class="hljs-number">1</span>)](item, mfp.currTemplate[type]);
+		mfp.appendContent(newContent, type);
+
+		item.preloaded = <span class="hljs-literal">true</span>;
+
+		_mfpTrigger(CHANGE_EVENT, item);
+		_prevContentType = item.type;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-34">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-34">&#182;</a>
+              </div>
+              <p>Append container back after its content changed</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		mfp.container.prepend(mfp.contentContainer);
+
+		_mfpTrigger(<span class="hljs-string">'AfterChange'</span>);
+	},
+
+
+	<span class="hljs-comment">/**
+	 * Set HTML content of popup
+	 */</span>
+	appendContent: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">newContent, type</span>) </span>{
+		mfp.content = newContent;
+
+		<span class="hljs-keyword">if</span>(newContent) {
+			<span class="hljs-keyword">if</span>(mfp.st.showCloseBtn &amp;&amp; mfp.st.closeBtnInside &amp;&amp;
+				mfp.currTemplate[type] === <span class="hljs-literal">true</span>) {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-35">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-35">&#182;</a>
+              </div>
+              <p>if there is no markup, we just append close button element inside</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				<span class="hljs-keyword">if</span>(!mfp.content.find(<span class="hljs-string">'.mfp-close'</span>).length) {
+					mfp.content.append(_getCloseBtn());
+				}
+			} <span class="hljs-keyword">else</span> {
+				mfp.content = newContent;
+			}
+		} <span class="hljs-keyword">else</span> {
+			mfp.content = <span class="hljs-string">''</span>;
+		}
+
+		_mfpTrigger(BEFORE_APPEND_EVENT);
+		mfp.container.addClass(<span class="hljs-string">'mfp-'</span>+type+<span class="hljs-string">'-holder'</span>);
+
+		mfp.contentContainer.append(mfp.content);
+	},
+
+
+	<span class="hljs-comment">/**
+	 * Creates Magnific Popup data object based on given data
+	 * @param  {int} index Index of item to parse
+	 */</span>
+	parseEl: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">index</span>) </span>{
+		<span class="hljs-keyword">var</span> item = mfp.items[index],
+			type;
+
+		<span class="hljs-keyword">if</span>(item.tagName) {
+			item = { <span class="hljs-attr">el</span>: $(item) };
+		} <span class="hljs-keyword">else</span> {
+			type = item.type;
+			item = { <span class="hljs-attr">data</span>: item, <span class="hljs-attr">src</span>: item.src };
+		}
+
+		<span class="hljs-keyword">if</span>(item.el) {
+			<span class="hljs-keyword">var</span> types = mfp.types;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-36">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-36">&#182;</a>
+              </div>
+              <p>check for ‘mfp-TYPE’ class</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; types.length; i++) {
+				<span class="hljs-keyword">if</span>( item.el.hasClass(<span class="hljs-string">'mfp-'</span>+types[i]) ) {
+					type = types[i];
+					<span class="hljs-keyword">break</span>;
+				}
+			}
+
+			item.src = item.el.attr(<span class="hljs-string">'data-mfp-src'</span>);
+			<span class="hljs-keyword">if</span>(!item.src) {
+				item.src = item.el.attr(<span class="hljs-string">'href'</span>);
+			}
+		}
+
+		item.type = type || mfp.st.type || <span class="hljs-string">'inline'</span>;
+		item.index = index;
+		item.parsed = <span class="hljs-literal">true</span>;
+		mfp.items[index] = item;
+		_mfpTrigger(<span class="hljs-string">'ElementParse'</span>, item);
+
+		<span class="hljs-keyword">return</span> mfp.items[index];
+	},
+
+
+	<span class="hljs-comment">/**
+	 * Initializes single popup or a group of popups
+	 */</span>
+	addGroup: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">el, options</span>) </span>{
+		<span class="hljs-keyword">var</span> eHandler = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+			e.mfpEl = <span class="hljs-keyword">this</span>;
+			mfp._openClick(e, el, options);
+		};
+
+		<span class="hljs-keyword">if</span>(!options) {
+			options = {};
+		}
+
+		<span class="hljs-keyword">var</span> eName = <span class="hljs-string">'click.magnificPopup'</span>;
+		options.mainEl = el;
+
+		<span class="hljs-keyword">if</span>(options.items) {
+			options.isObj = <span class="hljs-literal">true</span>;
+			el.off(eName).on(eName, eHandler);
+		} <span class="hljs-keyword">else</span> {
+			options.isObj = <span class="hljs-literal">false</span>;
+			<span class="hljs-keyword">if</span>(options.delegate) {
+				el.off(eName).on(eName, options.delegate , eHandler);
+			} <span class="hljs-keyword">else</span> {
+				options.items = el;
+				el.off(eName).on(eName, eHandler);
+			}
+		}
+	},
+	<span class="hljs-attr">_openClick</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e, el, options</span>) </span>{
+		<span class="hljs-keyword">var</span> midClick = options.midClick !== <span class="hljs-literal">undefined</span> ? options.midClick : $.magnificPopup.defaults.midClick;
+
+
+		<span class="hljs-keyword">if</span>(!midClick &amp;&amp; ( e.which === <span class="hljs-number">2</span> || e.ctrlKey || e.metaKey || e.altKey || e.shiftKey ) ) {
+			<span class="hljs-keyword">return</span>;
+		}
+
+		<span class="hljs-keyword">var</span> disableOn = options.disableOn !== <span class="hljs-literal">undefined</span> ? options.disableOn : $.magnificPopup.defaults.disableOn;
+
+		<span class="hljs-keyword">if</span>(disableOn) {
+			<span class="hljs-keyword">if</span>($.isFunction(disableOn)) {
+				<span class="hljs-keyword">if</span>( !disableOn.call(mfp) ) {
+					<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+				}
+			} <span class="hljs-keyword">else</span> { <span class="hljs-comment">// else it's number</span>
+				<span class="hljs-keyword">if</span>( _window.width() &lt; disableOn ) {
+					<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+				}
+			}
+		}
+
+		<span class="hljs-keyword">if</span>(e.type) {
+			e.preventDefault();</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-37">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-37">&#182;</a>
+              </div>
+              <p>This will prevent popup from closing if element is inside and popup is already opened</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="hljs-keyword">if</span>(mfp.isOpen) {
+				e.stopPropagation();
+			}
+		}
+
+		options.el = $(e.mfpEl);
+		<span class="hljs-keyword">if</span>(options.delegate) {
+			options.items = el.find(options.delegate);
+		}
+		mfp.open(options);
+	},
+
+
+	<span class="hljs-comment">/**
+	 * Updates text on preloader
+	 */</span>
+	updateStatus: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">status, text</span>) </span>{
+
+		<span class="hljs-keyword">if</span>(mfp.preloader) {
+			<span class="hljs-keyword">if</span>(_prevStatus !== status) {
+				mfp.container.removeClass(<span class="hljs-string">'mfp-s-'</span>+_prevStatus);
+			}
+
+			<span class="hljs-keyword">if</span>(!text &amp;&amp; status === <span class="hljs-string">'loading'</span>) {
+				text = mfp.st.tLoading;
+			}
+
+			<span class="hljs-keyword">var</span> data = {
+				<span class="hljs-attr">status</span>: status,
+				<span class="hljs-attr">text</span>: text
+			};</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-38">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-38">&#182;</a>
+              </div>
+              <p>allows to modify status</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			_mfpTrigger(<span class="hljs-string">'UpdateStatus'</span>, data);
+
+			status = data.status;
+			text = data.text;
+
+			mfp.preloader.html(text);
+
+			mfp.preloader.find(<span class="hljs-string">'a'</span>).on(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+				e.stopImmediatePropagation();
+			});
+
+			mfp.container.addClass(<span class="hljs-string">'mfp-s-'</span>+status);
+			_prevStatus = status;
+		}
+	},
+
+
+	<span class="hljs-comment">/*
+		"Private" helpers that aren't private at all
+	 */</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-39">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-39">&#182;</a>
+              </div>
+              <p>Check to close popup or not
+“target” is an element that was clicked</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	_checkIfClose: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">target</span>) </span>{
+
+		<span class="hljs-keyword">if</span>($(target).hasClass(PREVENT_CLOSE_CLASS)) {
+			<span class="hljs-keyword">return</span>;
+		}
+
+		<span class="hljs-keyword">var</span> closeOnContent = mfp.st.closeOnContentClick;
+		<span class="hljs-keyword">var</span> closeOnBg = mfp.st.closeOnBgClick;
+
+		<span class="hljs-keyword">if</span>(closeOnContent &amp;&amp; closeOnBg) {
+			<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+		} <span class="hljs-keyword">else</span> {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-40">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-40">&#182;</a>
+              </div>
+              <p>We close the popup if click is on close button or on preloader. Or if there is no content.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="hljs-keyword">if</span>(!mfp.content || $(target).hasClass(<span class="hljs-string">'mfp-close'</span>) || (mfp.preloader &amp;&amp; target === mfp.preloader[<span class="hljs-number">0</span>]) ) {
+				<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+			}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-41">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-41">&#182;</a>
+              </div>
+              <p>if click is outside the content</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="hljs-keyword">if</span>(  (target !== mfp.content[<span class="hljs-number">0</span>] &amp;&amp; !$.contains(mfp.content[<span class="hljs-number">0</span>], target))  ) {
+				<span class="hljs-keyword">if</span>(closeOnBg) {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-42">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-42">&#182;</a>
+              </div>
+              <p>last check, if the clicked element is in DOM, (in case it’s removed onclick)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>					<span class="hljs-keyword">if</span>( $.contains(<span class="hljs-built_in">document</span>, target) ) {
+						<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+					}
+				}
+			} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(closeOnContent) {
+				<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+			}
+
+		}
+		<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+	},
+	<span class="hljs-attr">_addClassToMFP</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">cName</span>) </span>{
+		mfp.bgOverlay.addClass(cName);
+		mfp.wrap.addClass(cName);
+	},
+	<span class="hljs-attr">_removeClassFromMFP</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">cName</span>) </span>{
+		<span class="hljs-keyword">this</span>.bgOverlay.removeClass(cName);
+		mfp.wrap.removeClass(cName);
+	},
+	<span class="hljs-attr">_hasScrollBar</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">winHeight</span>) </span>{
+		<span class="hljs-keyword">return</span> (  (mfp.isIE7 ? _document.height() : <span class="hljs-built_in">document</span>.body.scrollHeight) &gt; (winHeight || _window.height()) );
+	},
+	<span class="hljs-attr">_setFocus</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		(mfp.st.focus ? mfp.content.find(mfp.st.focus).eq(<span class="hljs-number">0</span>) : mfp.wrap).focus();
+	},
+	<span class="hljs-attr">_onFocusIn</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+		<span class="hljs-keyword">if</span>( e.target !== mfp.wrap[<span class="hljs-number">0</span>] &amp;&amp; !$.contains(mfp.wrap[<span class="hljs-number">0</span>], e.target) ) {
+			mfp._setFocus();
+			<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+		}
+	},
+	<span class="hljs-attr">_parseMarkup</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">template, values, item</span>) </span>{
+		<span class="hljs-keyword">var</span> arr;
+		<span class="hljs-keyword">if</span>(item.data) {
+			values = $.extend(item.data, values);
+		}
+		_mfpTrigger(MARKUP_PARSE_EVENT, [template, values, item] );
+
+		$.each(values, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">key, value</span>) </span>{
+			<span class="hljs-keyword">if</span>(value === <span class="hljs-literal">undefined</span> || value === <span class="hljs-literal">false</span>) {
+				<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+			}
+			arr = key.split(<span class="hljs-string">'_'</span>);
+			<span class="hljs-keyword">if</span>(arr.length &gt; <span class="hljs-number">1</span>) {
+				<span class="hljs-keyword">var</span> el = template.find(EVENT_NS + <span class="hljs-string">'-'</span>+arr[<span class="hljs-number">0</span>]);
+
+				<span class="hljs-keyword">if</span>(el.length &gt; <span class="hljs-number">0</span>) {
+					<span class="hljs-keyword">var</span> attr = arr[<span class="hljs-number">1</span>];
+					<span class="hljs-keyword">if</span>(attr === <span class="hljs-string">'replaceWith'</span>) {
+						<span class="hljs-keyword">if</span>(el[<span class="hljs-number">0</span>] !== value[<span class="hljs-number">0</span>]) {
+							el.replaceWith(value);
+						}
+					} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(attr === <span class="hljs-string">'img'</span>) {
+						<span class="hljs-keyword">if</span>(el.is(<span class="hljs-string">'img'</span>)) {
+							el.attr(<span class="hljs-string">'src'</span>, value);
+						} <span class="hljs-keyword">else</span> {
+							el.replaceWith( $(<span class="hljs-string">'&lt;img&gt;'</span>).attr(<span class="hljs-string">'src'</span>, value).attr(<span class="hljs-string">'class'</span>, el.attr(<span class="hljs-string">'class'</span>)) );
+						}
+					} <span class="hljs-keyword">else</span> {
+						el.attr(arr[<span class="hljs-number">1</span>], value);
+					}
+				}
+
+			} <span class="hljs-keyword">else</span> {
+				template.find(EVENT_NS + <span class="hljs-string">'-'</span>+key).html(value);
+			}
+		});
+	},
+
+	<span class="hljs-attr">_getScrollbarSize</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-43">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-43">&#182;</a>
+              </div>
+              <p>thx David</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		<span class="hljs-keyword">if</span>(mfp.scrollbarSize === <span class="hljs-literal">undefined</span>) {
+			<span class="hljs-keyword">var</span> scrollDiv = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"div"</span>);
+			scrollDiv.style.cssText = <span class="hljs-string">'width: 99px; height: 99px; overflow: scroll; position: absolute; top: -9999px;'</span>;
+			<span class="hljs-built_in">document</span>.body.appendChild(scrollDiv);
+			mfp.scrollbarSize = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+			<span class="hljs-built_in">document</span>.body.removeChild(scrollDiv);
+		}
+		<span class="hljs-keyword">return</span> mfp.scrollbarSize;
+	}
+
+}; <span class="hljs-comment">/* MagnificPopup core prototype end */</span>
+
+
+
+
+<span class="hljs-comment">/**
+ * Public static functions
+ */</span>
+$.magnificPopup = {
+	<span class="hljs-attr">instance</span>: <span class="hljs-literal">null</span>,
+	<span class="hljs-attr">proto</span>: MagnificPopup.prototype,
+	<span class="hljs-attr">modules</span>: [],
+
+	<span class="hljs-attr">open</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">options, index</span>) </span>{
+		_checkInstance();
+
+		<span class="hljs-keyword">if</span>(!options) {
+			options = {};
+		} <span class="hljs-keyword">else</span> {
+			options = $.extend(<span class="hljs-literal">true</span>, {}, options);
+		}
+
+		options.isObj = <span class="hljs-literal">true</span>;
+		options.index = index || <span class="hljs-number">0</span>;
+		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.instance.open(options);
+	},
+
+	<span class="hljs-attr">close</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		<span class="hljs-keyword">return</span> $.magnificPopup.instance &amp;&amp; $.magnificPopup.instance.close();
+	},
+
+	<span class="hljs-attr">registerModule</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">name, module</span>) </span>{
+		<span class="hljs-keyword">if</span>(<span class="hljs-built_in">module</span>.options) {
+			$.magnificPopup.defaults[name] = <span class="hljs-built_in">module</span>.options;
+		}
+		$.extend(<span class="hljs-keyword">this</span>.proto, <span class="hljs-built_in">module</span>.proto);
+		<span class="hljs-keyword">this</span>.modules.push(name);
+	},
+
+	<span class="hljs-attr">defaults</span>: {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-44">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-44">&#182;</a>
+              </div>
+              <p>Info about options is in docs:
+<a href="http://dimsemenov.com/plugins/magnific-popup/documentation.html#options">http://dimsemenov.com/plugins/magnific-popup/documentation.html#options</a></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+		disableOn: <span class="hljs-number">0</span>,
+
+		<span class="hljs-attr">key</span>: <span class="hljs-literal">null</span>,
+
+		<span class="hljs-attr">midClick</span>: <span class="hljs-literal">false</span>,
+
+		<span class="hljs-attr">mainClass</span>: <span class="hljs-string">''</span>,
+
+		<span class="hljs-attr">preloader</span>: <span class="hljs-literal">true</span>,
+
+		<span class="hljs-attr">focus</span>: <span class="hljs-string">''</span>, <span class="hljs-comment">// CSS selector of input to focus after popup is opened</span>
+
+		closeOnContentClick: <span class="hljs-literal">false</span>,
+
+		<span class="hljs-attr">closeOnBgClick</span>: <span class="hljs-literal">true</span>,
+
+		<span class="hljs-attr">closeBtnInside</span>: <span class="hljs-literal">true</span>,
+
+		<span class="hljs-attr">showCloseBtn</span>: <span class="hljs-literal">true</span>,
+
+		<span class="hljs-attr">enableEscapeKey</span>: <span class="hljs-literal">true</span>,
+
+		<span class="hljs-attr">modal</span>: <span class="hljs-literal">false</span>,
+
+		<span class="hljs-attr">alignTop</span>: <span class="hljs-literal">false</span>,
+
+		<span class="hljs-attr">removalDelay</span>: <span class="hljs-number">0</span>,
+
+		<span class="hljs-attr">prependTo</span>: <span class="hljs-literal">null</span>,
+
+		<span class="hljs-attr">fixedContentPos</span>: <span class="hljs-string">'auto'</span>,
+
+		<span class="hljs-attr">fixedBgPos</span>: <span class="hljs-string">'auto'</span>,
+
+		<span class="hljs-attr">overflowY</span>: <span class="hljs-string">'auto'</span>,
+
+		<span class="hljs-attr">closeMarkup</span>: <span class="hljs-string">'&lt;button title="%title%" type="button" class="mfp-close"&gt;&amp;#215;&lt;/button&gt;'</span>,
+
+		<span class="hljs-attr">tClose</span>: <span class="hljs-string">'Close (Esc)'</span>,
+
+		<span class="hljs-attr">tLoading</span>: <span class="hljs-string">'Loading...'</span>,
+
+		<span class="hljs-attr">autoFocusLast</span>: <span class="hljs-literal">true</span>
+
+	}
+};
+
+
+
+$.fn.magnificPopup = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">options</span>) </span>{
+	_checkInstance();
+
+	<span class="hljs-keyword">var</span> jqEl = $(<span class="hljs-keyword">this</span>);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-45">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-45">&#182;</a>
+              </div>
+              <p>We call some API method of first param is a string</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	<span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> options === <span class="hljs-string">"string"</span> ) {
+
+		<span class="hljs-keyword">if</span>(options === <span class="hljs-string">'open'</span>) {
+			<span class="hljs-keyword">var</span> items,
+				itemOpts = _isJQ ? jqEl.data(<span class="hljs-string">'magnificPopup'</span>) : jqEl[<span class="hljs-number">0</span>].magnificPopup,
+				index = <span class="hljs-built_in">parseInt</span>(<span class="hljs-built_in">arguments</span>[<span class="hljs-number">1</span>], <span class="hljs-number">10</span>) || <span class="hljs-number">0</span>;
+
+			<span class="hljs-keyword">if</span>(itemOpts.items) {
+				items = itemOpts.items[index];
+			} <span class="hljs-keyword">else</span> {
+				items = jqEl;
+				<span class="hljs-keyword">if</span>(itemOpts.delegate) {
+					items = items.find(itemOpts.delegate);
+				}
+				items = items.eq( index );
+			}
+			mfp._openClick({<span class="hljs-attr">mfpEl</span>:items}, jqEl, itemOpts);
+		} <span class="hljs-keyword">else</span> {
+			<span class="hljs-keyword">if</span>(mfp.isOpen)
+				mfp[options].apply(mfp, <span class="hljs-built_in">Array</span>.prototype.slice.call(<span class="hljs-built_in">arguments</span>, <span class="hljs-number">1</span>));
+		}
+
+	} <span class="hljs-keyword">else</span> {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-46">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-46">&#182;</a>
+              </div>
+              <p>clone options obj</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		options = $.extend(<span class="hljs-literal">true</span>, {}, options);
+
+		<span class="hljs-comment">/*
+		 * As Zepto doesn't support .data() method for objects
+		 * and it works only in normal browsers
+		 * we assign "options" object directly to the DOM element. FTW!
+		 */</span>
+		<span class="hljs-keyword">if</span>(_isJQ) {
+			jqEl.data(<span class="hljs-string">'magnificPopup'</span>, options);
+		} <span class="hljs-keyword">else</span> {
+			jqEl[<span class="hljs-number">0</span>].magnificPopup = options;
+		}
+
+		mfp.addGroup(jqEl, options);
+
+	}
+	<span class="hljs-keyword">return</span> jqEl;
+};
+
+<span class="hljs-comment">/*&gt;&gt;core*/</span>
+
+<span class="hljs-comment">/*&gt;&gt;inline*/</span>
+
+<span class="hljs-keyword">var</span> INLINE_NS = <span class="hljs-string">'inline'</span>,
+	_hiddenClass,
+	_inlinePlaceholder,
+	_lastInlineElement,
+	_putInlineElementsBack = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		<span class="hljs-keyword">if</span>(_lastInlineElement) {
+			_inlinePlaceholder.after( _lastInlineElement.addClass(_hiddenClass) ).detach();
+			_lastInlineElement = <span class="hljs-literal">null</span>;
+		}
+	};
+
+$.magnificPopup.registerModule(INLINE_NS, {
+	<span class="hljs-attr">options</span>: {
+		<span class="hljs-attr">hiddenClass</span>: <span class="hljs-string">'hide'</span>, <span class="hljs-comment">// will be appended with `mfp-` prefix</span>
+		markup: <span class="hljs-string">''</span>,
+		<span class="hljs-attr">tNotFound</span>: <span class="hljs-string">'Content not found'</span>
+	},
+	<span class="hljs-attr">proto</span>: {
+
+		<span class="hljs-attr">initInline</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			mfp.types.push(INLINE_NS);
+
+			_mfpOn(CLOSE_EVENT+<span class="hljs-string">'.'</span>+INLINE_NS, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+				_putInlineElementsBack();
+			});
+		},
+
+		<span class="hljs-attr">getInline</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">item, template</span>) </span>{
+
+			_putInlineElementsBack();
+
+			<span class="hljs-keyword">if</span>(item.src) {
+				<span class="hljs-keyword">var</span> inlineSt = mfp.st.inline,
+					el = $(item.src);
+
+				<span class="hljs-keyword">if</span>(el.length) {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-47">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-47">&#182;</a>
+              </div>
+              <p>If target element has parent - we replace it with placeholder and put it back after popup is closed</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>					<span class="hljs-keyword">var</span> parent = el[<span class="hljs-number">0</span>].parentNode;
+					<span class="hljs-keyword">if</span>(parent &amp;&amp; parent.tagName) {
+						<span class="hljs-keyword">if</span>(!_inlinePlaceholder) {
+							_hiddenClass = inlineSt.hiddenClass;
+							_inlinePlaceholder = _getEl(_hiddenClass);
+							_hiddenClass = <span class="hljs-string">'mfp-'</span>+_hiddenClass;
+						}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-48">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-48">&#182;</a>
+              </div>
+              <p>replace target inline element with placeholder</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>						_lastInlineElement = el.after(_inlinePlaceholder).detach().removeClass(_hiddenClass);
+					}
+
+					mfp.updateStatus(<span class="hljs-string">'ready'</span>);
+				} <span class="hljs-keyword">else</span> {
+					mfp.updateStatus(<span class="hljs-string">'error'</span>, inlineSt.tNotFound);
+					el = $(<span class="hljs-string">'&lt;div&gt;'</span>);
+				}
+
+				item.inlineElement = el;
+				<span class="hljs-keyword">return</span> el;
+			}
+
+			mfp.updateStatus(<span class="hljs-string">'ready'</span>);
+			mfp._parseMarkup(template, {}, item);
+			<span class="hljs-keyword">return</span> template;
+		}
+	}
+});
+
+<span class="hljs-comment">/*&gt;&gt;inline*/</span>
+
+<span class="hljs-comment">/*&gt;&gt;ajax*/</span>
+<span class="hljs-keyword">var</span> AJAX_NS = <span class="hljs-string">'ajax'</span>,
+	_ajaxCur,
+	_removeAjaxCursor = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		<span class="hljs-keyword">if</span>(_ajaxCur) {
+			$(<span class="hljs-built_in">document</span>.body).removeClass(_ajaxCur);
+		}
+	},
+	_destroyAjaxRequest = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		_removeAjaxCursor();
+		<span class="hljs-keyword">if</span>(mfp.req) {
+			mfp.req.abort();
+		}
+	};
+
+$.magnificPopup.registerModule(AJAX_NS, {
+
+	<span class="hljs-attr">options</span>: {
+		<span class="hljs-attr">settings</span>: <span class="hljs-literal">null</span>,
+		<span class="hljs-attr">cursor</span>: <span class="hljs-string">'mfp-ajax-cur'</span>,
+		<span class="hljs-attr">tError</span>: <span class="hljs-string">'&lt;a href="%url%"&gt;The content&lt;/a&gt; could not be loaded.'</span>
+	},
+
+	<span class="hljs-attr">proto</span>: {
+		<span class="hljs-attr">initAjax</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			mfp.types.push(AJAX_NS);
+			_ajaxCur = mfp.st.ajax.cursor;
+
+			_mfpOn(CLOSE_EVENT+<span class="hljs-string">'.'</span>+AJAX_NS, _destroyAjaxRequest);
+			_mfpOn(<span class="hljs-string">'BeforeChange.'</span> + AJAX_NS, _destroyAjaxRequest);
+		},
+		<span class="hljs-attr">getAjax</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">item</span>) </span>{
+
+			<span class="hljs-keyword">if</span>(_ajaxCur) {
+				$(<span class="hljs-built_in">document</span>.body).addClass(_ajaxCur);
+			}
+
+			mfp.updateStatus(<span class="hljs-string">'loading'</span>);
+
+			<span class="hljs-keyword">var</span> opts = $.extend({
+				<span class="hljs-attr">url</span>: item.src,
+				<span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data, textStatus, jqXHR</span>) </span>{
+					<span class="hljs-keyword">var</span> temp = {
+						<span class="hljs-attr">data</span>:data,
+						<span class="hljs-attr">xhr</span>:jqXHR
+					};
+
+					_mfpTrigger(<span class="hljs-string">'ParseAjax'</span>, temp);
+
+					mfp.appendContent( $(temp.data), AJAX_NS );
+
+					item.finished = <span class="hljs-literal">true</span>;
+
+					_removeAjaxCursor();
+
+					mfp._setFocus();
+
+					setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+						mfp.wrap.addClass(READY_CLASS);
+					}, <span class="hljs-number">16</span>);
+
+					mfp.updateStatus(<span class="hljs-string">'ready'</span>);
+
+					_mfpTrigger(<span class="hljs-string">'AjaxContentAdded'</span>);
+				},
+				<span class="hljs-attr">error</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+					_removeAjaxCursor();
+					item.finished = item.loadError = <span class="hljs-literal">true</span>;
+					mfp.updateStatus(<span class="hljs-string">'error'</span>, mfp.st.ajax.tError.replace(<span class="hljs-string">'%url%'</span>, item.src));
+				}
+			}, mfp.st.ajax.settings);
+
+			mfp.req = $.ajax(opts);
+
+			<span class="hljs-keyword">return</span> <span class="hljs-string">''</span>;
+		}
+	}
+});
+
+<span class="hljs-comment">/*&gt;&gt;ajax*/</span>
+
+<span class="hljs-comment">/*&gt;&gt;image*/</span>
+<span class="hljs-keyword">var</span> _imgInterval,
+	_getTitle = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">item</span>) </span>{
+		<span class="hljs-keyword">if</span>(item.data &amp;&amp; item.data.title !== <span class="hljs-literal">undefined</span>)
+			<span class="hljs-keyword">return</span> item.data.title;
+
+		<span class="hljs-keyword">var</span> src = mfp.st.image.titleSrc;
+
+		<span class="hljs-keyword">if</span>(src) {
+			<span class="hljs-keyword">if</span>($.isFunction(src)) {
+				<span class="hljs-keyword">return</span> src.call(mfp, item);
+			} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(item.el) {
+				<span class="hljs-keyword">return</span> item.el.attr(src) || <span class="hljs-string">''</span>;
+			}
+		}
+		<span class="hljs-keyword">return</span> <span class="hljs-string">''</span>;
+	};
+
+$.magnificPopup.registerModule(<span class="hljs-string">'image'</span>, {
+
+	<span class="hljs-attr">options</span>: {
+		<span class="hljs-attr">markup</span>: <span class="hljs-string">'&lt;div class="mfp-figure"&gt;'</span>+
+					<span class="hljs-string">'&lt;div class="mfp-close"&gt;&lt;/div&gt;'</span>+
+					<span class="hljs-string">'&lt;figure&gt;'</span>+
+						<span class="hljs-string">'&lt;div class="mfp-img"&gt;&lt;/div&gt;'</span>+
+						<span class="hljs-string">'&lt;figcaption&gt;'</span>+
+							<span class="hljs-string">'&lt;div class="mfp-bottom-bar"&gt;'</span>+
+								<span class="hljs-string">'&lt;div class="mfp-title"&gt;&lt;/div&gt;'</span>+
+								<span class="hljs-string">'&lt;div class="mfp-counter"&gt;&lt;/div&gt;'</span>+
+							<span class="hljs-string">'&lt;/div&gt;'</span>+
+						<span class="hljs-string">'&lt;/figcaption&gt;'</span>+
+					<span class="hljs-string">'&lt;/figure&gt;'</span>+
+				<span class="hljs-string">'&lt;/div&gt;'</span>,
+		<span class="hljs-attr">cursor</span>: <span class="hljs-string">'mfp-zoom-out-cur'</span>,
+		<span class="hljs-attr">titleSrc</span>: <span class="hljs-string">'title'</span>,
+		<span class="hljs-attr">verticalFit</span>: <span class="hljs-literal">true</span>,
+		<span class="hljs-attr">tError</span>: <span class="hljs-string">'&lt;a href="%url%"&gt;The image&lt;/a&gt; could not be loaded.'</span>
+	},
+
+	<span class="hljs-attr">proto</span>: {
+		<span class="hljs-attr">initImage</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			<span class="hljs-keyword">var</span> imgSt = mfp.st.image,
+				ns = <span class="hljs-string">'.image'</span>;
+
+			mfp.types.push(<span class="hljs-string">'image'</span>);
+
+			_mfpOn(OPEN_EVENT+ns, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+				<span class="hljs-keyword">if</span>(mfp.currItem.type === <span class="hljs-string">'image'</span> &amp;&amp; imgSt.cursor) {
+					$(<span class="hljs-built_in">document</span>.body).addClass(imgSt.cursor);
+				}
+			});
+
+			_mfpOn(CLOSE_EVENT+ns, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+				<span class="hljs-keyword">if</span>(imgSt.cursor) {
+					$(<span class="hljs-built_in">document</span>.body).removeClass(imgSt.cursor);
+				}
+				_window.off(<span class="hljs-string">'resize'</span> + EVENT_NS);
+			});
+
+			_mfpOn(<span class="hljs-string">'Resize'</span>+ns, mfp.resizeImage);
+			<span class="hljs-keyword">if</span>(mfp.isLowIE) {
+				_mfpOn(<span class="hljs-string">'AfterChange'</span>, mfp.resizeImage);
+			}
+		},
+		<span class="hljs-attr">resizeImage</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			<span class="hljs-keyword">var</span> item = mfp.currItem;
+			<span class="hljs-keyword">if</span>(!item || !item.img) <span class="hljs-keyword">return</span>;
+
+			<span class="hljs-keyword">if</span>(mfp.st.image.verticalFit) {
+				<span class="hljs-keyword">var</span> decr = <span class="hljs-number">0</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-49">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-49">&#182;</a>
+              </div>
+              <p>fix box-sizing in ie7/8</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				<span class="hljs-keyword">if</span>(mfp.isLowIE) {
+					decr = <span class="hljs-built_in">parseInt</span>(item.img.css(<span class="hljs-string">'padding-top'</span>), <span class="hljs-number">10</span>) + <span class="hljs-built_in">parseInt</span>(item.img.css(<span class="hljs-string">'padding-bottom'</span>),<span class="hljs-number">10</span>);
+				}
+				item.img.css(<span class="hljs-string">'max-height'</span>, mfp.wH-decr);
+			}
+		},
+		<span class="hljs-attr">_onImageHasSize</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">item</span>) </span>{
+			<span class="hljs-keyword">if</span>(item.img) {
+
+				item.hasSize = <span class="hljs-literal">true</span>;
+
+				<span class="hljs-keyword">if</span>(_imgInterval) {
+					clearInterval(_imgInterval);
+				}
+
+				item.isCheckingImgSize = <span class="hljs-literal">false</span>;
+
+				_mfpTrigger(<span class="hljs-string">'ImageHasSize'</span>, item);
+
+				<span class="hljs-keyword">if</span>(item.imgHidden) {
+					<span class="hljs-keyword">if</span>(mfp.content)
+						mfp.content.removeClass(<span class="hljs-string">'mfp-loading'</span>);
+
+					item.imgHidden = <span class="hljs-literal">false</span>;
+				}
+
+			}
+		},
+
+		<span class="hljs-comment">/**
+		 * Function that loops until the image has size to display elements that rely on it asap
+		 */</span>
+		findImageSize: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">item</span>) </span>{
+
+			<span class="hljs-keyword">var</span> counter = <span class="hljs-number">0</span>,
+				img = item.img[<span class="hljs-number">0</span>],
+				mfpSetInterval = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">delay</span>) </span>{
+
+					<span class="hljs-keyword">if</span>(_imgInterval) {
+						clearInterval(_imgInterval);
+					}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-50">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-50">&#182;</a>
+              </div>
+              <p>decelerating interval that checks for size of an image</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>					_imgInterval = setInterval(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+						<span class="hljs-keyword">if</span>(img.naturalWidth &gt; <span class="hljs-number">0</span>) {
+							mfp._onImageHasSize(item);
+							<span class="hljs-keyword">return</span>;
+						}
+
+						<span class="hljs-keyword">if</span>(counter &gt; <span class="hljs-number">200</span>) {
+							clearInterval(_imgInterval);
+						}
+
+						counter++;
+						<span class="hljs-keyword">if</span>(counter === <span class="hljs-number">3</span>) {
+							mfpSetInterval(<span class="hljs-number">10</span>);
+						} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(counter === <span class="hljs-number">40</span>) {
+							mfpSetInterval(<span class="hljs-number">50</span>);
+						} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(counter === <span class="hljs-number">100</span>) {
+							mfpSetInterval(<span class="hljs-number">500</span>);
+						}
+					}, delay);
+				};
+
+			mfpSetInterval(<span class="hljs-number">1</span>);
+		},
+
+		<span class="hljs-attr">getImage</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">item, template</span>) </span>{
+
+			<span class="hljs-keyword">var</span> guard = <span class="hljs-number">0</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-51">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-51">&#182;</a>
+              </div>
+              <p>image load complete handler</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				onLoadComplete = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+					<span class="hljs-keyword">if</span>(item) {
+						<span class="hljs-keyword">if</span> (item.img[<span class="hljs-number">0</span>].complete) {
+							item.img.off(<span class="hljs-string">'.mfploader'</span>);
+
+							<span class="hljs-keyword">if</span>(item === mfp.currItem){
+								mfp._onImageHasSize(item);
+
+								mfp.updateStatus(<span class="hljs-string">'ready'</span>);
+							}
+
+							item.hasSize = <span class="hljs-literal">true</span>;
+							item.loaded = <span class="hljs-literal">true</span>;
+
+							_mfpTrigger(<span class="hljs-string">'ImageLoadComplete'</span>);
+
+						}
+						<span class="hljs-keyword">else</span> {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-52">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-52">&#182;</a>
+              </div>
+              <p>if image complete check fails 200 times (20 sec), we assume that there was an error.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>							guard++;
+							<span class="hljs-keyword">if</span>(guard &lt; <span class="hljs-number">200</span>) {
+								setTimeout(onLoadComplete,<span class="hljs-number">100</span>);
+							} <span class="hljs-keyword">else</span> {
+								onLoadError();
+							}
+						}
+					}
+				},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-53">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-53">&#182;</a>
+              </div>
+              <p>image error handler</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				onLoadError = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+					<span class="hljs-keyword">if</span>(item) {
+						item.img.off(<span class="hljs-string">'.mfploader'</span>);
+						<span class="hljs-keyword">if</span>(item === mfp.currItem){
+							mfp._onImageHasSize(item);
+							mfp.updateStatus(<span class="hljs-string">'error'</span>, imgSt.tError.replace(<span class="hljs-string">'%url%'</span>, item.src) );
+						}
+
+						item.hasSize = <span class="hljs-literal">true</span>;
+						item.loaded = <span class="hljs-literal">true</span>;
+						item.loadError = <span class="hljs-literal">true</span>;
+					}
+				},
+				imgSt = mfp.st.image;
+
+
+			<span class="hljs-keyword">var</span> el = template.find(<span class="hljs-string">'.mfp-img'</span>);
+			<span class="hljs-keyword">if</span>(el.length) {
+				<span class="hljs-keyword">var</span> img = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'img'</span>);
+				img.className = <span class="hljs-string">'mfp-img'</span>;
+				<span class="hljs-keyword">if</span>(item.el &amp;&amp; item.el.find(<span class="hljs-string">'img'</span>).length) {
+					img.alt = item.el.find(<span class="hljs-string">'img'</span>).attr(<span class="hljs-string">'alt'</span>);
+				}
+				item.img = $(img).on(<span class="hljs-string">'load.mfploader'</span>, onLoadComplete).on(<span class="hljs-string">'error.mfploader'</span>, onLoadError);
+				img.src = item.src;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-54">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-54">&#182;</a>
+              </div>
+              <p>without clone() “error” event is not firing when IMG is replaced by new IMG
+TODO: find a way to avoid such cloning</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				<span class="hljs-keyword">if</span>(el.is(<span class="hljs-string">'img'</span>)) {
+					item.img = item.img.clone();
+				}
+
+				img = item.img[<span class="hljs-number">0</span>];
+				<span class="hljs-keyword">if</span>(img.naturalWidth &gt; <span class="hljs-number">0</span>) {
+					item.hasSize = <span class="hljs-literal">true</span>;
+				} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!img.width) {
+					item.hasSize = <span class="hljs-literal">false</span>;
+				}
+			}
+
+			mfp._parseMarkup(template, {
+				<span class="hljs-attr">title</span>: _getTitle(item),
+				<span class="hljs-attr">img_replaceWith</span>: item.img
+			}, item);
+
+			mfp.resizeImage();
+
+			<span class="hljs-keyword">if</span>(item.hasSize) {
+				<span class="hljs-keyword">if</span>(_imgInterval) clearInterval(_imgInterval);
+
+				<span class="hljs-keyword">if</span>(item.loadError) {
+					template.addClass(<span class="hljs-string">'mfp-loading'</span>);
+					mfp.updateStatus(<span class="hljs-string">'error'</span>, imgSt.tError.replace(<span class="hljs-string">'%url%'</span>, item.src) );
+				} <span class="hljs-keyword">else</span> {
+					template.removeClass(<span class="hljs-string">'mfp-loading'</span>);
+					mfp.updateStatus(<span class="hljs-string">'ready'</span>);
+				}
+				<span class="hljs-keyword">return</span> template;
+			}
+
+			mfp.updateStatus(<span class="hljs-string">'loading'</span>);
+			item.loading = <span class="hljs-literal">true</span>;
+
+			<span class="hljs-keyword">if</span>(!item.hasSize) {
+				item.imgHidden = <span class="hljs-literal">true</span>;
+				template.addClass(<span class="hljs-string">'mfp-loading'</span>);
+				mfp.findImageSize(item);
+			}
+
+			<span class="hljs-keyword">return</span> template;
+		}
+	}
+});
+
+<span class="hljs-comment">/*&gt;&gt;image*/</span>
+
+<span class="hljs-comment">/*&gt;&gt;zoom*/</span>
+<span class="hljs-keyword">var</span> hasMozTransform,
+	getHasMozTransform = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		<span class="hljs-keyword">if</span>(hasMozTransform === <span class="hljs-literal">undefined</span>) {
+			hasMozTransform = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'p'</span>).style.MozTransform !== <span class="hljs-literal">undefined</span>;
+		}
+		<span class="hljs-keyword">return</span> hasMozTransform;
+	};
+
+$.magnificPopup.registerModule(<span class="hljs-string">'zoom'</span>, {
+
+	<span class="hljs-attr">options</span>: {
+		<span class="hljs-attr">enabled</span>: <span class="hljs-literal">false</span>,
+		<span class="hljs-attr">easing</span>: <span class="hljs-string">'ease-in-out'</span>,
+		<span class="hljs-attr">duration</span>: <span class="hljs-number">300</span>,
+		<span class="hljs-attr">opener</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">element</span>) </span>{
+			<span class="hljs-keyword">return</span> element.is(<span class="hljs-string">'img'</span>) ? element : element.find(<span class="hljs-string">'img'</span>);
+		}
+	},
+
+	<span class="hljs-attr">proto</span>: {
+
+		<span class="hljs-attr">initZoom</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			<span class="hljs-keyword">var</span> zoomSt = mfp.st.zoom,
+				ns = <span class="hljs-string">'.zoom'</span>,
+				image;
+
+			<span class="hljs-keyword">if</span>(!zoomSt.enabled || !mfp.supportsTransition) {
+				<span class="hljs-keyword">return</span>;
+			}
+
+			<span class="hljs-keyword">var</span> duration = zoomSt.duration,
+				getElToAnimate = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">image</span>) </span>{
+					<span class="hljs-keyword">var</span> newImg = image.clone().removeAttr(<span class="hljs-string">'style'</span>).removeAttr(<span class="hljs-string">'class'</span>).addClass(<span class="hljs-string">'mfp-animated-image'</span>),
+						transition = <span class="hljs-string">'all '</span>+(zoomSt.duration/<span class="hljs-number">1000</span>)+<span class="hljs-string">'s '</span> + zoomSt.easing,
+						cssObj = {
+							<span class="hljs-attr">position</span>: <span class="hljs-string">'fixed'</span>,
+							<span class="hljs-attr">zIndex</span>: <span class="hljs-number">9999</span>,
+							<span class="hljs-attr">left</span>: <span class="hljs-number">0</span>,
+							<span class="hljs-attr">top</span>: <span class="hljs-number">0</span>,
+							<span class="hljs-string">'-webkit-backface-visibility'</span>: <span class="hljs-string">'hidden'</span>
+						},
+						t = <span class="hljs-string">'transition'</span>;
+
+					cssObj[<span class="hljs-string">'-webkit-'</span>+t] = cssObj[<span class="hljs-string">'-moz-'</span>+t] = cssObj[<span class="hljs-string">'-o-'</span>+t] = cssObj[t] = transition;
+
+					newImg.css(cssObj);
+					<span class="hljs-keyword">return</span> newImg;
+				},
+				showMainContent = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+					mfp.content.css(<span class="hljs-string">'visibility'</span>, <span class="hljs-string">'visible'</span>);
+				},
+				openTimeout,
+				animatedImg;
+
+			_mfpOn(<span class="hljs-string">'BuildControls'</span>+ns, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+				<span class="hljs-keyword">if</span>(mfp._allowZoom()) {
+
+					clearTimeout(openTimeout);
+					mfp.content.css(<span class="hljs-string">'visibility'</span>, <span class="hljs-string">'hidden'</span>);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-55">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-55">&#182;</a>
+              </div>
+              <p>Basically, all code below does is clones existing image, puts in on top of the current one and animated it</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+					image = mfp._getItemToZoom();
+
+					<span class="hljs-keyword">if</span>(!image) {
+						showMainContent();
+						<span class="hljs-keyword">return</span>;
+					}
+
+					animatedImg = getElToAnimate(image);
+
+					animatedImg.css( mfp._getOffset() );
+
+					mfp.wrap.append(animatedImg);
+
+					openTimeout = setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+						animatedImg.css( mfp._getOffset( <span class="hljs-literal">true</span> ) );
+						openTimeout = setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+
+							showMainContent();
+
+							setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+								animatedImg.remove();
+								image = animatedImg = <span class="hljs-literal">null</span>;
+								_mfpTrigger(<span class="hljs-string">'ZoomAnimationEnded'</span>);
+							}, <span class="hljs-number">16</span>); <span class="hljs-comment">// avoid blink when switching images</span>
+
+						}, duration); <span class="hljs-comment">// this timeout equals animation duration</span>
+
+					}, <span class="hljs-number">16</span>); <span class="hljs-comment">// by adding this timeout we avoid short glitch at the beginning of animation</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-56">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-56">&#182;</a>
+              </div>
+              <p>Lots of timeouts…</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				}
+			});
+			_mfpOn(BEFORE_CLOSE_EVENT+ns, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+				<span class="hljs-keyword">if</span>(mfp._allowZoom()) {
+
+					clearTimeout(openTimeout);
+
+					mfp.st.removalDelay = duration;
+
+					<span class="hljs-keyword">if</span>(!image) {
+						image = mfp._getItemToZoom();
+						<span class="hljs-keyword">if</span>(!image) {
+							<span class="hljs-keyword">return</span>;
+						}
+						animatedImg = getElToAnimate(image);
+					}
+
+					animatedImg.css( mfp._getOffset(<span class="hljs-literal">true</span>) );
+					mfp.wrap.append(animatedImg);
+					mfp.content.css(<span class="hljs-string">'visibility'</span>, <span class="hljs-string">'hidden'</span>);
+
+					setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+						animatedImg.css( mfp._getOffset() );
+					}, <span class="hljs-number">16</span>);
+				}
+
+			});
+
+			_mfpOn(CLOSE_EVENT+ns, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+				<span class="hljs-keyword">if</span>(mfp._allowZoom()) {
+					showMainContent();
+					<span class="hljs-keyword">if</span>(animatedImg) {
+						animatedImg.remove();
+					}
+					image = <span class="hljs-literal">null</span>;
+				}
+			});
+		},
+
+		<span class="hljs-attr">_allowZoom</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			<span class="hljs-keyword">return</span> mfp.currItem.type === <span class="hljs-string">'image'</span>;
+		},
+
+		<span class="hljs-attr">_getItemToZoom</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			<span class="hljs-keyword">if</span>(mfp.currItem.hasSize) {
+				<span class="hljs-keyword">return</span> mfp.currItem.img;
+			} <span class="hljs-keyword">else</span> {
+				<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+			}
+		},</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-57">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-57">&#182;</a>
+              </div>
+              <p>Get element postion relative to viewport</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		_getOffset: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">isLarge</span>) </span>{
+			<span class="hljs-keyword">var</span> el;
+			<span class="hljs-keyword">if</span>(isLarge) {
+				el = mfp.currItem.img;
+			} <span class="hljs-keyword">else</span> {
+				el = mfp.st.zoom.opener(mfp.currItem.el || mfp.currItem);
+			}
+
+			<span class="hljs-keyword">var</span> offset = el.offset();
+			<span class="hljs-keyword">var</span> paddingTop = <span class="hljs-built_in">parseInt</span>(el.css(<span class="hljs-string">'padding-top'</span>),<span class="hljs-number">10</span>);
+			<span class="hljs-keyword">var</span> paddingBottom = <span class="hljs-built_in">parseInt</span>(el.css(<span class="hljs-string">'padding-bottom'</span>),<span class="hljs-number">10</span>);
+			offset.top -= ( $(<span class="hljs-built_in">window</span>).scrollTop() - paddingTop );
+
+
+			<span class="hljs-comment">/*
+
+			Animating left + top + width/height looks glitchy in Firefox, but perfect in Chrome. And vice-versa.
+
+			 */</span>
+			<span class="hljs-keyword">var</span> obj = {
+				<span class="hljs-attr">width</span>: el.width(),</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-58">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-58">&#182;</a>
+              </div>
+              <p>fix Zepto height+padding issue</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				height: (_isJQ ? el.innerHeight() : el[<span class="hljs-number">0</span>].offsetHeight) - paddingBottom - paddingTop
+			};</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-59">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-59">&#182;</a>
+              </div>
+              <p>I hate to do this, but there is no another option</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="hljs-keyword">if</span>( getHasMozTransform() ) {
+				obj[<span class="hljs-string">'-moz-transform'</span>] = obj[<span class="hljs-string">'transform'</span>] = <span class="hljs-string">'translate('</span> + offset.left + <span class="hljs-string">'px,'</span> + offset.top + <span class="hljs-string">'px)'</span>;
+			} <span class="hljs-keyword">else</span> {
+				obj.left = offset.left;
+				obj.top = offset.top;
+			}
+			<span class="hljs-keyword">return</span> obj;
+		}
+
+	}
+});
+
+
+
+<span class="hljs-comment">/*&gt;&gt;zoom*/</span>
+
+<span class="hljs-comment">/*&gt;&gt;iframe*/</span>
+
+<span class="hljs-keyword">var</span> IFRAME_NS = <span class="hljs-string">'iframe'</span>,
+	_emptyPage = <span class="hljs-string">'//about:blank'</span>,
+
+	_fixIframeBugs = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">isShowing</span>) </span>{
+		<span class="hljs-keyword">if</span>(mfp.currTemplate[IFRAME_NS]) {
+			<span class="hljs-keyword">var</span> el = mfp.currTemplate[IFRAME_NS].find(<span class="hljs-string">'iframe'</span>);
+			<span class="hljs-keyword">if</span>(el.length) {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-60">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-60">&#182;</a>
+              </div>
+              <p>reset src after the popup is closed to avoid “video keeps playing after popup is closed” bug</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				<span class="hljs-keyword">if</span>(!isShowing) {
+					el[<span class="hljs-number">0</span>].src = _emptyPage;
+				}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-61">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-61">&#182;</a>
+              </div>
+              <p>IE8 black screen bug fix</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				<span class="hljs-keyword">if</span>(mfp.isIE8) {
+					el.css(<span class="hljs-string">'display'</span>, isShowing ? <span class="hljs-string">'block'</span> : <span class="hljs-string">'none'</span>);
+				}
+			}
+		}
+	};
+
+$.magnificPopup.registerModule(IFRAME_NS, {
+
+	<span class="hljs-attr">options</span>: {
+		<span class="hljs-attr">markup</span>: <span class="hljs-string">'&lt;div class="mfp-iframe-scaler"&gt;'</span>+
+					<span class="hljs-string">'&lt;div class="mfp-close"&gt;&lt;/div&gt;'</span>+
+					<span class="hljs-string">'&lt;iframe class="mfp-iframe" src="//about:blank" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;'</span>+
+				<span class="hljs-string">'&lt;/div&gt;'</span>,
+
+		<span class="hljs-attr">srcAction</span>: <span class="hljs-string">'iframe_src'</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-62">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-62">&#182;</a>
+              </div>
+              <p>we don’t care and support only one default type of URL by default</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		patterns: {
+			<span class="hljs-attr">youtube</span>: {
+				<span class="hljs-attr">index</span>: <span class="hljs-string">'youtube.com'</span>,
+				<span class="hljs-attr">id</span>: <span class="hljs-string">'v='</span>,
+				<span class="hljs-attr">src</span>: <span class="hljs-string">'//www.youtube.com/embed/%id%?autoplay=1'</span>
+			},
+			<span class="hljs-attr">vimeo</span>: {
+				<span class="hljs-attr">index</span>: <span class="hljs-string">'vimeo.com/'</span>,
+				<span class="hljs-attr">id</span>: <span class="hljs-string">'/'</span>,
+				<span class="hljs-attr">src</span>: <span class="hljs-string">'//player.vimeo.com/video/%id%?autoplay=1'</span>
+			},
+			<span class="hljs-attr">gmaps</span>: {
+				<span class="hljs-attr">index</span>: <span class="hljs-string">'//maps.google.'</span>,
+				<span class="hljs-attr">src</span>: <span class="hljs-string">'%id%&amp;output=embed'</span>
+			}
+		}
+	},
+
+	<span class="hljs-attr">proto</span>: {
+		<span class="hljs-attr">initIframe</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			mfp.types.push(IFRAME_NS);
+
+			_mfpOn(<span class="hljs-string">'BeforeChange'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e, prevType, newType</span>) </span>{
+				<span class="hljs-keyword">if</span>(prevType !== newType) {
+					<span class="hljs-keyword">if</span>(prevType === IFRAME_NS) {
+						_fixIframeBugs(); <span class="hljs-comment">// iframe if removed</span>
+					} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(newType === IFRAME_NS) {
+						_fixIframeBugs(<span class="hljs-literal">true</span>); <span class="hljs-comment">// iframe is showing</span>
+					}
+				}<span class="hljs-comment">// else {</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-63">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-63">&#182;</a>
+              </div>
+              <p>iframe source is switched, don’t do anything
+}</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			});
+
+			_mfpOn(CLOSE_EVENT + <span class="hljs-string">'.'</span> + IFRAME_NS, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+				_fixIframeBugs();
+			});
+		},
+
+		<span class="hljs-attr">getIframe</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">item, template</span>) </span>{
+			<span class="hljs-keyword">var</span> embedSrc = item.src;
+			<span class="hljs-keyword">var</span> iframeSt = mfp.st.iframe;
+
+			$.each(iframeSt.patterns, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+				<span class="hljs-keyword">if</span>(embedSrc.indexOf( <span class="hljs-keyword">this</span>.index ) &gt; <span class="hljs-number">-1</span>) {
+					<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.id) {
+						<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> <span class="hljs-keyword">this</span>.id === <span class="hljs-string">'string'</span>) {
+							embedSrc = embedSrc.substr(embedSrc.lastIndexOf(<span class="hljs-keyword">this</span>.id)+<span class="hljs-keyword">this</span>.id.length, embedSrc.length);
+						} <span class="hljs-keyword">else</span> {
+							embedSrc = <span class="hljs-keyword">this</span>.id.call( <span class="hljs-keyword">this</span>, embedSrc );
+						}
+					}
+					embedSrc = <span class="hljs-keyword">this</span>.src.replace(<span class="hljs-string">'%id%'</span>, embedSrc );
+					<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>; <span class="hljs-comment">// break;</span>
+				}
+			});
+
+			<span class="hljs-keyword">var</span> dataObj = {};
+			<span class="hljs-keyword">if</span>(iframeSt.srcAction) {
+				dataObj[iframeSt.srcAction] = embedSrc;
+			}
+			mfp._parseMarkup(template, dataObj, item);
+
+			mfp.updateStatus(<span class="hljs-string">'ready'</span>);
+
+			<span class="hljs-keyword">return</span> template;
+		}
+	}
+});
+
+
+
+<span class="hljs-comment">/*&gt;&gt;iframe*/</span>
+
+<span class="hljs-comment">/*&gt;&gt;gallery*/</span>
+<span class="hljs-comment">/**
+ * Get looped index depending on number of slides
+ */</span>
+<span class="hljs-keyword">var</span> _getLoopedId = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">index</span>) </span>{
+		<span class="hljs-keyword">var</span> numSlides = mfp.items.length;
+		<span class="hljs-keyword">if</span>(index &gt; numSlides - <span class="hljs-number">1</span>) {
+			<span class="hljs-keyword">return</span> index - numSlides;
+		} <span class="hljs-keyword">else</span>  <span class="hljs-keyword">if</span>(index &lt; <span class="hljs-number">0</span>) {
+			<span class="hljs-keyword">return</span> numSlides + index;
+		}
+		<span class="hljs-keyword">return</span> index;
+	},
+	_replaceCurrTotal = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">text, curr, total</span>) </span>{
+		<span class="hljs-keyword">return</span> text.replace(<span class="hljs-regexp">/%curr%/gi</span>, curr + <span class="hljs-number">1</span>).replace(<span class="hljs-regexp">/%total%/gi</span>, total);
+	};
+
+$.magnificPopup.registerModule(<span class="hljs-string">'gallery'</span>, {
+
+	<span class="hljs-attr">options</span>: {
+		<span class="hljs-attr">enabled</span>: <span class="hljs-literal">false</span>,
+		<span class="hljs-attr">arrowMarkup</span>: <span class="hljs-string">'&lt;button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"&gt;&lt;/button&gt;'</span>,
+		<span class="hljs-attr">preload</span>: [<span class="hljs-number">0</span>,<span class="hljs-number">2</span>],
+		<span class="hljs-attr">navigateByImgClick</span>: <span class="hljs-literal">true</span>,
+		<span class="hljs-attr">arrows</span>: <span class="hljs-literal">true</span>,
+
+		<span class="hljs-attr">tPrev</span>: <span class="hljs-string">'Previous (Left arrow key)'</span>,
+		<span class="hljs-attr">tNext</span>: <span class="hljs-string">'Next (Right arrow key)'</span>,
+		<span class="hljs-attr">tCounter</span>: <span class="hljs-string">'%curr% of %total%'</span>
+	},
+
+	<span class="hljs-attr">proto</span>: {
+		<span class="hljs-attr">initGallery</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+
+			<span class="hljs-keyword">var</span> gSt = mfp.st.gallery,
+				ns = <span class="hljs-string">'.mfp-gallery'</span>;
+
+			mfp.direction = <span class="hljs-literal">true</span>; <span class="hljs-comment">// true - next, false - prev</span>
+
+			<span class="hljs-keyword">if</span>(!gSt || !gSt.enabled ) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+
+			_wrapClasses += <span class="hljs-string">' mfp-gallery'</span>;
+
+			_mfpOn(OPEN_EVENT+ns, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+
+				<span class="hljs-keyword">if</span>(gSt.navigateByImgClick) {
+					mfp.wrap.on(<span class="hljs-string">'click'</span>+ns, <span class="hljs-string">'.mfp-img'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+						<span class="hljs-keyword">if</span>(mfp.items.length &gt; <span class="hljs-number">1</span>) {
+							mfp.next();
+							<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+						}
+					});
+				}
+
+				_document.on(<span class="hljs-string">'keydown'</span>+ns, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+					<span class="hljs-keyword">if</span> (e.keyCode === <span class="hljs-number">37</span>) {
+						mfp.prev();
+					} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (e.keyCode === <span class="hljs-number">39</span>) {
+						mfp.next();
+					}
+				});
+			});
+
+			_mfpOn(<span class="hljs-string">'UpdateStatus'</span>+ns, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e, data</span>) </span>{
+				<span class="hljs-keyword">if</span>(data.text) {
+					data.text = _replaceCurrTotal(data.text, mfp.currItem.index, mfp.items.length);
+				}
+			});
+
+			_mfpOn(MARKUP_PARSE_EVENT+ns, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e, element, values, item</span>) </span>{
+				<span class="hljs-keyword">var</span> l = mfp.items.length;
+				values.counter = l &gt; <span class="hljs-number">1</span> ? _replaceCurrTotal(gSt.tCounter, item.index, l) : <span class="hljs-string">''</span>;
+			});
+
+			_mfpOn(<span class="hljs-string">'BuildControls'</span> + ns, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+				<span class="hljs-keyword">if</span>(mfp.items.length &gt; <span class="hljs-number">1</span> &amp;&amp; gSt.arrows &amp;&amp; !mfp.arrowLeft) {
+					<span class="hljs-keyword">var</span> markup = gSt.arrowMarkup,
+						arrowLeft = mfp.arrowLeft = $( markup.replace(<span class="hljs-regexp">/%title%/gi</span>, gSt.tPrev).replace(<span class="hljs-regexp">/%dir%/gi</span>, <span class="hljs-string">'left'</span>) ).addClass(PREVENT_CLOSE_CLASS),
+						arrowRight = mfp.arrowRight = $( markup.replace(<span class="hljs-regexp">/%title%/gi</span>, gSt.tNext).replace(<span class="hljs-regexp">/%dir%/gi</span>, <span class="hljs-string">'right'</span>) ).addClass(PREVENT_CLOSE_CLASS);
+
+					arrowLeft.click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+						mfp.prev();
+					});
+					arrowRight.click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+						mfp.next();
+					});
+
+					mfp.container.append(arrowLeft.add(arrowRight));
+				}
+			});
+
+			_mfpOn(CHANGE_EVENT+ns, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+				<span class="hljs-keyword">if</span>(mfp._preloadTimeout) clearTimeout(mfp._preloadTimeout);
+
+				mfp._preloadTimeout = setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+					mfp.preloadNearbyImages();
+					mfp._preloadTimeout = <span class="hljs-literal">null</span>;
+				}, <span class="hljs-number">16</span>);
+			});
+
+
+			_mfpOn(CLOSE_EVENT+ns, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+				_document.off(ns);
+				mfp.wrap.off(<span class="hljs-string">'click'</span>+ns);
+				mfp.arrowRight = mfp.arrowLeft = <span class="hljs-literal">null</span>;
+			});
+
+		},
+		<span class="hljs-attr">next</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			mfp.direction = <span class="hljs-literal">true</span>;
+			mfp.index = _getLoopedId(mfp.index + <span class="hljs-number">1</span>);
+			mfp.updateItemHTML();
+		},
+		<span class="hljs-attr">prev</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			mfp.direction = <span class="hljs-literal">false</span>;
+			mfp.index = _getLoopedId(mfp.index - <span class="hljs-number">1</span>);
+			mfp.updateItemHTML();
+		},
+		<span class="hljs-attr">goTo</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">newIndex</span>) </span>{
+			mfp.direction = (newIndex &gt;= mfp.index);
+			mfp.index = newIndex;
+			mfp.updateItemHTML();
+		},
+		<span class="hljs-attr">preloadNearbyImages</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			<span class="hljs-keyword">var</span> p = mfp.st.gallery.preload,
+				preloadBefore = <span class="hljs-built_in">Math</span>.min(p[<span class="hljs-number">0</span>], mfp.items.length),
+				preloadAfter = <span class="hljs-built_in">Math</span>.min(p[<span class="hljs-number">1</span>], mfp.items.length),
+				i;
+
+			<span class="hljs-keyword">for</span>(i = <span class="hljs-number">1</span>; i &lt;= (mfp.direction ? preloadAfter : preloadBefore); i++) {
+				mfp._preloadItem(mfp.index+i);
+			}
+			<span class="hljs-keyword">for</span>(i = <span class="hljs-number">1</span>; i &lt;= (mfp.direction ? preloadBefore : preloadAfter); i++) {
+				mfp._preloadItem(mfp.index-i);
+			}
+		},
+		<span class="hljs-attr">_preloadItem</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">index</span>) </span>{
+			index = _getLoopedId(index);
+
+			<span class="hljs-keyword">if</span>(mfp.items[index].preloaded) {
+				<span class="hljs-keyword">return</span>;
+			}
+
+			<span class="hljs-keyword">var</span> item = mfp.items[index];
+			<span class="hljs-keyword">if</span>(!item.parsed) {
+				item = mfp.parseEl( index );
+			}
+
+			_mfpTrigger(<span class="hljs-string">'LazyLoad'</span>, item);
+
+			<span class="hljs-keyword">if</span>(item.type === <span class="hljs-string">'image'</span>) {
+				item.img = $(<span class="hljs-string">'&lt;img class="mfp-img" /&gt;'</span>).on(<span class="hljs-string">'load.mfploader'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+					item.hasSize = <span class="hljs-literal">true</span>;
+				}).on(<span class="hljs-string">'error.mfploader'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+					item.hasSize = <span class="hljs-literal">true</span>;
+					item.loadError = <span class="hljs-literal">true</span>;
+					_mfpTrigger(<span class="hljs-string">'LazyLoadError'</span>, item);
+				}).attr(<span class="hljs-string">'src'</span>, item.src);
+			}
+
+
+			item.preloaded = <span class="hljs-literal">true</span>;
+		}
+	}
+});
+
+<span class="hljs-comment">/*&gt;&gt;gallery*/</span>
+
+<span class="hljs-comment">/*&gt;&gt;retina*/</span>
+
+<span class="hljs-keyword">var</span> RETINA_NS = <span class="hljs-string">'retina'</span>;
+
+$.magnificPopup.registerModule(RETINA_NS, {
+	<span class="hljs-attr">options</span>: {
+		<span class="hljs-attr">replaceSrc</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">item</span>) </span>{
+			<span class="hljs-keyword">return</span> item.src.replace(<span class="hljs-regexp">/\.\w+$/</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">m</span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">'@2x'</span> + m; });
+		},
+		<span class="hljs-attr">ratio</span>: <span class="hljs-number">1</span> <span class="hljs-comment">// Function or number.  Set to 1 to disable.</span>
+	},
+	<span class="hljs-attr">proto</span>: {
+		<span class="hljs-attr">initRetina</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			<span class="hljs-keyword">if</span>(<span class="hljs-built_in">window</span>.devicePixelRatio &gt; <span class="hljs-number">1</span>) {
+
+				<span class="hljs-keyword">var</span> st = mfp.st.retina,
+					ratio = st.ratio;
+
+				ratio = !<span class="hljs-built_in">isNaN</span>(ratio) ? ratio : ratio();
+
+				<span class="hljs-keyword">if</span>(ratio &gt; <span class="hljs-number">1</span>) {
+					_mfpOn(<span class="hljs-string">'ImageHasSize'</span> + <span class="hljs-string">'.'</span> + RETINA_NS, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e, item</span>) </span>{
+						item.img.css({
+							<span class="hljs-string">'max-width'</span>: item.img[<span class="hljs-number">0</span>].naturalWidth / ratio,
+							<span class="hljs-string">'width'</span>: <span class="hljs-string">'100%'</span>
+						});
+					});
+					_mfpOn(<span class="hljs-string">'ElementParse'</span> + <span class="hljs-string">'.'</span> + RETINA_NS, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e, item</span>) </span>{
+						item.src = st.replaceSrc(item, ratio);
+					});
+				}
+			}
+
+		}
+	}
+});
+
+<span class="hljs-comment">/*&gt;&gt;retina*/</span>
+ _checkInstance(); }));</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>gulpfile.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page_wrapper">
+            <div id="jump_page">
+              
+                
+                <a class="source" href="README.html">
+                  README.md
+                </a>
+              
+                
+                <a class="source" href="gulpfile.html">
+                  gulpfile.js
+                </a>
+              
+            </div>
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>gulpfile.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-keyword">var</span> gulp = <span class="hljs-built_in">require</span>(<span class="hljs-string">'gulp'</span>);
+<span class="hljs-keyword">var</span> less = <span class="hljs-built_in">require</span>(<span class="hljs-string">'gulp-less'</span>);
+<span class="hljs-keyword">var</span> browserSync = <span class="hljs-built_in">require</span>(<span class="hljs-string">'browser-sync'</span>).create();
+<span class="hljs-keyword">var</span> header = <span class="hljs-built_in">require</span>(<span class="hljs-string">'gulp-header'</span>);
+<span class="hljs-keyword">var</span> cleanCSS = <span class="hljs-built_in">require</span>(<span class="hljs-string">'gulp-clean-css'</span>);
+<span class="hljs-keyword">var</span> rename = <span class="hljs-built_in">require</span>(<span class="hljs-string">"gulp-rename"</span>);
+<span class="hljs-keyword">var</span> uglify = <span class="hljs-built_in">require</span>(<span class="hljs-string">'gulp-uglify'</span>);
+<span class="hljs-keyword">var</span> pkg = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./package.json'</span>);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <p>Set the banner content</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-keyword">var</span> banner = [<span class="hljs-string">'/*!\n'</span>,
+    <span class="hljs-string">' * Start Bootstrap - &lt;%= pkg.title %&gt; v&lt;%= pkg.version %&gt; (&lt;%= pkg.homepage %&gt;)\n'</span>,
+    <span class="hljs-string">' * Copyright 2013-'</span> + (<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()).getFullYear(), <span class="hljs-string">' &lt;%= pkg.author %&gt;\n'</span>,
+    <span class="hljs-string">' * Licensed under &lt;%= pkg.license.type %&gt; (&lt;%= pkg.license.url %&gt;)\n'</span>,
+    <span class="hljs-string">' */\n'</span>,
+    <span class="hljs-string">''</span>
+].join(<span class="hljs-string">''</span>);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <p>Compile LESS files from /less into /css</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>gulp.task(<span class="hljs-string">'less'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> gulp.src(<span class="hljs-string">'less/creative.less'</span>)
+        .pipe(less())
+        .pipe(header(banner, { <span class="hljs-attr">pkg</span>: pkg }))
+        .pipe(gulp.dest(<span class="hljs-string">'css'</span>))
+        .pipe(browserSync.reload({
+            <span class="hljs-attr">stream</span>: <span class="hljs-literal">true</span>
+        }))
+});</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <p>Minify compiled CSS</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>gulp.task(<span class="hljs-string">'minify-css'</span>, [<span class="hljs-string">'less'</span>], <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> gulp.src(<span class="hljs-string">'css/creative.css'</span>)
+        .pipe(cleanCSS({ <span class="hljs-attr">compatibility</span>: <span class="hljs-string">'ie8'</span> }))
+        .pipe(rename({ <span class="hljs-attr">suffix</span>: <span class="hljs-string">'.min'</span> }))
+        .pipe(gulp.dest(<span class="hljs-string">'css'</span>))
+        .pipe(browserSync.reload({
+            <span class="hljs-attr">stream</span>: <span class="hljs-literal">true</span>
+        }))
+});</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>Minify JS</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>gulp.task(<span class="hljs-string">'minify-js'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> gulp.src(<span class="hljs-string">'js/creative.js'</span>)
+        .pipe(uglify())
+        .pipe(header(banner, { <span class="hljs-attr">pkg</span>: pkg }))
+        .pipe(rename({ <span class="hljs-attr">suffix</span>: <span class="hljs-string">'.min'</span> }))
+        .pipe(gulp.dest(<span class="hljs-string">'js'</span>))
+        .pipe(browserSync.reload({
+            <span class="hljs-attr">stream</span>: <span class="hljs-literal">true</span>
+        }))
+});</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <p>Copy vendor libraries from /node_modules into /vendor</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>gulp.task(<span class="hljs-string">'copy'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    gulp.src([<span class="hljs-string">'node_modules/bootstrap/dist/**/*'</span>, <span class="hljs-string">'!**/npm.js'</span>, <span class="hljs-string">'!**/bootstrap-theme.*'</span>, <span class="hljs-string">'!**/*.map'</span>])
+        .pipe(gulp.dest(<span class="hljs-string">'vendor/bootstrap'</span>))
+
+    gulp.src([<span class="hljs-string">'node_modules/jquery/dist/jquery.js'</span>, <span class="hljs-string">'node_modules/jquery/dist/jquery.min.js'</span>])
+        .pipe(gulp.dest(<span class="hljs-string">'vendor/jquery'</span>))
+
+    gulp.src([<span class="hljs-string">'node_modules/magnific-popup/dist/*'</span>])
+        .pipe(gulp.dest(<span class="hljs-string">'vendor/magnific-popup'</span>))
+
+    gulp.src([<span class="hljs-string">'node_modules/scrollreveal/dist/*.js'</span>])
+        .pipe(gulp.dest(<span class="hljs-string">'vendor/scrollreveal'</span>))
+
+    gulp.src([
+            <span class="hljs-string">'node_modules/font-awesome/**'</span>,
+            <span class="hljs-string">'!node_modules/font-awesome/**/*.map'</span>,
+            <span class="hljs-string">'!node_modules/font-awesome/.npmignore'</span>,
+            <span class="hljs-string">'!node_modules/font-awesome/*.txt'</span>,
+            <span class="hljs-string">'!node_modules/font-awesome/*.md'</span>,
+            <span class="hljs-string">'!node_modules/font-awesome/*.json'</span>
+        ])
+        .pipe(gulp.dest(<span class="hljs-string">'vendor/font-awesome'</span>))
+})</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>Run everything</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>gulp.task(<span class="hljs-string">'default'</span>, [<span class="hljs-string">'less'</span>, <span class="hljs-string">'minify-css'</span>, <span class="hljs-string">'minify-js'</span>, <span class="hljs-string">'copy'</span>]);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <p>Configure the browserSync task</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>gulp.task(<span class="hljs-string">'browserSync'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    browserSync.init({
+        <span class="hljs-attr">server</span>: {
+            <span class="hljs-attr">baseDir</span>: <span class="hljs-string">''</span>
+        },
+    })
+})</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <p>Dev task with browserSync</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>gulp.task(<span class="hljs-string">'dev'</span>, [<span class="hljs-string">'browserSync'</span>, <span class="hljs-string">'less'</span>, <span class="hljs-string">'minify-css'</span>, <span class="hljs-string">'minify-js'</span>], <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    gulp.watch(<span class="hljs-string">'less/*.less'</span>, [<span class="hljs-string">'less'</span>]);
+    gulp.watch(<span class="hljs-string">'css/*.css'</span>, [<span class="hljs-string">'minify-css'</span>]);
+    gulp.watch(<span class="hljs-string">'js/*.js'</span>, [<span class="hljs-string">'minify-js'</span>]);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
+              </div>
+              <p>Reloads the browser whenever HTML or JS files change</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    gulp.watch(<span class="hljs-string">'*.html'</span>, browserSync.reload);
+    gulp.watch(<span class="hljs-string">'js/**/*.js'</span>, browserSync.reload);
+});</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

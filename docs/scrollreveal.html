@@ -1,0 +1,1870 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>scrollreveal.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page_wrapper">
+            <div id="jump_page">
+              
+                
+                <a class="source" href="scrollreveal.html">
+                  scrollreveal.js
+                </a>
+              
+                
+                <a class="source" href="scrollreveal.min.html">
+                  scrollreveal.min.js
+                </a>
+              
+            </div>
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>scrollreveal.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">root, factory</span>) </span>{
+  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> define === <span class="hljs-string">'function'</span> &amp;&amp; define.amd) {
+    define(factory);
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> exports === <span class="hljs-string">'object'</span>) {
+    <span class="hljs-built_in">module</span>.exports = factory(<span class="hljs-built_in">require</span>, exports, <span class="hljs-built_in">module</span>);
+  } <span class="hljs-keyword">else</span> {
+    root.ScrollReveal = factory();
+  }
+}(<span class="hljs-keyword">this</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">require, exports, module</span>) </span>{</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <p>///    /////    /////    /////
+///    /////    /////    /////
+///    /////    /////    /////
+///    /////    /////    /////
+///             /////    /////
+///             /////    /////
+///    /////    /////    /////
+///    /////    /////    /////
+///    /////
+///    /////
+///    /////    /////    /////
+///    /////    /////    /////
+///    /////    /////    /////
+///    /////    /////    /////</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+<span class="hljs-comment">/**
+ * ScrollReveal
+ * ------------
+ * Version : 3.1.4
+ * Website : scrollrevealjs.org
+ * Repo    : github.com/jlmakes/scrollreveal.js
+ * Author  : Julian Lloyd (@jlmakes)
+ */</span>
+
+;(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+<span class="hljs-meta">    'use strict'</span>;
+
+    <span class="hljs-keyword">var</span>
+        sr,
+        Tools,
+        _requestAnimationFrame;
+
+    <span class="hljs-keyword">this</span>.ScrollReveal = (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+
+        <span class="hljs-comment">/**
+         * Configuration
+         * -------------
+         * This object signature can be passed directly to the ScrollReveal constructor,
+         * or as the second argument of the `reveal()` method.
+         */</span>
+
+        ScrollReveal.prototype.defaults = {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <pre><code>       <span class="hljs-string">'bottom'</span>, <span class="hljs-string">'left'</span>, <span class="hljs-string">'top'</span>, <span class="hljs-string">'right'</span>
+</code></pre>
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            origin      : <span class="hljs-string">'bottom'</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <pre><code>       Can be any valid CSS distance, e.g. <span class="hljs-string">'5rem'</span>, <span class="hljs-string">'10%'</span>, <span class="hljs-string">'20vw'</span>, etc.
+</code></pre>
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            distance    : <span class="hljs-string">'20px'</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <pre><code>       Time <span class="hljs-keyword">in</span> milliseconds.
+</code></pre>
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            duration    : <span class="hljs-number">500</span>,
+            <span class="hljs-attr">delay</span>       : <span class="hljs-number">0</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <pre><code>       Starting angles <span class="hljs-keyword">in</span> degrees, will transition <span class="hljs-keyword">from</span> these values to <span class="hljs-number">0</span> <span class="hljs-keyword">in</span> all axes.
+</code></pre>
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            rotate      : { <span class="hljs-attr">x</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">y</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">z</span>: <span class="hljs-number">0</span> },</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <pre><code>       Starting opacity value, before transitioning to the computed opacity.
+</code></pre>
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            opacity     : <span class="hljs-number">0</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <pre><code>       Starting scale value, will transition <span class="hljs-keyword">from</span> <span class="hljs-keyword">this</span> value to <span class="hljs-number">1</span>
+</code></pre>
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            scale       : <span class="hljs-number">0.9</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <pre><code>       Accepts any valid CSS easing, e.g. <span class="hljs-string">'ease'</span>, <span class="hljs-string">'ease-in-out'</span>, <span class="hljs-string">'linear'</span>, etc.
+</code></pre>
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            easing      : <span class="hljs-string">'cubic-bezier(0.6, 0.2, 0.1, 1)'</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
+              </div>
+              <pre><code>       When <span class="hljs-literal">null</span>, <span class="hljs-string">`&lt;html&gt;`</span> is assumed to be the reveal container. You can pass a
+       DOM node <span class="hljs-keyword">as</span> a custom container, e.g. document.querySelector(<span class="hljs-string">'.fooContainer'</span>)
+       or a selector, e.g. <span class="hljs-string">'.fooContainer'</span>
+</code></pre>
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            container   : <span class="hljs-literal">null</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-11">&#182;</a>
+              </div>
+              <pre><code>       <span class="hljs-literal">true</span>/<span class="hljs-literal">false</span> to control reveal animations on mobile.
+</code></pre>
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            mobile      : <span class="hljs-literal">true</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-12">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-12">&#182;</a>
+              </div>
+              <pre><code>       <span class="hljs-literal">true</span>:  reveals occur every time elements become visible
+       <span class="hljs-literal">false</span>: reveals occur once <span class="hljs-keyword">as</span> elements become visible
+</code></pre>
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            reset       : <span class="hljs-literal">false</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-13">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-13">&#182;</a>
+              </div>
+              <pre><code>       <span class="hljs-string">'always'</span> — delay <span class="hljs-keyword">for</span> all reveal animations
+       <span class="hljs-string">'once'</span>   — delay only the first time reveals occur
+       <span class="hljs-string">'onload'</span> - delay only <span class="hljs-keyword">for</span> animations triggered by first load
+</code></pre>
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            useDelay    : <span class="hljs-string">'always'</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-14">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-14">&#182;</a>
+              </div>
+              <pre><code>       Change when an element is considered <span class="hljs-keyword">in</span> the viewport. The <span class="hljs-keyword">default</span> value
+       <span class="hljs-keyword">of</span> <span class="hljs-number">0.20</span> means <span class="hljs-number">20</span>% <span class="hljs-keyword">of</span> an element must be visible <span class="hljs-keyword">for</span> its reveal to occur.
+</code></pre>
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            viewFactor  : <span class="hljs-number">0.2</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-15">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-15">&#182;</a>
+              </div>
+              <pre><code>       Pixel values that alter the container boundaries.
+       e.g. Set <span class="hljs-string">`{ top: 48 }`</span>, <span class="hljs-keyword">if</span> you have a <span class="hljs-number">48</span>px tall fixed toolbar.
+       --
+       Visual Aid: https:<span class="hljs-comment">//scrollrevealjs.org/assets/viewoffset.png</span>
+</code></pre>
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            viewOffset  : { <span class="hljs-attr">top</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">right</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">bottom</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">left</span>: <span class="hljs-number">0</span> },</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-16">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-16">&#182;</a>
+              </div>
+              <pre><code>       Callbacks that fire <span class="hljs-keyword">for</span> each completed element reveal, and <span class="hljs-keyword">if</span>
+       <span class="hljs-string">`config.reset = true`</span>, <span class="hljs-keyword">for</span> each completed element reset. When creating your
+       callbacks, remember they are passed the element’s DOM node that triggered
+       it <span class="hljs-keyword">as</span> the first argument.
+</code></pre>
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            afterReveal : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">domEl</span>) </span>{},
+            <span class="hljs-attr">afterReset</span>  : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">domEl</span>) </span>{}
+        };
+
+
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ScrollReveal</span>(<span class="hljs-params">config</span>) </span>{</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-17">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-17">&#182;</a>
+              </div>
+              <p>Support instantiation without the <code>new</code> keyword.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-keyword">this</span> == <span class="hljs-string">'undefined'</span> || <span class="hljs-built_in">Object</span>.getPrototypeOf(<span class="hljs-keyword">this</span>) !== ScrollReveal.prototype) {
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ScrollReveal(config)
+            }
+
+            sr = <span class="hljs-keyword">this</span>; <span class="hljs-comment">// Save reference to instance.</span>
+            sr.tools = <span class="hljs-keyword">new</span> Tools(); <span class="hljs-comment">// *required utilities</span>
+
+            <span class="hljs-keyword">if</span> (sr.isSupported()) {
+
+                sr.tools.extend(sr.defaults, config || {});
+
+                _resolveContainer(sr.defaults);
+
+                sr.store = {
+                    <span class="hljs-attr">elements</span>   : {},
+                    <span class="hljs-attr">containers</span> : []
+                };
+
+                sr.sequences   = {};
+                sr.history     = [];
+                sr.uid         = <span class="hljs-number">0</span>;
+                sr.initialized = <span class="hljs-literal">false</span>;
+            }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-18">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-18">&#182;</a>
+              </div>
+              <p>Note: IE9 only supports console if devtools are open.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">console</span> !== <span class="hljs-string">'undefined'</span> &amp;&amp; <span class="hljs-built_in">console</span> !== <span class="hljs-literal">null</span>) {
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'ScrollReveal is not supported in this browser.'</span>);
+            }
+
+            <span class="hljs-keyword">return</span> sr
+        }
+
+
+
+        <span class="hljs-comment">/**
+         * Check if client supports CSS Transform and CSS Transition.
+         * @return {boolean}
+         */</span>
+        ScrollReveal.prototype.isSupported = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">var</span> style = <span class="hljs-built_in">document</span>.documentElement.style;
+            <span class="hljs-keyword">return</span> <span class="hljs-string">'WebkitTransition'</span> <span class="hljs-keyword">in</span> style &amp;&amp; <span class="hljs-string">'WebkitTransform'</span> <span class="hljs-keyword">in</span> style
+                || <span class="hljs-string">'transition'</span> <span class="hljs-keyword">in</span> style &amp;&amp; <span class="hljs-string">'transform'</span> <span class="hljs-keyword">in</span> style
+        };
+
+
+
+        <span class="hljs-comment">/**
+         * Creates a reveal set, a group of elements that will animate when they
+         * become visible. If [interval] is provided, a new sequence is created
+         * that will ensure elements reveal in the order they appear in the DOM.
+         *
+         * @param {string|Node} [selector] The element (node) or elements (selector) to animate.
+         * @param {Object}      [config]   Override the defaults for this reveal set.
+         * @param {number}      [interval] Time between sequenced element animations (milliseconds).
+         * @param {boolean}     [sync]     Used internally when updating reveals for async content.
+         *
+         * @return {Object} The current ScrollReveal instance.
+         */</span>
+        ScrollReveal.prototype.reveal = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">selector, config, interval, sync</span>) </span>{
+
+            <span class="hljs-keyword">var</span>
+                container,
+                elements,
+                elem,
+                elemId,
+                sequence,
+                sequenceId;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-19">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-19">&#182;</a>
+              </div>
+              <p>Resolve container.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">if</span> (config &amp;&amp; config.container) {
+                container = _resolveContainer(config);
+            } <span class="hljs-keyword">else</span> {
+                container = sr.defaults.container;
+            }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-20">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-20">&#182;</a>
+              </div>
+              <p>Let’s check to see if a DOM node was passed in as the first argument,
+otherwise query the container for all elements matching the selector.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">if</span> (sr.tools.isNode(selector)) {
+                elements = [selector];
+            } <span class="hljs-keyword">else</span> {
+                elements = <span class="hljs-built_in">Array</span>.prototype.slice.call(container.querySelectorAll(selector));
+            }
+
+            <span class="hljs-keyword">if</span> (!elements.length) {
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'ScrollReveal: reveal on "'</span>+ selector + <span class="hljs-string">'" failed, no elements found.'</span>);
+                <span class="hljs-keyword">return</span> sr
+            }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-21">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-21">&#182;</a>
+              </div>
+              <p>No custom configuration was passed, but a sequence interval instead.
+let’s shuffle things around to make sure everything works.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">if</span> (config &amp;&amp; <span class="hljs-keyword">typeof</span> config == <span class="hljs-string">'number'</span>) {
+                interval = config;
+                config = {};
+            }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-22">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-22">&#182;</a>
+              </div>
+              <p>Prepare a new sequence if an interval is passed.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">if</span> (interval &amp;&amp; <span class="hljs-keyword">typeof</span> interval == <span class="hljs-string">'number'</span>) {
+                sequenceId = _nextUid();
+
+                sequence = sr.sequences[sequenceId] = {
+                    <span class="hljs-attr">id</span>       : sequenceId,
+                    <span class="hljs-attr">interval</span> : interval,
+                    <span class="hljs-attr">elemIds</span>  : [],
+                    <span class="hljs-attr">active</span>   : <span class="hljs-literal">false</span>
+                }
+            }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-23">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-23">&#182;</a>
+              </div>
+              <p>Begin main loop to configure ScrollReveal elements.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; elements.length; i++) {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-24">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-24">&#182;</a>
+              </div>
+              <p>Check if the element has already been configured and grab it from the store.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>                elemId = elements[i].getAttribute(<span class="hljs-string">'data-sr-id'</span>);
+                <span class="hljs-keyword">if</span> (elemId) {
+                    elem = sr.store.elements[elemId];
+                }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-25">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-25">&#182;</a>
+              </div>
+              <p>Otherwise, let’s do some basic setup.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>                <span class="hljs-keyword">else</span> {
+                    elem = {
+                        <span class="hljs-attr">id</span>        : _nextUid(),
+                        <span class="hljs-attr">domEl</span>     : elements[i],
+                        <span class="hljs-attr">seen</span>      : <span class="hljs-literal">false</span>,
+                        <span class="hljs-attr">revealing</span> : <span class="hljs-literal">false</span>
+                    };
+                    elem.domEl.setAttribute(<span class="hljs-string">'data-sr-id'</span>, elem.id);
+                }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-26">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-26">&#182;</a>
+              </div>
+              <p>Sequence only setup</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>                <span class="hljs-keyword">if</span> (sequence) {
+
+                    elem.sequence = {
+                        <span class="hljs-attr">id</span>    : sequence.id,
+                        <span class="hljs-attr">index</span> : sequence.elemIds.length
+                    };
+
+                    sequence.elemIds.push(elem.id);
+                }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-27">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-27">&#182;</a>
+              </div>
+              <p>New or existing element, it’s time to update its configuration, styles,
+and send the updates to our store.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>                _configure(elem, config || {});
+                _style(elem);
+                _updateStore(elem);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-28">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-28">&#182;</a>
+              </div>
+              <p>We need to make sure elements are set to visibility: visible, even when
+on mobile and <code>config.mobile == false</code>, or if unsupported.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>                <span class="hljs-keyword">if</span> (sr.tools.isMobile() &amp;&amp; !elem.config.mobile || !sr.isSupported()) {
+                    elem.domEl.setAttribute(<span class="hljs-string">'style'</span>, elem.styles.inline);
+                    elem.disabled = <span class="hljs-literal">true</span>;
+                }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-29">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-29">&#182;</a>
+              </div>
+              <p>Otherwise, proceed normally.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>                <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (!elem.revealing) {
+                    elem.domEl.setAttribute(<span class="hljs-string">'style'</span>,
+                        elem.styles.inline
+                      + elem.styles.transform.initial
+                    );
+                }
+            }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-30">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-30">&#182;</a>
+              </div>
+              <p>Each <code>reveal()</code> is recorded so that when calling <code>sync()</code> while working
+with asynchronously loaded content, it can re-trace your steps but with
+all your new elements now in the DOM.</p>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-31">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-31">&#182;</a>
+              </div>
+              <p>Since <code>reveal()</code> is called internally by <code>sync()</code>, we don’t want to
+record or intiialize each reveal during syncing.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">if</span> (!sync &amp;&amp; sr.isSupported()) {
+                _record(selector, config);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-32">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-32">&#182;</a>
+              </div>
+              <p>We push initialization to the event queue using setTimeout, so that we can</p>
+<h2 id="give-scrollreveal-room-to-process-all-reveal-calls-before-putting-things-into-motion-">give ScrollReveal room to process all reveal calls before putting things into motion.</h2>
+<p>Philip Roberts - What the heck is the event loop anyway? (JSConf EU 2014)
+<a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ">https://www.youtube.com/watch?v=8aGhZQkoFbQ</a></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>                <span class="hljs-keyword">if</span> (sr.initTimeout) {
+                    <span class="hljs-built_in">window</span>.clearTimeout(sr.initTimeout);
+                }
+                sr.initTimeout = <span class="hljs-built_in">window</span>.setTimeout(_init, <span class="hljs-number">0</span>);
+            }
+
+            <span class="hljs-keyword">return</span> sr
+        };
+
+
+
+        <span class="hljs-comment">/**
+         * Re-runs `reveal()` for each record stored in history, effectively capturing
+         * any content loaded asynchronously that matches existing reveal set selectors.
+         *
+         * @return {Object} The current ScrollReveal instance.
+         */</span>
+        ScrollReveal.prototype.sync = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">if</span> (sr.history.length &amp;&amp; sr.isSupported()) {
+                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; sr.history.length; i++) {
+                    <span class="hljs-keyword">var</span> record = sr.history[i];
+                    sr.reveal(record.selector, record.config, record.interval, <span class="hljs-literal">true</span>);
+                };
+                _init();
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'ScrollReveal: sync failed, no reveals found.'</span>);
+            }
+            <span class="hljs-keyword">return</span> sr
+        };
+
+
+
+        <span class="hljs-comment">/**
+         * Private Methods
+         * ---------------
+         * These methods remain accessible only to the ScrollReveal instance, even
+         * though they only "exist" during instantiation outside of the constructors scope.
+         * --
+         * http://stackoverflow.com/questions/111102/how-do-javascript-closures-work
+         */</span>
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_resolveContainer</span>(<span class="hljs-params">config</span>) </span>{
+            <span class="hljs-keyword">var</span> container = config.container;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-33">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-33">&#182;</a>
+              </div>
+              <p>Check if our container is defined by a selector.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">if</span> (container &amp;&amp; <span class="hljs-keyword">typeof</span> container == <span class="hljs-string">'string'</span>) {
+                <span class="hljs-keyword">return</span> config.container = <span class="hljs-built_in">window</span>.document.querySelector(container);
+            }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-34">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-34">&#182;</a>
+              </div>
+              <p>Check if our container is defined by a node.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (container &amp;&amp; !sr.tools.isNode(container)) {
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'ScrollReveal: Invalid container provided, using &lt;html&gt; instead.'</span>);
+                config.container = <span class="hljs-literal">null</span>;
+            }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-35">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-35">&#182;</a>
+              </div>
+              <p>Otherwise use <html> by default.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">if</span> (container == <span class="hljs-literal">null</span>) {
+                config.container = <span class="hljs-built_in">window</span>.document.documentElement;
+            }
+
+            <span class="hljs-keyword">return</span> config.container
+        }
+
+
+
+        <span class="hljs-comment">/**
+         * A consistent way of creating unique IDs.
+         * @returns {number}
+         */</span>
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_nextUid</span>(<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">return</span> ++sr.uid;
+        }
+
+
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_configure</span>(<span class="hljs-params">elem, config</span>) </span>{</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-36">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-36">&#182;</a>
+              </div>
+              <p>If the element hasn’t already been configured, let’s use a clone of the
+defaults extended by the configuration passed as the second argument.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">if</span> (!elem.config) {
+                elem.config = sr.tools.extendClone(sr.defaults, config);
+            }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-37">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-37">&#182;</a>
+              </div>
+              <p>Otherwise, let’s use a clone of the existing element configuration extended
+by the configuration passed as the second argument.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">else</span> {
+                elem.config = sr.tools.extendClone(elem.config, config);
+            }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-38">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-38">&#182;</a>
+              </div>
+              <p>Infer CSS Transform axis from origin string.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">if</span> (elem.config.origin === <span class="hljs-string">'top'</span> || elem.config.origin === <span class="hljs-string">'bottom'</span>) {
+                elem.config.axis = <span class="hljs-string">'Y'</span>;
+            } <span class="hljs-keyword">else</span> {
+                elem.config.axis = <span class="hljs-string">'X'</span>;
+            }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-39">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-39">&#182;</a>
+              </div>
+              <p>Let’s make sure our our pixel distances are negative for top and left.
+e.g. config.origin = ‘top’ and config.distance = ‘25px’ starts at <code>top: -25px</code> in CSS.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">if</span> (elem.config.origin === <span class="hljs-string">'top'</span> || elem.config.origin === <span class="hljs-string">'left'</span>) {
+                elem.config.distance = <span class="hljs-string">'-'</span> + elem.config.distance;
+            }
+        }
+
+
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_style</span>(<span class="hljs-params">elem</span>) </span>{
+            <span class="hljs-keyword">var</span> computed = <span class="hljs-built_in">window</span>.getComputedStyle(elem.domEl);
+
+            <span class="hljs-keyword">if</span> (!elem.styles) {
+                elem.styles = {
+                    <span class="hljs-attr">transition</span> : {},
+                    <span class="hljs-attr">transform</span>  : {},
+                    <span class="hljs-attr">computed</span>   : {}
+                };</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-40">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-40">&#182;</a>
+              </div>
+              <h2 id="capture-any-existing-inline-styles-and-add-our-visibility-override-">Capture any existing inline styles, and add our visibility override.</h2>
+<p>See section 4.2. in the Documentation:
+<a href="https://github.com/jlmakes/scrollreveal.js#42-improve-user-experience">https://github.com/jlmakes/scrollreveal.js#42-improve-user-experience</a></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>                elem.styles.inline  = elem.domEl.getAttribute(<span class="hljs-string">'style'</span>) || <span class="hljs-string">''</span>;
+                elem.styles.inline += <span class="hljs-string">'; visibility: visible; '</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-41">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-41">&#182;</a>
+              </div>
+              <p>grab the elements existing opacity.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>                elem.styles.computed.opacity = computed.opacity;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-42">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-42">&#182;</a>
+              </div>
+              <p>grab the elements existing transitions.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>                <span class="hljs-keyword">if</span> (!computed.transition || computed.transition == <span class="hljs-string">'all 0s ease 0s'</span>) {
+                    elem.styles.computed.transition = <span class="hljs-string">''</span>;
+                } <span class="hljs-keyword">else</span> {
+                    elem.styles.computed.transition = computed.transition + <span class="hljs-string">', '</span>;
+                }
+            }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-43">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-43">&#182;</a>
+              </div>
+              <p>Create transition styles</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            elem.styles.transition.instant = _generateTransition(elem, <span class="hljs-number">0</span>);
+            elem.styles.transition.delayed = _generateTransition(elem, elem.config.delay);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-44">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-44">&#182;</a>
+              </div>
+              <p>Generate transform styles, first with the webkit prefix.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            elem.styles.transform.initial = <span class="hljs-string">' -webkit-transform:'</span>;
+            elem.styles.transform.target  = <span class="hljs-string">' -webkit-transform:'</span>;
+            _generateTransform(elem);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-45">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-45">&#182;</a>
+              </div>
+              <p>And again without any prefix.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            elem.styles.transform.initial += <span class="hljs-string">'transform:'</span>;
+            elem.styles.transform.target  += <span class="hljs-string">'transform:'</span>;
+            _generateTransform(elem);
+
+        }
+
+
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_generateTransition</span>(<span class="hljs-params">elem, delay</span>) </span>{
+            <span class="hljs-keyword">var</span> config = elem.config;
+
+            <span class="hljs-keyword">return</span> <span class="hljs-string">'-webkit-transition: '</span> + elem.styles.computed.transition +
+                     <span class="hljs-string">'-webkit-transform '</span> + config.duration / <span class="hljs-number">1000</span> + <span class="hljs-string">'s '</span>
+                                          + config.easing + <span class="hljs-string">' '</span>
+                                          + delay / <span class="hljs-number">1000</span> + <span class="hljs-string">'s, opacity '</span>
+                                          + config.duration / <span class="hljs-number">1000</span> + <span class="hljs-string">'s '</span>
+                                          + config.easing + <span class="hljs-string">' '</span>
+                                          + delay / <span class="hljs-number">1000</span> + <span class="hljs-string">'s; '</span> +
+
+                           <span class="hljs-string">'transition: '</span> + elem.styles.computed.transition +
+                             <span class="hljs-string">'transform '</span> + config.duration / <span class="hljs-number">1000</span> + <span class="hljs-string">'s '</span>
+                                          + config.easing + <span class="hljs-string">' '</span>
+                                          + delay / <span class="hljs-number">1000</span> + <span class="hljs-string">'s, opacity '</span>
+                                          + config.duration / <span class="hljs-number">1000</span> + <span class="hljs-string">'s '</span>
+                                          + config.easing + <span class="hljs-string">' '</span>
+                                          + delay / <span class="hljs-number">1000</span> + <span class="hljs-string">'s; '</span>
+        }
+
+
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_generateTransform</span>(<span class="hljs-params">elem</span>) </span>{
+            <span class="hljs-keyword">var</span> config    = elem.config;
+            <span class="hljs-keyword">var</span> transform = elem.styles.transform;
+
+            <span class="hljs-keyword">if</span> (<span class="hljs-built_in">parseInt</span>(config.distance)) {
+                transform.initial += <span class="hljs-string">' translate'</span> + config.axis + <span class="hljs-string">'('</span> + config.distance + <span class="hljs-string">')'</span>;
+                transform.target  += <span class="hljs-string">' translate'</span> + config.axis + <span class="hljs-string">'(0)'</span>;
+            }
+            <span class="hljs-keyword">if</span> (config.scale) {
+                transform.initial += <span class="hljs-string">' scale('</span> + config.scale + <span class="hljs-string">')'</span>;
+                transform.target  += <span class="hljs-string">' scale(1)'</span>;
+            }
+            <span class="hljs-keyword">if</span> (config.rotate.x) {
+                transform.initial += <span class="hljs-string">' rotateX('</span> + config.rotate.x + <span class="hljs-string">'deg)'</span>;
+                transform.target  += <span class="hljs-string">' rotateX(0)'</span>;
+            }
+            <span class="hljs-keyword">if</span> (config.rotate.y) {
+                transform.initial += <span class="hljs-string">' rotateY('</span> + config.rotate.y + <span class="hljs-string">'deg)'</span>;
+                transform.target  += <span class="hljs-string">' rotateY(0)'</span>;
+            }
+            <span class="hljs-keyword">if</span> (config.rotate.z) {
+                transform.initial += <span class="hljs-string">' rotateZ('</span> + config.rotate.z + <span class="hljs-string">'deg)'</span>;
+                transform.target  += <span class="hljs-string">' rotateZ(0)'</span>;
+            }
+            transform.initial += <span class="hljs-string">'; opacity: '</span> + config.opacity + <span class="hljs-string">';'</span>;
+            transform.target  += <span class="hljs-string">'; opacity: '</span> + elem.styles.computed.opacity + <span class="hljs-string">';'</span>;
+        }
+
+
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_updateStore</span>(<span class="hljs-params">elem</span>) </span>{
+            <span class="hljs-keyword">var</span> container = elem.config.container;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-46">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-46">&#182;</a>
+              </div>
+              <p>If this element’s container isn’t already in the store, let’s add it.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">if</span> (container &amp;&amp; sr.store.containers.indexOf(container) == <span class="hljs-number">-1</span>) {
+                sr.store.containers.push(elem.config.container);
+            }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-47">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-47">&#182;</a>
+              </div>
+              <p>Update the element stored with our new element.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            sr.store.elements[elem.id] = elem;
+        };
+
+
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_record</span>(<span class="hljs-params">selector, config, interval</span>) </span>{</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-48">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-48">&#182;</a>
+              </div>
+              <p>Save the <code>reveal()</code> arguments that triggered this <code>_record()</code> call, so we
+can re-trace our steps when calling the <code>sync()</code> method.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">var</span> record = {
+                <span class="hljs-attr">selector</span> : selector,
+                <span class="hljs-attr">config</span>   : config,
+                <span class="hljs-attr">interval</span> : interval
+            };
+            sr.history.push(record);
+        }
+
+
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_init</span>(<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">if</span> (sr.isSupported()) {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-49">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-49">&#182;</a>
+              </div>
+              <p>Initial animate call triggers valid reveal animations on first load.
+Subsequent animate calls are made inside the event handler.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>                _animate();</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-50">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-50">&#182;</a>
+              </div>
+              <p>Then we loop through all container nodes in the store and bind event
+listeners to each.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; sr.store.containers.length; i++) {
+                    sr.store.containers[i].addEventListener(<span class="hljs-string">'scroll'</span>, _handler);
+                    sr.store.containers[i].addEventListener(<span class="hljs-string">'resize'</span>, _handler);
+                }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-51">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-51">&#182;</a>
+              </div>
+              <p>Let’s also do a one-time binding of window event listeners.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>                <span class="hljs-keyword">if</span> (!sr.initialized) {
+                    <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'scroll'</span>, _handler);
+                    <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'resize'</span>, _handler);
+                    sr.initialized = <span class="hljs-literal">true</span>;
+                }
+            }
+            <span class="hljs-keyword">return</span> sr
+        }
+
+
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_handler</span>(<span class="hljs-params"></span>) </span>{
+            _requestAnimationFrame(_animate);
+        }
+
+
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_setActiveSequences</span>(<span class="hljs-params"></span>) </span>{
+
+            <span class="hljs-keyword">var</span>
+                active,
+                elem,
+                elemId,
+                sequence;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-52">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-52">&#182;</a>
+              </div>
+              <p>Loop through all sequences</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            sr.tools.forOwn(sr.sequences, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">sequenceId</span>) </span>{
+                sequence = sr.sequences[sequenceId];
+                active   = <span class="hljs-literal">false</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-53">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-53">&#182;</a>
+              </div>
+              <p>For each sequenced elemenet, let’s check visibility and if
+any are visible, set it’s sequence to active.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; sequence.elemIds.length; i++) {
+                    elemId = sequence.elemIds[i]
+                    elem   = sr.store.elements[elemId];
+                    <span class="hljs-keyword">if</span> (_isElemVisible(elem) &amp;&amp; !active) {
+                        active = <span class="hljs-literal">true</span>;
+                    }
+                }
+
+                sequence.active = active;
+            });
+        }
+
+
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_animate</span>(<span class="hljs-params"></span>) </span>{
+
+            <span class="hljs-keyword">var</span>
+                delayed,
+                elem;
+
+            _setActiveSequences();</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-54">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-54">&#182;</a>
+              </div>
+              <p>Loop through all elements in the store</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            sr.tools.forOwn(sr.store.elements, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">elemId</span>) </span>{
+
+                elem = sr.store.elements[elemId];
+                delayed = _shouldUseDelay(elem);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-55">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-55">&#182;</a>
+              </div>
+              <p>Let’s see if we should reveal, and if so, whether to use delay.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>                <span class="hljs-keyword">if</span> (_shouldReveal(elem)) {
+                    <span class="hljs-keyword">if</span> (delayed) {
+                        elem.domEl.setAttribute(<span class="hljs-string">'style'</span>,
+                            elem.styles.inline
+                          + elem.styles.transform.target
+                          + elem.styles.transition.delayed
+                        );
+                    } <span class="hljs-keyword">else</span> {
+                        elem.domEl.setAttribute(<span class="hljs-string">'style'</span>,
+                            elem.styles.inline
+                          + elem.styles.transform.target
+                          + elem.styles.transition.instant
+                        );
+                    }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-56">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-56">&#182;</a>
+              </div>
+              <p>Let’s queue the <code>afterReveal</code> callback and tag the element.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>                    _queueCallback(<span class="hljs-string">'reveal'</span>, elem, delayed);
+                    elem.revealing = <span class="hljs-literal">true</span>;
+                    elem.seen = <span class="hljs-literal">true</span>;
+
+                    <span class="hljs-keyword">if</span> (elem.sequence) {
+                        _queueNextInSequence(elem, delayed);
+                    }
+                }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-57">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-57">&#182;</a>
+              </div>
+              <p>If we got this far our element shouldn’t reveal, but should it reset?</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>                <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (_shouldReset(elem)) {
+                    elem.domEl.setAttribute(<span class="hljs-string">'style'</span>,
+                        elem.styles.inline
+                      + elem.styles.transform.initial
+                      + elem.styles.transition.instant
+                    );
+                    _queueCallback(<span class="hljs-string">'reset'</span>, elem);
+                    elem.revealing = <span class="hljs-literal">false</span>;
+                }
+            });
+        }
+
+
+
+        <span class="hljs-comment">/**
+         * Sequence callback that triggers the next element.
+         */</span>
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_queueNextInSequence</span>(<span class="hljs-params">elem, delayed</span>) </span>{
+
+            <span class="hljs-keyword">var</span>
+                elapsed  = <span class="hljs-number">0</span>,
+                delay    = <span class="hljs-number">0</span>,
+                sequence = sr.sequences[elem.sequence.id];</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-58">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-58">&#182;</a>
+              </div>
+              <p>We’re processing a sequenced element, so let’s block other elements in this sequence.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            sequence.blocked = <span class="hljs-literal">true</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-59">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-59">&#182;</a>
+              </div>
+              <p>Since we’re triggering animations a part of a sequence after animations on first load,
+we need to check for that condition and explicitly add the delay to our timer.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">if</span> (delayed &amp;&amp; elem.config.useDelay == <span class="hljs-string">'onload'</span>) {
+                delay = elem.config.delay;
+            }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-60">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-60">&#182;</a>
+              </div>
+              <p>If a sequence timer is already running, capture the elapsed time and clear it.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">if</span> (elem.sequence.timer) {
+                elapsed = <span class="hljs-built_in">Math</span>.abs(elem.sequence.timer.started - <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>());
+                <span class="hljs-built_in">window</span>.clearTimeout(elem.sequence.timer);
+            }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-61">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-61">&#182;</a>
+              </div>
+              <p>Start a new timer.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            elem.sequence.timer = { <span class="hljs-attr">started</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>() };
+            elem.sequence.timer.clock = <span class="hljs-built_in">window</span>.setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-62">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-62">&#182;</a>
+              </div>
+              <p>Sequence interval has passed, so unblock the sequence and re-run the handler.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>                sequence.blocked = <span class="hljs-literal">false</span>;
+                elem.sequence.timer = <span class="hljs-literal">null</span>;
+                _handler();
+
+            }, <span class="hljs-built_in">Math</span>.abs(sequence.interval) + delay - elapsed);
+        }
+
+
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_queueCallback</span>(<span class="hljs-params">type, elem, delayed</span>) </span>{
+
+            <span class="hljs-keyword">var</span>
+                elapsed  = <span class="hljs-number">0</span>,
+                duration = <span class="hljs-number">0</span>,
+                callback = <span class="hljs-string">'after'</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-63">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-63">&#182;</a>
+              </div>
+              <p>Check which callback we’re working with.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">switch</span> (type) {
+
+                <span class="hljs-keyword">case</span> <span class="hljs-string">'reveal'</span>:
+                    duration = elem.config.duration;
+                    <span class="hljs-keyword">if</span> (delayed) {
+                        duration += elem.config.delay;
+                    }
+                    callback += <span class="hljs-string">'Reveal'</span>;
+                    <span class="hljs-keyword">break</span>
+
+                <span class="hljs-keyword">case</span> <span class="hljs-string">'reset'</span>:
+                    duration = elem.config.duration;
+                    callback += <span class="hljs-string">'Reset'</span>;
+                    <span class="hljs-keyword">break</span>
+            }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-64">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-64">&#182;</a>
+              </div>
+              <p>If a timer is already running, capture the elapsed time and clear it.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">if</span> (elem.timer) {
+                elapsed = <span class="hljs-built_in">Math</span>.abs(elem.timer.started - <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>());
+                <span class="hljs-built_in">window</span>.clearTimeout(elem.timer.clock);
+            }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-65">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-65">&#182;</a>
+              </div>
+              <p>Start a new timer.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            elem.timer = { <span class="hljs-attr">started</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>() };
+            elem.timer.clock = <span class="hljs-built_in">window</span>.setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-66">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-66">&#182;</a>
+              </div>
+              <p>The timer completed, so let’s fire the callback and null the timer.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>                elem.config[callback](elem.domEl);
+                elem.timer = <span class="hljs-literal">null</span>;
+
+            }, duration - elapsed);
+        }
+
+
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_shouldReveal</span>(<span class="hljs-params">elem</span>) </span>{
+            <span class="hljs-keyword">if</span> (elem.sequence) {
+                <span class="hljs-keyword">var</span> sequence = sr.sequences[elem.sequence.id];
+                <span class="hljs-keyword">return</span> sequence.active
+                    &amp;&amp; !sequence.blocked
+                    &amp;&amp; !elem.revealing
+                    &amp;&amp; !elem.disabled
+            }
+            <span class="hljs-keyword">return</span> _isElemVisible(elem)
+                &amp;&amp; !elem.revealing
+                &amp;&amp; !elem.disabled
+        }
+
+
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_shouldUseDelay</span>(<span class="hljs-params">elem</span>) </span>{
+            <span class="hljs-keyword">var</span> config = elem.config.useDelay;
+            <span class="hljs-keyword">return</span> config === <span class="hljs-string">'always'</span>
+                || (config === <span class="hljs-string">'onload'</span> &amp;&amp; !sr.initialized)
+                || (config === <span class="hljs-string">'once'</span> &amp;&amp; !elem.seen)
+        }
+
+
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_shouldReset</span>(<span class="hljs-params">elem</span>) </span>{
+            <span class="hljs-keyword">if</span> (elem.sequence) {
+                <span class="hljs-keyword">var</span> sequence = sr.sequences[elem.sequence.id];
+                <span class="hljs-keyword">return</span> !sequence.active
+                    &amp;&amp; elem.config.reset
+                    &amp;&amp; elem.revealing
+                    &amp;&amp; !elem.disabled
+            }
+            <span class="hljs-keyword">return</span> !_isElemVisible(elem)
+                &amp;&amp; elem.config.reset
+                &amp;&amp; elem.revealing
+                &amp;&amp; !elem.disabled
+        }
+
+
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_getContainer</span>(<span class="hljs-params">container</span>) </span>{
+            <span class="hljs-keyword">return</span> {
+                <span class="hljs-attr">width</span>  : container.clientWidth,
+                <span class="hljs-attr">height</span> : container.clientHeight
+            }
+        }
+
+
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_getScrolled</span>(<span class="hljs-params">container</span>) </span>{</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-67">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-67">&#182;</a>
+              </div>
+              <p>Return the container scroll values, plus the its offset.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">if</span> (container &amp;&amp; container !== <span class="hljs-built_in">window</span>.document.documentElement) {
+                <span class="hljs-keyword">var</span> offset = _getOffset(container);
+                <span class="hljs-keyword">return</span> {
+                    <span class="hljs-attr">x</span> : container.scrollLeft + offset.left,
+                    <span class="hljs-attr">y</span> : container.scrollTop  + offset.top
+                }
+            }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-68">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-68">&#182;</a>
+              </div>
+              <p>Otherwise, default to the window object’s scroll values.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">else</span> {
+                <span class="hljs-keyword">return</span> {
+                    <span class="hljs-attr">x</span> : <span class="hljs-built_in">window</span>.pageXOffset,
+                    <span class="hljs-attr">y</span> : <span class="hljs-built_in">window</span>.pageYOffset
+                }
+            }
+        }
+
+
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_getOffset</span>(<span class="hljs-params">domEl</span>) </span>{
+
+            <span class="hljs-keyword">var</span>
+                offsetTop    = <span class="hljs-number">0</span>,
+                offsetLeft   = <span class="hljs-number">0</span>,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-69">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-69">&#182;</a>
+              </div>
+              <p>Grab the element’s dimensions.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>                offsetHeight = domEl.offsetHeight,
+                offsetWidth  = domEl.offsetWidth;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-70">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-70">&#182;</a>
+              </div>
+              <p>Now calculate the distance between the element and its parent, then
+again for the parent to its parent, and again etc… until we have the
+total distance of the element to the document’s top and left origin.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">do</span> {
+                <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">isNaN</span>(domEl.offsetTop)) {
+                    offsetTop += domEl.offsetTop;
+                }
+                <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">isNaN</span>(domEl.offsetLeft)) {
+                    offsetLeft += domEl.offsetLeft;
+                }
+            } <span class="hljs-keyword">while</span> (domEl = domEl.offsetParent);
+
+            <span class="hljs-keyword">return</span> {
+                <span class="hljs-attr">top</span>    : offsetTop,
+                <span class="hljs-attr">left</span>   : offsetLeft,
+                <span class="hljs-attr">height</span> : offsetHeight,
+                <span class="hljs-attr">width</span>  : offsetWidth
+            }
+        }
+
+
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_isElemVisible</span>(<span class="hljs-params">elem</span>) </span>{
+
+            <span class="hljs-keyword">var</span>
+                offset     = _getOffset(elem.domEl),
+                container  = _getContainer(elem.config.container),
+                scrolled   = _getScrolled(elem.config.container),
+                vF         = elem.config.viewFactor,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-71">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-71">&#182;</a>
+              </div>
+              <p>Define the element geometry.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>                elemHeight = offset.height,
+                elemWidth  = offset.width,
+                elemTop    = offset.top,
+                elemLeft   = offset.left,
+                elemBottom = elemTop  + elemHeight,
+                elemRight  = elemLeft + elemWidth;
+
+            <span class="hljs-keyword">return</span> confirmBounds() || isPositionFixed()
+
+            <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">confirmBounds</span>(<span class="hljs-params"></span>) </span>{
+
+                <span class="hljs-keyword">var</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-72">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-72">&#182;</a>
+              </div>
+              <p>Define the element’s functional boundaries using its view factor.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>                    top        = elemTop    + elemHeight * vF,
+                    left       = elemLeft   + elemWidth  * vF,
+                    bottom     = elemBottom - elemHeight * vF,
+                    right      = elemRight  - elemWidth  * vF,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-73">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-73">&#182;</a>
+              </div>
+              <p>Define the container functional boundaries using its view offset.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>                    viewTop    = scrolled.y + elem.config.viewOffset.top,
+                    viewLeft   = scrolled.x + elem.config.viewOffset.left,
+                    viewBottom = scrolled.y - elem.config.viewOffset.bottom + container.height,
+                    viewRight  = scrolled.x - elem.config.viewOffset.right  + container.width;
+
+                <span class="hljs-keyword">return</span> top    &lt; viewBottom
+                    &amp;&amp; bottom &gt; viewTop
+                    &amp;&amp; left   &gt; viewLeft
+                    &amp;&amp; right  &lt; viewRight
+            }
+
+            <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isPositionFixed</span>(<span class="hljs-params"></span>) </span>{
+                <span class="hljs-keyword">return</span> (<span class="hljs-built_in">window</span>.getComputedStyle(elem.domEl).position === <span class="hljs-string">'fixed'</span>)
+            }
+        }
+
+
+
+        <span class="hljs-keyword">return</span> ScrollReveal
+
+    })();
+
+
+    <span class="hljs-comment">/**
+     * helper.tools.js
+     * ---------------
+     * Simple deep object extend, and a few other agnostic helper methods.
+     * gist: https://gist.github.com/jlmakes/9f104e3f1b4d86334987
+     */</span>
+
+    Tools = (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+
+        Tools.prototype.isObject = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">object</span>) </span>{
+            <span class="hljs-keyword">return</span> object !== <span class="hljs-literal">null</span> &amp;&amp; <span class="hljs-keyword">typeof</span> object === <span class="hljs-string">'object'</span> &amp;&amp; object.constructor == <span class="hljs-built_in">Object</span>
+        };
+
+        Tools.prototype.isNode = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">object</span>) </span>{
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">typeof</span> Node === <span class="hljs-string">'object'</span>
+                ? object <span class="hljs-keyword">instanceof</span> Node
+                : object &amp;&amp; <span class="hljs-keyword">typeof</span> object === <span class="hljs-string">'object'</span>
+                         &amp;&amp; <span class="hljs-keyword">typeof</span> object.nodeType === <span class="hljs-string">'number'</span>
+                         &amp;&amp; <span class="hljs-keyword">typeof</span> object.nodeName === <span class="hljs-string">'string'</span>
+        };
+
+        Tools.prototype.forOwn = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">object, callback</span>) </span>{
+            <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.isObject(object)) {
+                <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">'Expected "object", but received "'</span> + <span class="hljs-keyword">typeof</span> object + <span class="hljs-string">'".'</span>);
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> property <span class="hljs-keyword">in</span> object) {
+                    <span class="hljs-keyword">if</span> (object.hasOwnProperty(property)) {
+                        callback(property);
+                    }
+                }
+            }
+        };
+
+        Tools.prototype.extend = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">target, source</span>) </span>{
+            <span class="hljs-keyword">this</span>.forOwn(source, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">property</span>) </span>{
+                <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.isObject(source[property])) {
+                    <span class="hljs-keyword">if</span> (!target[property] || !<span class="hljs-keyword">this</span>.isObject(target[property])) {
+                        target[property] = {};
+                    }
+                    <span class="hljs-keyword">this</span>.extend(target[property], source[property]);
+                } <span class="hljs-keyword">else</span> {
+                    target[property] = source[property];
+                }
+            }.bind(<span class="hljs-keyword">this</span>));
+            <span class="hljs-keyword">return</span> target
+        };
+
+        Tools.prototype.extendClone = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">target, source</span>) </span>{
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.extend(<span class="hljs-keyword">this</span>.extend({}, target), source)
+        };
+
+        Tools.prototype.isMobile = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">return</span> <span class="hljs-regexp">/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i</span>.test(navigator.userAgent)
+        };
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Tools</span>(<span class="hljs-params"></span>) </span>{};
+        <span class="hljs-keyword">return</span> Tools
+
+    })();
+
+
+
+    _requestAnimationFrame = <span class="hljs-built_in">window</span>.requestAnimationFrame       ||
+                             <span class="hljs-built_in">window</span>.webkitRequestAnimationFrame ||
+                             <span class="hljs-built_in">window</span>.mozRequestAnimationFrame;
+
+
+
+}).call(<span class="hljs-keyword">this</span>);
+
+<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.ScrollReveal;
+
+}));</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>
