@@ -1,0 +1,7 @@
+project/*
+otherResource/*
+node_modules/*
+fonts/*
+font-awesome-4.7.0/*
+js/*
+flow-typed/*

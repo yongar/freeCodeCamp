@@ -1,7 +1,7 @@
 {
   "name": "freecodecamp",
   "version": "1.0.0",
-  "description": "",
+  "description": "Yong Choi main repository for freecodecamp projects/homeworks",
   "main": "index.js",
   "scripts": {
     "start": "node javascript.js",
@@ -9,10 +9,11 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "devDependencies": {
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-import": "^2.2.0",
     "flow-bin": "^0.40.0"
   }
 }

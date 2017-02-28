@@ -4,74 +4,41 @@
 		"selected_items":
 		[
 			[
-				"col-md-off",
-				"col-md-offset-4\t bootstrap.min.css"
-			],
-			[
-				"well",
-				"well-lg\t bootstrap.min.css"
-			],
-			[
-				"charcode",
-				"charcode"
-			],
-			[
-				"font",
-				"font-style"
-			],
-			[
-				"toUpp",
-				"toUpperCase(): string\tNativeScript - String"
-			],
-			[
-				"char",
-				"charAt( pos: int ): string\tString"
-			],
-			[
 				"fun",
 				"function"
 			],
 			[
-				"con",
-				"console.log()"
+				"for",
+				"for\tfor (…) {…}"
+			],
+			[
+				"index",
+				"indexOf( searchElement: any, fromIndex?: int ): int\tArray"
+			],
+			[
+				"inde",
+				"indexOf( searchString: string, position?: int ): int\tString"
+			],
+			[
+				"toupp",
+				"toUpperCase(): string\tString"
+			],
+			[
+				"rep",
+				"replace( searchValue: string, replaceValue: string ): string\tString"
+			],
+			[
+				"match",
+				"match( regexp: any ): Array\tString"
 			],
 			[
 				"cons",
-				"console.log()"
-			],
-			[
-				"cont",
-				"contacts"
-			],
-			[
-				"first",
-				"firstName"
-			],
-			[
-				"consol",
 				"console.log()"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"contents": "\nExpected vs actual record\tService\tProtocol\tPort\tWeight\tPriority\tTTL\tName\tTarget\tStatus\n  Expected record\t _sip\t _tls\t 443\t 1\t 100\t 3600\t @\t sipdir.online.lync.com\tCorrect\n  Expected record\t _sipfederationtls\t _tcp\t 5061\t 1\t 100\t 3600\t @\t sipfed.online.lync.com\tThe record we detected doesn't match the expected value\n Actual record\t _sipfederationtls\t _tcp\t 5061\t 1\t 100\t 3600\t @\t sipdir.online.lync.com\tInvalid entry\n",
-			"settings":
-			{
-				"buffer_size": 419,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "project/bootstrap/index.html",
-			"settings":
-			{
-				"buffer_size": 17745,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -80,24 +47,12 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 227.0,
-		"last_filter": "insta",
+		"height": 392.0,
+		"last_filter": "pac",
 		"selected_items":
 		[
 			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
-				"remove",
-				"Package Control: Remove Package"
-			],
-			[
-				"package",
-				"Package Control: Remove Package"
-			],
-			[
-				"instal",
+				"pac",
 				"Package Control: Install Package"
 			],
 			[
@@ -105,15 +60,19 @@
 				"Package Control: Install Package"
 			],
 			[
+				"ins",
+				"Indexing Status"
+			],
+			[
 				"",
 				"Package Control: Install Package"
 			]
 		],
-		"width": 417.0
+		"width": 521.0
 	},
 	"console":
 	{
-		"height": 202.0,
+		"height": 0.0,
 		"history":
 		[
 		]
@@ -129,80 +88,35 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/yongar/freecodecampprojectsforyong",
-		"/Users/yongar/freecodecampprojectsforyong/project",
-		"/Users/yongar/freecodecampprojectsforyong/project/bootstrap",
-		"/Users/yongar/freecodecampprojectsforyong/project/bootstrap/js",
-		"/Users/yongar/freecodecampprojectsforyong/vendor"
+		"/Users/yongar/freeCodeCamp"
 	],
 	"file_history":
 	[
-		"/Users/yongar/.bash_profile",
-		"/Users/yongar/freecodecampprojectsforyong/project/bootstrap/index.html",
-		"/Users/yongar/Downloads/Ascii Art.alfredsnippets",
-		"/Users/yongar/freecodecampprojectsforyong/index.html",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
-		"/Users/yongar/freecodecampprojectsforyong/randomWikiArticlier.html",
-		"/Users/yongar/freecodecampprojectsforyong/project/bootstrap/js/creative.js",
-		"/usr/local/etc/nginx/nginx.conf",
-		"/Users/yongar/freecodecampprojectsforyong/www.yongar.xyz_2017-02-18_10-19-10.report.html",
-		"/Users/yongar/freecodecampprojectsforyong/project/randomQoute/css/randomQuote.css",
-		"/Users/yongar/freecodecampprojectsforyong/project/randomQoute/index.html",
-		"/Users/yongar/Documents/BTTSetting",
-		"/Users/yongar/freecodecampprojectsforyong/gitDone.sh",
-		"/Users/yongar/freecodecampprojectsforyong/project/bootstrap/img/portfolio/thumbnails/3.jpg",
-		"/Users/yongar/freecodecampprojectsforyong/.git/MERGE_MSG",
-		"/Users/yongar/freecodecampprojectsforyong/index.php",
-		"/Users/yongar/freecodecampprojectsforyong/analyticstracking.php",
-		"/Users/yongar/freecodecampprojectsforyong/excercise/arrayMap.ts",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/Compare Side-By-Side/SBSCompare.sublime-settings",
-		"/Users/yongar/bashprofile/.bash_profile",
-		"/Users/yongar/freecodecampprojectsforyong/helloWorld.js",
-		"/Users/yongar/freecodecampprojectsforyong/excercise/getIntexToIns.js",
-		"/Users/yongar/freecodecampprojectsforyong/excercise/rot13.js",
-		"/Users/yongar/freecodecampprojectsforyong/ajax/clickEvent.html",
-		"/Users/yongar/freecodecampprojectsforyong/destroyer.js",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/Markdown (Standard).sublime-settings",
+		"/Users/yongar/freeCodeCamp/README.md",
+		"/Users/yongar/freeCodeCamp/readme.md",
+		"/Users/yongar/freeCodeCamp/destroyer.js",
 		"/Users/yongar/.hyper.js",
-		"/Users/yongar/freecodecampprojectsforyong/first_server.js",
-		"/Users/yongar/freecodecampprojectsforyong/prop_check.js",
-		"/Users/yongar/freecodecampprojectsforyong/largestOfFour.js",
-		"/Users/yongar/freecodecampprojectsforyong/titleCase.js",
-		"/Users/yongar/Google Drive/Consulting Info/ReadyPac/Formating the Input variables.txt",
-		"/Users/yongar/freecodecampprojectsforyong/findLongestWord.js",
-		"/Users/yongar/Library/Mobile Documents/com~apple~CloudDocs/Email Signature/CorningEmailSignature.html",
-		"/Users/yongar/googleChromium",
-		"/Applications/Chromium.app/Contents/Info.plist",
-		"/Users/yongar/freecodecampprojectsforyong/factorialize.js",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/ESLint.sublime-settings",
-		"/Users/yongar/freecodecampprojectsforyong/arrayMap.js",
-		"/Users/yongar/freecodecampprojectsforyong/arrayReduce.js",
-		"/Users/yongar/freecodecampprojectsforyong/arraySort.js",
-		"/Users/yongar/freecodecampprojectsforyong/reverseString.js",
-		"/Users/yongar/.eslintrc.js",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/ESLint/ESLint.sublime-settings",
-		"/Users/yongar/freecodecampprojectsforyong/randomNumber.js",
-		"/Users/yongar/ehostssh.sh",
-		"/Users/yongar/freecodecampprojectsforyong/prop.js",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/GoTools.sublime-settings",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/GoTools/GoTools.sublime-settings",
-		"/Users/yongar/Downloads/bookmarks_2_1_17.html",
-		"/Users/yongar/freecodecampprojectsforyong/blackJackCardCounting.js",
-		"/Users/yongar/bashprofile/.git/MERGE_MSG",
-		"/Users/yongar/freecodecampprojectsforyong/.gitignore",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/Side Bar.sublime-settings",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/CSS Extended Completions/css_style_completions.sublime-settings",
-		"/Users/yongar/freecodecampprojectsforyong/FreeCodeCamp.sublime-project",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/css_style_completions.sublime-settings",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/bh_core.sublime-settings",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/BracketHighlighter/bh_core.sublime-settings",
+		"/Users/yongar/freeCodeCamp/slasher.js",
+		"/Users/yongar/freeCodeCamp/bouncer.js",
+		"/Users/yongar/freeCodeCamp/mutation.js",
+		"/Users/yongar/freeCodeCamp/confirmEnding.js",
+		"/Users/yongar/freeCodeCamp/repeatStringNumTimes.js",
+		"/Users/yongar/freeCodeCamp/truncateString.js",
+		"/Users/yongar/freeCodeCamp/chunkArrayInGroup.js",
+		"/Users/yongar/freeCodeCamp/titleCase.js",
+		"/Users/yongar/freeCodeCamp/.git/COMMIT_EDITMSG",
+		"/Users/yongar/freeCodeCamp/.gitignore",
+		"/Users/yongar/.gitconfig",
+		"//titleCase.js",
 		"/Users/yongar/freecodecampprojectsforyong/freeCodeCampJS.js",
+		"/Users/yongar/freecodecampprojectsforyong/project/bootstrap/index.html",
+		"/Users/yongar/freecodecampprojectsforyong/index.php",
 		"/Users/yongar/freecodecampprojectsforyong/freeCodeCamp.sublime-project"
 	],
 	"find":
 	{
-		"height": 43.0
+		"height": 28.0
 	},
 	"find_in_files":
 	{
@@ -216,8 +130,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"cal",
-			"open"
+			");\n"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -235,237 +148,18 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 419,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								419,
-								419
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content"
-							],
-							"default_dir": "/Users/yongar/freecodecampprojectsforyong",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "project/bootstrap/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 17745,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								13656,
-								13656
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": "<",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								}
-							],
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content"
-							],
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 7106.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 34.0
+		"height": 28.0
 	},
 	"input":
 	{
-		"height": 42.0
+		"height": 36.0
 	},
 	"layout":
 	{
@@ -490,18 +184,6 @@
 		]
 	},
 	"menu_visible": true,
-	"output.CSS Extended Completions":
-	{
-		"height": 0.0
-	},
-	"output.doc":
-	{
-		"height": 0.0
-	},
-	"output.exec":
-	{
-		"height": 166.0
-	},
 	"output.find_results":
 	{
 		"height": 0.0
@@ -510,7 +192,7 @@
 	"project": "FreeCodeCamp.sublime-project",
 	"replace":
 	{
-		"height": 64.0
+		"height": 52.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -528,10 +210,6 @@
 		"last_filter": "",
 		"selected_items":
 		[
-			[
-				"",
-				"~/freecodecampprojectsforyong/FreeCodeCamp.sublime-project"
-			]
 		],
 		"width": 380.0
 	},
@@ -552,7 +230,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 317.0,
+	"side_bar_width": 251.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
