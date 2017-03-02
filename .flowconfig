@@ -1,6 +1,9 @@
 [ignore]
-
+project/.*
+js/.*
+node_modules/.*
 [include]
+/excercise/*.js
 
 [libs]
 

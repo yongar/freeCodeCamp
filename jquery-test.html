@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Test</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/start/jquery-ui.min.css"/>
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="/css/styles.css" />
+<script src="/scripts/jquery.js"></script>
+<script type="text/javascript">
+$(documnet).ready({
+  $("#datepicker").datepicker();
+});
+
+function myAjaxHander (text) {
+    alert("hello " + text );
+}
+  $.ajax({url: "date.php", success: myAjaxHander, cache: "false"});
+  function showAlert(text){
+    alert("hello world" + text);
+  }
+</script>
+</head>
+<body>
+<h1 class="title" onclick="myAjaxHnder('hello');">jQuery Test</h1>
+<div id="main-div">
+<br/>
+<h1 class="yellow">This is an h1 (class="yellow")</h1>
+<h1>This is another h1</h1>
+<h2 class="red">This is an h2 (class="red")</h2>
+<h2>This is another h2</h2>
+<h3 class="green">This is an h3 (class="green")</h3>
+<h3>This is another h3</h3>
+<h4>Date: <Input type="text" id="datepicker"></Input></h4>
+<button class="btn" onclick="showAlert();">Show Alert</button>
+<ul>
+  <li>ul entry 1</li>
+  <li>ul entry 2</li>
+  <li>
+    <ul>
+      <li>Nested ul entry</li>
+      <li>Another nested ul entry</li>
+    </ul>
+  </li>
+  <li>
+    <ol>
+      <li>Nested ol entry</li>
+      <li>Another nested ol entry</li>
+    </ol>
+  </li>
+</ul>
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
+<font size="-2">
+From the
+<a href="http://www.coreservlets.com/javascript-jquery-tutorial/">
+coreservlets.com JavaScript and jQuery tutorial</a>
+</font>
+</div></body></html>
