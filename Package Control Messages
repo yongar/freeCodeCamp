@@ -1,0 +1,41 @@
+Package Control Messages
+========================
+
+SublimeLinter-jshint
+--------------------
+
+  SublimeLinter-jshint
+  -------------------------------
+  This linter plugin for SublimeLinter provides an interface to jshint.
+  
+  ** IMPORTANT! **
+  
+  Before this plugin will activate, you *must*
+  follow the installation instructions here:
+  
+  https://github.com/SublimeLinter/SublimeLinter-jshint
+
+
+SublimeLinter-json
+------------------
+
+  SublimeLinter-json
+  -------------------------------
+  This linter plugin for SublimeLinter provides an interface to json.
+  
+  For more information, please see https://github.com/SublimeLinter/SublimeLinter-json.
+
+
+SublimeLinter-php
+-----------------
+
+  SublimeLinter-php
+  -------------------------------
+  This linter plugin for SublimeLinter provides an interface to php -l.
+  
+  ** IMPORTANT! **
+  
+  Before this plugin will activate, you *must*
+  follow the installation instructions here:
+  
+  https://github.com/SublimeLinter/SublimeLinter-php

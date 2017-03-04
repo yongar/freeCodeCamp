@@ -20,6 +20,24 @@
 
 <script type="text/javascript">
 
+
+$(document).ready(function() {
+  getChannelInfo();
+  $(".selector").click(function() {
+    $(".selector").removeClass("active");
+    $(this).addClass("active");
+    var status = $(this).attr('id');
+    if (status === "all") {
+      $(".online, .offline").removeClass("hidden");
+    } else if (status === "online") {
+      $(".online").removeClass("hidden");
+      $(".offline").addClass("hidden");
+    } else {
+      $(".offline").removeClass("hidden");
+      $(".online").addClass("hidden");
+    }
+  })
+});
 $(document).ready(function() {
 	getChannelInfo();
 	$(".selector").click(function() {
