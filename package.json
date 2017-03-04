@@ -11,10 +11,8 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "eslint": "^3.16.1",
-    "eslint-config-airbnb-base": "^11.1.0",
-    "eslint-plugin-import": "^2.2.0",
     "flow-bin": "^0.40.0",
-    "jshint": "^2.9.4"
+    "jshint": "^2.9.4",
+    "luxbar": "^0.3.2"
   }
 }
