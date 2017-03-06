@@ -1,65 +1,91 @@
-<link rel="stylesheet" type="text/css" href="css/boostrap.css" />
-<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
-<link rel="stylesheet" type="text/css" href="css/icofont.css">
+<html>
 
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/twitch.js"></script>
-<style type="text/css">
-
+<head>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.css" />
+	<link rel="stylesheet" type="text/css" href="/css/icofont.css" />
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+	<style>
 	@import url(https://fonts.googleapis.com/css?family=Oswald:400,700|Droid+Serif:400,400italic);
+	$background: #ecf0e7;
+	$container: #e1e1e6;
+	$online: #b8cca6;
+	$header: #5c5457;
+	$text: #8ea7c2;
+	$offline: #4a5e82;
+	$grow: width 0.4s linear;
 
-	$background	: #ecf0e7;
-	$container	: #e1e1e6;
-	$online		: #b8cca6;
-	$header		: #5c5457;
-	$text		: #8ea7c2;
-	$offline	: #4a5e82;
-	$grow		: width 0.4s linear;
-</style>
+	</style>
+	<script>
+	$(document).ready(function() {
+		$(".panel").mouseover(function() {
+			$(this).addClass("panel-primary");
+		});
+		$(".panel").mouseout(function() {
+			$(this).removeClass("panel-primary");
+		});
+	});
 
-<script type="text/javascript">
+	</script>
+	<title>Twitch Status</title>
+</head>
 
-
-$(document).ready(function() {
-  getChannelInfo();
-  $(".selector").click(function() {
-    $(".selector").removeClass("active");
-    $(this).addClass("active");
-    var status = $(this).attr('id');
-    if (status === "all") {
-      $(".online, .offline").removeClass("hidden");
-    } else if (status === "online") {
-      $(".online").removeClass("hidden");
-      $(".offline").addClass("hidden");
-    } else {
-      $(".offline").removeClass("hidden");
-      $(".online").addClass("hidden");
-    }
-  })
-});
-$(document).ready(function() {
-	getChannelInfo();
-	$(".selector").click(function() {
-		$(".selector").removeClass("active");
-		$(this).addClass("active");
-		var status = $(this).attr('id');
-		if (status === "all") {
-			$(".online, .offline").removeClass("hidden");
-	    } else if (status === "online") {
-	      	$(".online").removeClass("hidden");
-	      	$(".offline").addClass("hidden");
-	    } else {
-	      	$(".offline").removeClass("hidden");
-	      	$(".online").addClass("hidden");
-	    }
-	 })
-});
-</script>
-
-<div class="container">
-	<div class="row">
-
-
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<div class="navbar-brand">
+					<a href="#">
+						<img src="project/bootstrap/img/YC_MarkOnly_Ychoi5%20Square.png" height="20" width="20">						Yong Choi . Name </a>
+				</div>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active">
+					<A href="#">Home</A>
+				</li>
+				<li>
+					<a href="#twitch">Twtich Status</a>
+				</li>
+			</ul>
+			<ul class="navbar nav navbar-nav navbar-right">
+				<li class="diabled"><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+				<li>
+					<a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row" anchor="twitch">
+			<div class="col-LG-12"></div>
+			<div class="text-center">Twtich.tv Status</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel" id="freeCodeCamp">
+					<div class="panel-heading">Free Code Camp</div>
+					<div class="panel-body">This is </div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 ">
+				<div class="panel" id="Starcraft">
+					<div class="panel-heading">Starcraft</div>
+					<div class="panel-body">and its statud</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 ">
+				<div class="panel" id="other">
+					<div class="panel-heading">other</div>
+					<div class="panel-body">and its statud</div>
+				</div>
+			</div>
+		</div>
 	</div>
-</div>
+	</div>
+</body>
+
+</html>
+

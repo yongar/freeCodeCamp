@@ -1,0 +1,33 @@
+{
+  "name": "freecodecamp",
+  "version": "1.0.0",
+  "description": "Yong Choi freeCodeCamp project folder",
+  "main": "main.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yongar/freeCodeCamp.git"
+  },
+  "keywords": [
+    "javascript",
+    "html",
+    "css",
+    "luxbar"
+  ],
+  "author": "Yong Choi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yongar/freeCodeCamp/issues"
+  },
+  "homepage": "https://github.com/yongar/freeCodeCamp#readme",
+  "devDependencies": {
+    "cordova": "^6.5.0",
+    "jshint": "^2.9.4",
+    "luxbar": "file:luxbar"
+  }
+}
