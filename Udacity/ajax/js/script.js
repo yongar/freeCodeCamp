@@ -1,18 +1,3 @@
-//require('jqeury');
-
-
-function googleMap(street, city) {
-    var $body = $('body');
-    //    var location = "41.01322,-73.8806408,19z";
-    var location = street + city;
-    var googleURL =
-        "http://maps.googleapis.com/maps/api/streetview?size=600x300&location=";
-    var imgSrc = googleURL + location;
-    $body.append("<img src='" + imgSrc + "'>");
-    return true;
-    //http://maps.googleapis.com/maps/api/streetview?size=600x300&location=foxwoodDr+oakpark,ca
-}
-
 function loadData() {
     var $body = $('body');
     var $wikiElem = $('#wikipedia-links');
@@ -23,15 +8,21 @@ function loadData() {
     // clear out old data before new request
     $wikiElem.text("");
     $nytElem.text("");
-    var $city = $("#city").val();
-    var $street = $("#street").val();
+    var cityStr = $("#city").val();
+    var streetStr = $("#street").val();
+    var address = streetStr + ', ' + cityStr;
+    $greeting.text('So you want live at ' + address);
+
+    var streetviewURL =
+        'http://maps.googleapis.com/maps/api/streetview?size=600x400&location=' +
+        address + '?';
 
     // load streetview
-    $body.append('<h1> hello </h1>');
-    //googleMap();
-    $body.append("<h1> street " + $street + " city " + $city + "</h1>");
-    googleMap($street, $city);
 
+    $body.append('<img class="bgimg" src="' + streetviewURL + '">');
+    $body.append('<h1> hello </h1>');
+
+    $body.append("<h1> street " + streetStr + " city " + cityStr + "</h1>");
 
     return false;
 }
