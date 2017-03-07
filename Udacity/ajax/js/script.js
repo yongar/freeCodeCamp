@@ -26,18 +26,18 @@ function loadData() {
 
     // NYTimes
     var NYtimeURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
-    // NYtimeURL += '?' + $.param({
-    //     'api-key': "539fa440bd66440683259b5feb7b8c12",
-    //     'q': address
-    // });
-    // $.ajax({
-    //     url: NYtimeURL,
-    //     method: 'GET',
-    // }).done(function (result) {
-    //     console.log(result);
-    // }).fail(function (err) {
-    //     throw err;
-    // });
+    NYtimeURL += '?' + $.param({
+        'api-key': "539fa440bd66440683259b5feb7b8c12",
+        'q': address
+    });
+    $.ajax({
+        url: NYtimeURL,
+        method: 'GET',
+    }).done(function (result) {
+        console.log(result);
+    }).fail(function (err) {
+        throw err;
+    });
 
 
     $.getJSON(NYtimeURL, function (data) {
