@@ -24,6 +24,26 @@ function loadData() {
 
     $body.append("<h1> street " + streetStr + " city " + cityStr + "</h1>");
 
+    // NYTimes
+    var NYtimeURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+    // NYtimeURL += '?' + $.param({
+    //     'api-key': "539fa440bd66440683259b5feb7b8c12",
+    //     'q': address
+    // });
+    // $.ajax({
+    //     url: NYtimeURL,
+    //     method: 'GET',
+    // }).done(function (result) {
+    //     console.log(result);
+    // }).fail(function (err) {
+    //     throw err;
+    // });
+
+
+    $.getJSON(NYtimeURL, function (data) {
+        console.log(data);
+    });
+
     return false;
 }
 
