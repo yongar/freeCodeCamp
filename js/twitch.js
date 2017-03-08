@@ -1,34 +1,41 @@
+var channels = ["freecodecamp", "test_channel", "ESL_SC2"];
+
+
 function getChannelInfo() {
-  channels.forEach(function(channel) {
+  channels.forEach(function (channel) {
     function makeURL(type, name) {
-      return 'https://wind-bow.gomix.me/twitch-api/' + type + '/' + name + '?callback=?';
+      return 'https://wind-bow.gomix.me/twitch-api/' + type + '/' + name +
+        '?callback=?';
     };
-    $.getJSON(makeURL("streams", channel), function(data) {
-      var game,
-          status;
+    $.getJSON(makeURL("streams", channel), function (data) {
+      var game, status;
+      console.log(data);
+      var channelID = "#" + channel;
+      console.log(channelID);
+
       if (data.stream === null) {
         game = "Offline";
         status = "offline";
+        $(channelID).addClass('panel-default');
+        $(channelID + "> div.panel-body").text(channelID + " is offline!");
+
       } else if (data.stream === undefined) {
-        game = "Account Closed";
-        status = "offline";
+        $(channelID).addClass('panel-danger');
+        $(channelID + "> div.panel-body").text(channelID + " is closed!");
       } else {
         game = data.stream.game;
         status = "online";
-      };
-      $.getJSON(makeURL("channels", channel), function(data) {
-        var logo = data.logo != null ? data.logo : "https://dummyimage.com/50x50/ecf0e7/5c5457.jpg&text=0x3F",
-          name = data.display_name != null ? data.display_name : channel,
-          description = status === "online" ? ': ' + data.status : "";
-          html = '<div class="row ' +
-          status + '"><div class="col-xs-2 col-sm-1" id="icon"><img src="' +
-          logo + '" class="logo"></div><div class="col-xs-10 col-sm-3" id="name"><a href="' +
-          data.url + '" target="_blank">' +
-          name + '</a></div><div class="col-xs-10 col-sm-8" id="streaming">'+
-          game + '<span class="hidden-xs">' +
-          description + '</span></div></div>';
-        status === "online" ? $("#display").prepend(html) : $("#display").append(html);
-      });
+        $(channelID).addClass('panel-success');
+        console.log(channelID);
+        $(channelID + "> div.panel-body").text(channelID + " is online!");
+        $(channelID + "> div.panel-body").append(
+          '<BR><a href="https://www.twitch.tv/esl_sc2">ESL_SC2</a>');
+      }; //end if
     });
   });
 };
+$(document).ready(function () {
+
+  getChannelInfo();
+
+});

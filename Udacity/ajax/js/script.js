@@ -25,23 +25,28 @@ function loadData() {
     $body.append("<h1> street " + streetStr + " city " + cityStr + "</h1>");
 
     // NYTimes
-    var NYtimeURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
-    NYtimeURL += '?' + $.param({
+    var NYtimesURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+    NYtimesURL += '?' + $.param({
         'api-key': "539fa440bd66440683259b5feb7b8c12",
-        'q': address
-    });
-    $.ajax({
-        url: NYtimeURL,
-        method: 'GET',
-    }).done(function (result) {
-        console.log(result);
-    }).fail(function (err) {
-        throw err;
+        'q': address,
+        'Access-Control-Allow-Origin': true
     });
 
 
-    $.getJSON(NYtimeURL, function (data) {
-        console.log(data);
+    $.getJSON(NYtimesURL, function (data) {
+        //        console.log(data);
+        $nytHeaderElem.text("New York Time Article about " + cityStr);
+        articles = data.response.docs;
+        for (var i = 0; i < articles.length; i++) {
+            var article = articles[i];
+            $nytElem.append('<li class="article"> ' + '<a href="' + article.web_url +
+                '" target="_blank">' + article.headline.main + '</a><br>by ' +
+                article.byline + '<br> <p>' + article.snippet + '</p>' +
+                '</li>');
+        }
+
+    }).error(function (e) {
+        $nytHeaderElem.text("does not work");
     });
 
     return false;
