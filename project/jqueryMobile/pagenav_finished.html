@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Mobile Page Navigation</title>
+<head>
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.css">
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+  <title>page nav</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <!-- Internal page that links to an external page -->
+    <section id="internalpage" data-role="page">
+        <header data-role="header">
+          <h1>External Page Linking</h1>
+        </header>
+        <div class="ui-content">
+          <p>This is page 1. There are two links: one to a page that is part of this site, one that is not.</p>
+          <p><a href="externalpage1.html">Link to an external page</a></p>
+          <p><a href="externalpage2.html" rel="external">Link to an external page outside of jQuery Mobile system</a></p>
+        </div>
+    </section>
+</body>
+</html>

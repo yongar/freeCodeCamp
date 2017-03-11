@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"re",
+				"ready\tdocument.ready - $(function(){})"
+			],
+			[
 				"art",
 				"articleStr"
 			],
@@ -103,17 +107,57 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 93.0,
-		"last_filter": "alignment",
+		"height": 392.0,
+		"last_filter": "insta",
 		"selected_items":
 		[
 			[
-				"alignment",
-				"Tag: Remove All Tags in Document"
-			],
-			[
 				"insta",
 				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"trimm",
+				"Trimmer: Normalize spaces."
+			],
+			[
+				"jquer",
+				"Snippet: Google AJAX Libraries: jQuery"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"re",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"removc",
+				"Package Control: Remove Package"
+			],
+			[
+				"tr",
+				"Trimmer: Remove blank spaces."
+			],
+			[
+				"comb",
+				"Run CSScomb"
+			],
+			[
+				"alignment",
+				"Tag: Remove All Tags in Document"
 			],
 			[
 				"show",
@@ -136,15 +180,7 @@
 				"HTMLPrettify"
 			],
 			[
-				"remove",
-				"Package Control: Remove Package"
-			],
-			[
 				"inst",
-				"Package Control: Install Package"
-			],
-			[
-				"install",
 				"Package Control: Install Package"
 			],
 			[
@@ -188,11 +224,11 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 521.0
+		"width": 593.0
 	},
 	"console":
 	{
-		"height": 0.0,
+		"height": 237.0,
 		"history":
 		[
 		]
@@ -206,20 +242,48 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/Users/yongar/freeCodeCamp",
-		"/Users/yongar/freeCodeCamp/Udacity",
-		"/Users/yongar/freeCodeCamp/Udacity/ajax/js",
-		"/Users/yongar/freeCodeCamp/Udacity/ud811",
-		"/Users/yongar/freeCodeCamp/Udacity/ud811/scripts",
-		"/Users/yongar/com-lynda/Ex_Files_Build_Prog_Web_App/Exercise Files"
-	],
 	"file_history":
 	[
-		"/Users/yongar/freeCodeCamp/voicemail greeting sample",
-		"/Users/yongar/freeCodeCamp/Udacity/ajax/js/script.js",
+		"/Users/yongar/freeCodeCamp/freeCodeCamp.sublime-project",
+		"/Applications/Aptana Studio 3/full_uninstall.txt",
+		"/Users/yongar/com-lynda/Ex_Files_jQm_EssT/ExerciseFiles/ExampleSnippets.txt",
 		"/Users/yongar/freeCodeCamp/Udacity/ajax/index.html",
+		"/Users/yongar/freeCodeCamp/gulpjs/wf/gulpfile.js",
+		"/Users/yongar/freeCodeCamp/gulpjs/wf/package.json",
+		"/Users/yongar/freeCodeCamp/Udacity/ajax/js/script.js",
+		"/Users/yongar/freeCodeCamp/gulpjs/wf/component/coffee/tagline.coffee",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/Alignment/Base File.sublime-settings",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/Base File.sublime-settings",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/JsFormat.sublime-settings",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/JsFormat/JsFormat.sublime-settings",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/CodeFormatter/CodeFormatter.sublime-settings",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/CodeFormatter.sublime-settings",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/BracketHighlighter/bh_tag.sublime-settings",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/PackageResourceViewer/PackageResourceViewer.sublime-settings",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/Tag/Tag Package.sublime-settings",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/BracketHighlighter/bh_core.sublime-settings",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/CodeFormatter/Default (OSX).sublime-keymap",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/yongar/freeCodeCamp/css/styles.css",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/JSHint Gutter/.jshintrc",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/jshintify/Jshintify.sublime-settings",
+		"/Users/yongar/freeCodeCamp/gulpjs/wf/component/scripts/tagline.js",
+		"/Users/yongar/freeCodeCamp/gulpjs/workflows/package.json",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/Gulp.sublime-settings",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/Gulp/Gulp.sublime-settings",
+		"/Users/yongar/freeCodeCamp/.gitignore",
+		"/Users/yongar/freeCodeCamp/font-awesome/version.txt",
+		"/Users/yongar/freeCodeCamp/gulpjs/wf/.gitignore",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/CoffeeComplete Plus (Autocompletion)/CoffeeComplete Plus.sublime-settings",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/CoffeeCompile/CoffeeCompile.sublime-settings",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/Nodejs/Nodejs.sublime-settings",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/CoffeeComplete Plus (Autocompletion)/CoffeeComplete Plus Built-In Types.sublime-settings",
+		"/Users/yongar/Downloads/Ex_Files_FAQs/FAQs.txt",
+		"/Users/yongar/freeCodeCamp/webapp/progressive/app/index.html",
+		"/Users/yongar/freeCodeCamp/voicemail greeting sample",
 		"/Users/yongar/freeCodeCamp/Udacity/ud811/index.html",
 		"/Users/yongar/freeCodeCamp/ud811/index.html",
 		"/Users/yongar/Downloads/Profile-20170308T130534",
@@ -233,20 +297,12 @@
 		"/Users/yongar/Downloads/twitch-status/js/twitch-status.js",
 		"/Users/yongar/freeCodeCamp/font-awesome-4.7.0/scripts/jquery.js",
 		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/bh_tag.sublime-settings",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
 		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
 		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/BracketHighlighter/bh_tag.sublime-settings",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/BracketHighlighter/bh_core.sublime-settings",
 		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/Autoprefixer/Autoprefixer.sublime-settings",
 		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/Tag Package.sublime-settings",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/Tag/Tag Package.sublime-settings",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/JSHint Gutter/.jshintrc",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
 		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/SublimeLinter/Default (OSX).sublime-keymap",
 		"/Users/yongar/Library/Application Support/Sublime Text 3/Installed Packages/SublimeLinter-jshint.sublime-package",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
 		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/BracketHighlighter/bh_wrapping.sublime-settings",
 		"/Users/yongar/freeCodeCamp/FreeCodeCamp.sublime-project",
 		"/Users/yongar/freeCodeCamp/package.json",
@@ -263,8 +319,6 @@
 		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/GutterColor.sublime-settings",
 		"/Users/yongar/freeCodeCamp/somecss.css",
 		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/Alignment/Default (OSX).sublime-keymap",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/Base File.sublime-settings",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/Alignment/Base File.sublime-settings",
 		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/Color Highlighter/Default (OSX).sublime-keymap",
 		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/Color Highlighter/ColorHighlighter.sublime-settings",
 		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/ColorHighlighter.sublime-settings",
@@ -285,7 +339,6 @@
 		"/Users/yongar/freeCodeCamp/chunkArrayInGroup.js",
 		"/Users/yongar/freeCodeCamp/titleCase.js",
 		"/Users/yongar/freeCodeCamp/.git/COMMIT_EDITMSG",
-		"/Users/yongar/freeCodeCamp/.gitignore",
 		"/Users/yongar/.gitconfig",
 		"//titleCase.js",
 		"/Users/yongar/freecodecampprojectsforyong/freeCodeCampJS.js",
@@ -309,6 +362,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"closing",
+			"<<",
 			",",
 			">\n",
 			");\n",
@@ -331,7 +386,7 @@
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
 			",\\n",
@@ -391,6 +446,10 @@
 	"output.find_results":
 	{
 		"height": 0.0
+	},
+	"output.gulp_output":
+	{
+		"height": 196.0
 	},
 	"pinned_build_system": "",
 	"project": "FreeCodeCamp.sublime-project",

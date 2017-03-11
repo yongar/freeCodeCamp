@@ -27,7 +27,9 @@
   "homepage": "https://github.com/yongar/freeCodeCamp#readme",
   "devDependencies": {
     "cordova": "^6.5.0",
+    "ios-sim": "^5.0.13",
     "jshint": "^2.9.4",
-    "luxbar": "file:luxbar"
+    "luxbar": "file:luxbar",
+    "qunitjs": "^2.1.1"
   }
 }

@@ -31,12 +31,12 @@ function loadData() {
         'q': address,
         'Access-Control-Allow-Origin': true
     });
-    var nyTimesTimeOut = setTimeout(function () {
+    var nyTimesTimeOut = setTimeout(function() {
         $nytHeaderElem.text('failed to get NYT article')
 
     })
 
-    $.getJSON(NYtimesURL, function (data) {
+    $.getJSON(NYtimesURL, function(data) {
             //        console.log(data);
             $nytHeaderElem.text("New York Time Article about " + cityStr);
             articles = data.response.docs;
@@ -51,10 +51,10 @@ function loadData() {
 
 
         })
-        .done(function () {
+        .done(function() {
             clearTimeout(nyTimesTimeOut);
         })
-        .error(function (e) {
+        .error(function(e) {
             $nytHeaderElem.text("does not work");
         });
     // Wikipedia
@@ -72,7 +72,7 @@ function loadData() {
             }
 
         })
-        .done(function (response) {
+        .done(function(response) {
             var articleList = response[1];
 
             for (var i = 0; i < articleList.length; i++) {
@@ -85,10 +85,10 @@ function loadData() {
 
 
         })
-        .fail(function () {
+        .fail(function() {
             $wikiElem.text('failed to get wikipedia articles');
         })
-        .always(function () {
+        .always(function() {
             console.log("complete");
         });
 
@@ -97,3 +97,6 @@ function loadData() {
 }
 
 $('#form-container').submit(loadData);
+$.jQuery(document).ready(function($) {
+
+});
