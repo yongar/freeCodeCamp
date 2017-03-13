@@ -4,4 +4,6 @@ $(document).ready(function() {
      $(function(){
         $( "[data-role='header'], [data-role='footer']" ).toolbar();
       });
+     alert("hello world");
 });
+
