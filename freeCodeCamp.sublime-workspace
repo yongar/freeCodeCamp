@@ -99,6 +99,20 @@
 	},
 	"buffers":
 	[
+<<<<<<< Updated upstream
+=======
+		{
+			"contents": "Package Control Messages\n========================\n\nA File Icon\n-----------\n\n  # A File Icon 3.1.0\n  \n  New release!\n  \n  Please see `Preferences → Package Settings → A File Icon → Changelog` for \n  more info about the release.\n  \n  ***\n  \n  I've put a lot of time and effort into making `A File Icon` awesome. If you love \n  it, you can [buy me a coffee](https://www.patreon.com/ihodev) ☕.\n\n\nGitGutter\n---------\n\n  1.5.1\n  -----\n  \n    Fix:\n     - Files are randomly marked as modified (Issue #381)\n     - Print error message and abort evaluation on failed git call.\n     - Improve error handling on temporary file creation (Issue #384)\n  \n    Enhancement:\n     - Hide 'Compare against ... ' current branch in status message.\n  \n    Docs:\n     - Add Boxy Theme to the list of supported\n  \n  \n  💛 Git Gutter? Want to support development?\n  \n  I've teamed up with Wes Bos to offer the following discounts:\n  \n  +------------------------------------------------+\n  |                                                |\n  |   Use the coupon code GITGUTTER for $10 off    |\n  |                                                |\n  +------------------------------------------------+\n  \n  🏅 ⭐ ES6 ⭐\n  \n  👉 ES6.io/friend/GITGUTTER\n  \n  🏅 ⭐ Sublime Text Book ⭐\n  \n  👉 SublimeTextBook.com/friend/GITGUTTER\n  \n  🏅 ⭐ React For Beginners ⭐\n  \n  👉 ReactForBeginners.com/friend/GITGUTTER\n  \n  \n  Join 15,000 other developers already learning with Wes Bos.\n  \n  These are fantastic resources - 100% money back guarantee! 🌟\n\n  1.5.0\n  -----\n  \n    ------------------------------------------------------------------------\n                !!!   WHAT HAPPEND TO GITGUTTER-EDGE   !!!\n  \n    We decided to replace GitGutter-Edge by pre-releases ...\n  \n     1. to avoid issues with functions which depend on the package name.\n     2. because branch based packages are deprecated by Package Control.\n     3. to have more control about when to publish new features for testing.\n  \n    For more details and information how to get access to pre-releases,\n    please have a look into the README on\n  \n           https://packagecontrol.io/packages/GitGutter\n  \n    ------------------------------------------------------------------------\n  \n    Enhancement:\n     - Avoid creation of temporary files, if view does not show a file from a valid git repository.\n     - Optimize number of git and diff calls.\n     - Determine, whether a view's file really exists on disk.\n     - Make \"compare to\" functionality work per git directory (Issue #327)\n     - Optimize some encoding/decoding stuff.\n     - Use jinja2 template engine to render status bar messages if library is available.\n     - Read file from git index only, if the compare target has changed.\n     - Event driven tracking of changed compare target replaces polling.\n     - Update the temporary buffer file only, if the view has changed.\n     - Run git diff only if one of the temporary files changed.\n     - Query git for compare commit hash only if not comparing against commit.\n     - Don't call git for diff popup at all.\n     - Refactoring the EventListener to best fit the current structure.\n     - Add some idle time between git calls to reduce lacks on ST2\n  \n    Feature:\n     - Add support for custom icon packages (Issue #256)\n     - Add 'Compare against file commit' and enable filtering by commit id (Issue #142, #281)\n     - Add Side-By-Side settings support and show in command pallet\n     - Add support to set marker size in minimap (Issue #263)\n     - Show file status (committed/modified/untracked/ignored) on status bar (Issue #226)\n  \n    Fix:\n     - Disable GitGutter, if git binary was not found (Issue #94, #352)\n     - Create only one instance of GitGutterSettings (Issue #334)\n     - error invoking git on Windows systems (Issue #244, #357)\n     - Fix issue with all untracked and ignored files being marked incorrectly (Issue #267, #279, #353).\n     - Show the correct branch or tag name in the 'compare against' status message.\n     - Avoid exception due to missing dependencies. (Issue #366)\n     - Fall back to simple status bar text if jinja2 is not available (Issue #366)\n     - Run all git commands from within working tree (Issue #239, #248, #290)\n     - Follow symlinks correctly to the source file in the working tree (Issue #373).\n     - diff popup doesn't show modifications on first line.\n     - Noticeable flicker/delay in icons when working with files (Issue #340)\n     - Problem with smudge/clean filters (Issue #74)\n     - Use cached git diff result for 'Goto next/prev git difference' command.\n     - Ensure not to start more than one evaluation at a time.\n     - Disable GitGutter for binary files and scratch views. (Issue #189)\n     - GitGutter ignores on_modified() event in ST2, because view visibility check fails. (Issue #349)\n     - Securing git execution. (Issue #348)\n     - Show markers on new, ignored and untracked files only, if show_markers_on_untracked_file is true.\n  \n    README:\n     - Refactoring\n",
+			"settings":
+			{
+				"buffer_size": 4982,
+				"line_ending": "Unix",
+				"name": "Package Control Messages",
+				"read_only": true,
+				"scratch": true
+			}
+		}
+>>>>>>> Stashed changes
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -107,12 +121,33 @@
 	"build_varint": "",
 	"command_palette":
 	{
+<<<<<<< Updated upstream
 		"height": 392.0,
 		"last_filter": "insta",
 		"selected_items":
 		[
 			[
 				"insta",
+=======
+		"height": 147.0,
+		"last_filter": "alignment",
+		"selected_items":
+		[
+			[
+				"alignment",
+				"Preferences: Alignment Key Bindings – Default"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+>>>>>>> Stashed changes
 				"Package Control: Install Package"
 			],
 			[
@@ -132,6 +167,7 @@
 				"Package Control: Install Package"
 			],
 			[
+<<<<<<< Updated upstream
 				"re",
 				"Package Control: Remove Package"
 			],
@@ -140,10 +176,13 @@
 				"Package Control: Install Package"
 			],
 			[
+=======
+>>>>>>> Stashed changes
 				"pack",
 				"Package Control: Install Package"
 			],
 			[
+<<<<<<< Updated upstream
 				"removc",
 				"Package Control: Remove Package"
 			],
@@ -180,10 +219,13 @@
 				"HTMLPrettify"
 			],
 			[
+=======
+>>>>>>> Stashed changes
 				"inst",
 				"Package Control: Install Package"
 			],
 			[
+<<<<<<< Updated upstream
 				"sumli",
 				"SublimeLinter: Next Error"
 			],
@@ -214,6 +256,10 @@
 			[
 				"color",
 				"SublimeLinter: Clear Color Scheme Folder"
+=======
+				"pac",
+				"Package Control: Install Package"
+>>>>>>> Stashed changes
 			],
 			[
 				"ins",
@@ -244,6 +290,7 @@
 	},
 	"file_history":
 	[
+<<<<<<< Updated upstream
 		"/Users/yongar/freeCodeCamp/freeCodeCamp.sublime-project",
 		"/Applications/Aptana Studio 3/full_uninstall.txt",
 		"/Users/yongar/com-lynda/Ex_Files_jQm_EssT/ExerciseFiles/ExampleSnippets.txt",
@@ -325,6 +372,48 @@
 		"/Users/yongar/monoFonts/.gitignore",
 		"/Users/yongar/monoFonts/list_of_fonts.txt",
 		"/Users/yongar/fonts/install.sh",
+=======
+		"/Users/yongar/freeCodeCamp/test.php",
+		"/Users/yongar/freeCodeCamp/js/twitch.js",
+		"/Users/yongar/freeCodeCamp/twitchStatus.html",
+		"/Users/yongar/.bash_profile",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/Alignment/Default (OSX).sublime-keymap",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/Emmet/Emmet.sublime-settings",
+		"/Users/yongar/freeCodeCamp/jquery-test.html",
+		"/Users/yongar/freeCodeCamp/freeCodeCamp.sublime-project",
+		"/Users/yongar/Google Drive/Consulting Info/ReadyPac/ReadyPacFiles.sublime-project",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/GutterColor.sublime-settings",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/Emmet.sublime-settings",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/GhostText/GhostText.sublime-settings",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/Gutter Color/GutterColor.sublime-settings",
+		"/Users/yongar/freeCodeCamp/jquery.html",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/Emmet/Default (OSX).sublime-keymap",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/Alignment/Base File.sublime-settings",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/Base File.sublime-settings",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/GitGutter/Default (OSX).sublime-keymap",
+		"/Users/yongar/freeCodeCamp/date.php",
+		"/Users/yongar/freeCodeCamp/scripts/jquery.js",
+		"/Users/yongar/freeCodeCamp/.flowconfig",
+		"/usr/local/etc/nginx/nginx.conf",
+		"/usr/local/etc/php/7.1/php.ini",
+		"/usr/local/var/www/index.php",
+		"/Users/yongar/freeCodeCamp/index.php",
+		"/Users/yongar/bashprofile/.bash_profile",
+		"/Users/yongar/freeCodeCamp/.eslintignore",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/ESLint/Default (OSX).sublime-keymap",
+		"/Users/yongar/freeCodeCamp/.eslintrc.js",
+		"/Users/yongar/freeCodeCamp/excercise/arrayMap.js",
+		"/Users/yongar/freeCodeCamp/helloWorld.js",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/ESLint.sublime-settings",
+		"/Users/yongar/freeCodeCamp/excercise/.eslintrc.js",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/ESLint-Formatter/Default (OSX).sublime-keymap",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/ESLint/ESLint.sublime-settings",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/ESLintAutoFix/Default (OSX).sublime-keymap",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/ESLintAutoFix/ESLintAutoFix.sublime-settings",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/ESLint-Formatter.sublime-settings",
+		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/ESLint-Formatter/ESLint-Formatter.sublime-settings",
+>>>>>>> Stashed changes
 		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/Markdown (Standard).sublime-settings",
 		"/Users/yongar/freeCodeCamp/README.md",
 		"/Users/yongar/freeCodeCamp/readme.md",
@@ -348,7 +437,11 @@
 	],
 	"find":
 	{
+<<<<<<< Updated upstream
 		"height": 47.0
+=======
+		"height": 36.0
+>>>>>>> Stashed changes
 	},
 	"find_in_files":
 	{
@@ -362,6 +455,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+<<<<<<< Updated upstream
 			"closing",
 			"<<",
 			",",
@@ -381,6 +475,13 @@
 			">\n",
 			"alt",
 			"src",
+=======
+			"&&",
+			"Alert",
+			"edit",
+			"editor",
+			"open",
+>>>>>>> Stashed changes
 			");\n"
 		],
 		"highlight": true,
@@ -389,10 +490,15 @@
 		"regex": false,
 		"replace_history":
 		[
+<<<<<<< Updated upstream
 			",\\n",
 			",\\\\n",
 			",\\n",
 			""
+=======
+			"; ",
+			";\n"
+>>>>>>> Stashed changes
 		],
 		"reverse": false,
 		"show_context": true,
@@ -403,8 +509,119 @@
 	"groups":
 	[
 		{
+<<<<<<< Updated upstream
 			"sheets":
 			[
+=======
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4982,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								147,
+								147
+							]
+						],
+						"settings":
+						{
+							"auto_indent": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"default_dir": "/Users/yongar/freeCodeCamp",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_width": 2,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+>>>>>>> Stashed changes
 			]
 		}
 	],
@@ -439,9 +656,9 @@
 		]
 	},
 	"menu_visible": true,
-	"output.CSS Extended Completions":
+	"output.exec":
 	{
-		"height": 0.0
+		"height": 335.0
 	},
 	"output.find_results":
 	{
@@ -455,7 +672,11 @@
 	"project": "FreeCodeCamp.sublime-project",
 	"replace":
 	{
+<<<<<<< Updated upstream
 		"height": 88.0
+=======
+		"height": 66.0
+>>>>>>> Stashed changes
 	},
 	"save_all_on_build": true,
 	"select_file":
