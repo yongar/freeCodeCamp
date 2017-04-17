@@ -8,7 +8,8 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
 }
 
 else {
-header('Refresh: 0; url=https://www.yongchoi.comproject/bootstrap/index.html');}
+header('Refresh: 0; url=https://www.yongchoi.comproject/bootstrap/index.html');
+}
 
 ?>
 
