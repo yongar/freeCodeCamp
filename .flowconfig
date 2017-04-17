@@ -1,0 +1,8 @@
+[ignore]
+vendor/*
+node_modules/*
+[include]
+excercise/*
+[libs]
+
+[options]
