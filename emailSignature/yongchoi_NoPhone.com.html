@@ -1,5 +1,4 @@
-
-<div contenteditable="true" id="copyboard" style="border: 2px solid red; padding: 25px; margin: 25px auto; width: auto; max-width: 550px"><table style="border: none; font-size:13px;font-family: sans-serif;">
+<table style="border: none; font-size:13px;font-family: sans-serif;">
 <tr><td border=0 cellpadding=0 style="padding: 0in 0in 5.75pt 0in">
 <p>
 <b><span style="font-size:14px">Yong CHOI</span></b><br />
@@ -21,41 +20,4 @@
 </div>
 </td>
 </tr>
-</table></div><p style="text-align: center"><button type="button" id="clicker" href="javascript:void(0);" title="Copy to clipboard"onclick="copyfunc()">Click here to select signature</button></p><p id="hide" style="display: none; color: blue; text-align: center">Now hit Ctrl+C or right click and select 'Copy'</p>
-<script type='text/javascript'>
-    function copyfunc() {
-        SelectText('copyboard');
-        //window.prompt('Copy to clipboard (Hit Ctrl+C) then click "OK"', document.getElementById("copyboard").innerHTML);
-    }
-    var map = []; // Or you could call it "key"
-    var isIe = (navigator.userAgent.toLowerCase().indexOf("msie") != -1
-            || navigator.userAgent.toLowerCase().indexOf("trident") != -1);
-    document.body.addEventListener('keydown', function(e) {
-        e = e || event; // to deal with IE
-        map[e.keyCode] = e.type == 'keydown';
-        if (map[17] && map[65]) {
-            document.getElementById('clicker').onclick();
-            map = [];
-        }
-        return false;
-    });
-    function SelectText(element, e) {
-        /* highlight */
-        var doc = document
-                , text = doc.getElementById(element)
-                , range, selection
-                ;
-        if (doc.body.createTextRange) {
-            range = document.body.createTextRange();
-            range.moveToElementText(text);
-            range.select();
-        } else if (window.getSelection) {
-            selection = window.getSelection();
-            range = document.createRange();
-            range.selectNodeContents(text);
-            selection.removeAllRanges();
-            selection.addRange(range);
-        }
-        document.getElementById("hide").style.display = "block";
-    }
-</script>
+</table>
