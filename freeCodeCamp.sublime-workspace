@@ -47,7 +47,7 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 167.0,
+		"height": 183.0,
 		"last_filter": "install",
 		"selected_items":
 		[
@@ -96,7 +96,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 593.0
+		"width": 462.0
 	},
 	"console":
 	{
@@ -116,91 +116,150 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/yongar/freeCodeCamp"
+		"/Users/yongar/freeCodeCamp",
+		"/Users/yongar/freeCodeCamp/excercise"
 	],
 	"file_history":
 	[
-		"/Users/yongar/freeCodeCamp/index.php",
-		"/Users/yongar/freeCodeCamp/.gitignore",
-		"/Users/yongar/freeCodeCamp/index.html",
-		"/Users/yongar/freeCodeCamp/project/bootstrap/package.json",
-		"/Users/yongar/Google Drive/AlfredSync/Alfred.alfredpreferences/workflows/user.workflow.3D9F251D-DA6E-4CCA-B4D7-E534B3DBC5BB/utilities.py",
-		"/Users/yongar/Library/Application Support/Alfred 3/Workflow Data/com.bachya.lpvm/settings.json",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/TypeScript/TypeScript.sublime-settings",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/TypeScript/Preferences.sublime-settings",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/TypeScript.sublime-settings",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/JSHint Gutter/.jshintrc",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/Dart - Plugin Settings.sublime-settings",
-		"/Users/yongar/Downloads/YChoi.pcf",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 11 - jQuery effects and AJAX interaction/11-09 Data-dependent headings - Modify PHP/scripts/add-favs.js",
 		"/Users/yongar/freeCodeCamp/test.php",
-		"/Users/yongar/freeCodeCamp/js/twitch.js",
 		"/Users/yongar/freeCodeCamp/twitchStatus.html",
-		"/Users/yongar/.bash_profile",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/Alignment/Default (OSX).sublime-keymap",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/Emmet/Emmet.sublime-settings",
-		"/Users/yongar/freeCodeCamp/jquery-test.html",
-		"/Users/yongar/freeCodeCamp/freeCodeCamp.sublime-project",
-		"/Users/yongar/Google Drive/Consulting Info/ReadyPac/ReadyPacFiles.sublime-project",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/GutterColor.sublime-settings",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/Emmet.sublime-settings",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/GhostText/GhostText.sublime-settings",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/Gutter Color/GutterColor.sublime-settings",
-		"/Users/yongar/freeCodeCamp/jquery.html",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/Emmet/Default (OSX).sublime-keymap",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/Alignment/Base File.sublime-settings",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/Base File.sublime-settings",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/GitGutter/Default (OSX).sublime-keymap",
-		"/Users/yongar/freeCodeCamp/date.php",
-		"/Users/yongar/freeCodeCamp/scripts/jquery.js",
-		"/Users/yongar/freeCodeCamp/.flowconfig",
-		"/usr/local/etc/nginx/nginx.conf",
-		"/usr/local/etc/php/7.1/php.ini",
-		"/usr/local/var/www/index.php",
-		"/Users/yongar/bashprofile/.bash_profile",
-		"/Users/yongar/freeCodeCamp/.eslintignore",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/ESLint/Default (OSX).sublime-keymap",
-		"/Users/yongar/freeCodeCamp/.eslintrc.js",
+		"/Users/yongar/freeCodeCamp/voicemail greeting sample",
+		"/Users/yongar/freeCodeCamp/emailSignature/hdhomerun_mac_20170707beta2.dmg",
+		"/Users/yongar/freeCodeCamp/emailSignature/vlc-2.2.6.dmg",
+		"/Users/yongar/freeCodeCamp/emailSignature/ZinioReader5_1.0.1.dmg",
 		"/Users/yongar/freeCodeCamp/excercise/arrayMap.js",
-		"/Users/yongar/freeCodeCamp/helloWorld.js",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/ESLint.sublime-settings",
-		"/Users/yongar/freeCodeCamp/excercise/.eslintrc.js",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/ESLint-Formatter/Default (OSX).sublime-keymap",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/ESLint/ESLint.sublime-settings",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/ESLintAutoFix/Default (OSX).sublime-keymap",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/ESLintAutoFix/ESLintAutoFix.sublime-settings",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/User/ESLint-Formatter.sublime-settings",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/ESLint-Formatter/ESLint-Formatter.sublime-settings",
-		"/Users/yongar/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/Markdown (Standard).sublime-settings",
-		"/Users/yongar/freeCodeCamp/README.md",
-		"/Users/yongar/freeCodeCamp/readme.md",
-		"/Users/yongar/freeCodeCamp/destroyer.js",
-		"/Users/yongar/.hyper.js",
-		"/Users/yongar/freeCodeCamp/slasher.js",
-		"/Users/yongar/freeCodeCamp/bouncer.js",
-		"/Users/yongar/freeCodeCamp/mutation.js",
-		"/Users/yongar/freeCodeCamp/confirmEnding.js",
-		"/Users/yongar/freeCodeCamp/repeatStringNumTimes.js",
-		"/Users/yongar/freeCodeCamp/truncateString.js",
-		"/Users/yongar/freeCodeCamp/chunkArrayInGroup.js",
-		"/Users/yongar/freeCodeCamp/titleCase.js",
-		"/Users/yongar/freeCodeCamp/.git/COMMIT_EDITMSG",
-		"/Users/yongar/.gitconfig",
-		"//titleCase.js",
-		"/Users/yongar/freecodecampprojectsforyong/freeCodeCampJS.js",
-		"/Users/yongar/freecodecampprojectsforyong/project/bootstrap/index.html",
-		"/Users/yongar/freecodecampprojectsforyong/index.php",
-		"/Users/yongar/freecodecampprojectsforyong/freeCodeCamp.sublime-project"
+		"/Users/yongar/freeCodeCamp/excercise/arrayReduce.js",
+		"/Users/yongar/freeCodeCamp/excercise/arraySort.js",
+		"/Users/yongar/freeCodeCamp/excercise/AutoCompleteHtml.js",
+		"/Users/yongar/freeCodeCamp/excercise/bouncer.js",
+		"/Users/yongar/freeCodeCamp/excercise/chunkArrayInGroup.js",
+		"/Users/yongar/freeCodeCamp/excercise/confirmEnding.js",
+		"/Users/yongar/freeCodeCamp/excercise/destroyer.js",
+		"/Users/yongar/freeCodeCamp/excercise/findLongestWord.js",
+		"/Users/yongar/freeCodeCamp/excercise/first_server.js",
+		"/Users/yongar/freeCodeCamp/excercise/freeCodeCampJS.js",
+		"/Users/yongar/freeCodeCamp/excercise/getIntexToIns.js",
+		"/Users/yongar/freeCodeCamp/excercise/gulpfile.js",
+		"/Users/yongar/freeCodeCamp/excercise/index.js",
+		"/Users/yongar/freeCodeCamp/excercise/largestOfFour.js",
+		"/Users/yongar/freeCodeCamp/excercise/multiplier.js",
+		"/Users/yongar/freeCodeCamp/excercise/mutation.js",
+		"/Users/yongar/freeCodeCamp/excercise/prop.js",
+		"/Users/yongar/freeCodeCamp/excercise/prop_check.js",
+		"/Users/yongar/freeCodeCamp/excercise/repeatStringNumTimes.js",
+		"/Users/yongar/freeCodeCamp/excercise/slasher.js",
+		"/Users/yongar/freeCodeCamp/excercise/titleCase.js",
+		"/Users/yongar/freeCodeCamp/excercise/truncateString.js",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course.mobi",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 02 - Komodo Edit Text Editor/Custom Scheme.ksf",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 04 - Bare bones HTML5/index.html",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-02 CSS Reset/index.html",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-02 CSS Reset/css/reset.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-04 Applying classes to index.html/index.html",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-04 Applying classes to index.html/css/reset.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-05 Box layout - movies list/index.html",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-05 Box layout - movies list/css/reset.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-05 Box layout - movies list/css/style.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-05 Box layout - movies list/scripts/html5shiv-printshiv.js",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-06 HTML-shiv for IE8/index.html",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-06 HTML-shiv for IE8/css/reset.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-06 HTML-shiv for IE8/css/style.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-06 HTML-shiv for IE8/scripts/html5shiv-printshiv.js",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-07 Styling the header and top navigation/index.html",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-07 Styling the header and top navigation/css/reset.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-07 Styling the header and top navigation/css/style.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-07 Styling the header and top navigation/scripts/html5shiv-printshiv.js",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-08 Styling the favourites and movie list panel/index.html",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-08 Styling the favourites and movie list panel/css/reset.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-08 Styling the favourites and movie list panel/css/style.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-08 Styling the favourites and movie list panel/scripts/html5shiv-printshiv.js",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-09 Styling the footer/index.html",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-09 Styling the footer/css/reset.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-09 Styling the footer/css/style.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-09 Styling the footer/scripts/html5shiv-printshiv.js",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-10 Styling the single movie page/index.html",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-10 Styling the single movie page/css/delete.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-10 Styling the single movie page/css/reset.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-10 Styling the single movie page/css/style.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-10 Styling the single movie page/scripts/html5shiv-printshiv.js",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-11 Styling the admin pages/index.html",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-11 Styling the admin pages/css/reset.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-11 Styling the admin pages/css/style.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-11 Styling the admin pages/scripts/html5shiv-printshiv.js",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-12 Creating background images with a CSS sprite/index.html",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-12 Creating background images with a CSS sprite/css/reset.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-12 Creating background images with a CSS sprite/css/sprites.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-12 Creating background images with a CSS sprite/css/style.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 05 - Styling with CSS/05-12 Creating background images with a CSS sprite/scripts/html5shiv-printshiv.js",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 06 - Essential PHP/06-02 PHP and HTML combined/date-and-time.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 06 - Essential PHP/06-03 String delimiters/string-delimiters.homework.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 06 - Essential PHP/06-03 String delimiters/string-delimiters.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 06 - Essential PHP/06-06 PHP includes/version 2/include-files.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 06 - Essential PHP/06-08 Arrays/arrays.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 06 - Essential PHP/06-08 Arrays/associative-array-homework.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 06 - Essential PHP/06-08 Arrays/associative-array.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 06 - Essential PHP/06-13 Functions with parameters/functions2.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 07 - MySQL in phpMyAdmin/07-03 INSERT INTO.sql",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 07 - MySQL in phpMyAdmin/07-05 SELECT FROM.sql",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 08 - MySQL in PHP/08-01 Initialise and connect to database/INITIALISE TEST DATABASE/initilalise_test_database.sql",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 08 - MySQL in PHP/08-01 Initialise and connect to database/php-demos/connect.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 08 - MySQL in PHP/08-02 Select all records from database/connect.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 08 - MySQL in PHP/08-02 Select all records from database/table.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 08 - MySQL in PHP/08-03 Select records using WHERE/connect.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 08 - MySQL in PHP/08-03 Select records using WHERE/display.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 08 - MySQL in PHP/08-04 SQL injection/connect.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 08 - MySQL in PHP/08-04 SQL injection/display.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 08 - MySQL in PHP/08-05 Combating SQL injection with mysqli real_escape_string/display.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 08 - MySQL in PHP/08-06 Combating SQL injection with prepared statements/connect.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 08 - MySQL in PHP/08-06 Combating SQL injection with prepared statements/display-prep-stmt.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 08 - MySQL in PHP/08-07 Add data through PHP interface/display-and-insert.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 08 - MySQL in PHP/08-07 Add data through PHP interface/completed/insert.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 08 - MySQL in PHP/08-08 Delete data through PHP interface/connect.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 08 - MySQL in PHP/08-08 Delete data through PHP interface/delete.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 08 - MySQL in PHP/08-08 Delete data through PHP interface/display-and-delete.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-01 Efficient, reusable code with PHP includes/index.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-01 Efficient, reusable code with PHP includes/css/reset.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-01 Efficient, reusable code with PHP includes/css/style.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-01 Efficient, reusable code with PHP includes/scripts/html5shiv-printshiv.js",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-02 One index file for single movie and movies list/css/reset.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-02 One index file for single movie and movies list/css/style.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-02 One index file for single movie and movies list/php-includes/movie-list.inc.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-02 One index file for single movie and movies list/scripts/html5shiv-printshiv.js",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-03 One admin file for users and movies admin/Completed/css/reset.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-03 One admin file for users and movies admin/Completed/css/style.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-03 One admin file for users and movies admin/Completed/php-includes/movie-list.inc.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-03 One admin file for users and movies admin/Completed/scripts/html5shiv-printshiv.js",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-04 Initialise and connect to the MySQL database/css/reset.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-04 Initialise and connect to the MySQL database/css/style.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-04 Initialise and connect to the MySQL database/php-includes/connect.inc.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-04 Initialise and connect to the MySQL database/php-includes/movie-list.inc.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-04 Initialise and connect to the MySQL database/scripts/html5shiv-printshiv.js",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-05 Displaying dynamic data - the list of users/css/reset.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-05 Displaying dynamic data - the list of users/css/style.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-05 Displaying dynamic data - the list of users/php-includes/connect.inc.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-05 Displaying dynamic data - the list of users/php-includes/movie-list.inc.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-05 Displaying dynamic data - the list of users/php-includes/navigation.inc.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-05 Displaying dynamic data - the list of users/scripts/html5shiv-printshiv.js",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-06 Convert users list to function/css/reset.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-06 Convert users list to function/css/style.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-06 Convert users list to function/functions/show-users.fn.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-06 Convert users list to function/php-includes/connect.inc.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-06 Convert users list to function/php-includes/movie-list.inc.php",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-06 Convert users list to function/scripts/html5shiv-printshiv.js",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-07 Set include paths/css/reset.css",
+		"/Users/yongar/freeCodeCamp/otherResource/The-Ultimate-Web-Development-Course-Working Files/Chapter 09 - From static HTML to dynamic PHP/09-07 Set include paths/css/style.css"
 	],
 	"find":
 	{
-		"height": 28.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 145.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -208,6 +267,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			",",
 			"hostname",
 			"'hostname'",
 			"'name'",
@@ -222,9 +282,10 @@
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
+			",\\n",
 			"'name'",
 			"; ",
 			";\n"
@@ -245,11 +306,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 35.0
 	},
 	"input":
 	{
-		"height": 36.0
+		"height": 55.0
 	},
 	"layout":
 	{
@@ -286,7 +347,7 @@
 	"project": "freeCodeCamp.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 66.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -313,12 +374,12 @@
 	},
 	"select_symbol":
 	{
-		"height": 0.0,
+		"height": 357.0,
 		"last_filter": "",
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 470.0
 	},
 	"selected_group": 0,
 	"settings":
@@ -328,7 +389,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 251.0,
+	"side_bar_width": 321.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
