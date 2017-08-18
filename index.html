@@ -1,0 +1,24 @@
+<script type="text/javascript">
+  !function(name,path,ctx){
+    var latest,prev=name!=='Keen'&&window.Keen?window.Keen:false;ctx[name]=ctx[name]||{ready:function(fn){var h=document.getElementsByTagName('head')[0],s=document.createElement('script'),w=window,loaded;s.onload=s.onerror=s.onreadystatechange=function(){if((s.readyState&&!(/^c|loade/.test(s.readyState)))||loaded){return}s.onload=s.onreadystatechange=null;loaded=1;latest=w.Keen;if(prev){w.Keen=prev}else{try{delete w.Keen}catch(e){w.Keen=void 0}}ctx[name]=latest;ctx[name].ready(fn)};s.async=1;s.src=path;h.parentNode.insertBefore(s,h)}}
+  }('KeenAsync','https://d26b395fwzu5fz.cloudfront.net/keen-tracking-1.1.3.min.js',this);
+
+  KeenAsync.ready(function(){
+    // Configure a client instance
+    var client = new KeenAsync({
+      projectId: '59971e80c9e77c000149edf9',
+      writeKey: '33FD1AEFFA135D8DDA3E4618916500E2152A70F75B4457889210FFB5E26159EE7120E57AB9F22F8DAB5901E33D9CE4380DDD76215F5A96CCA865BB0667F282B71891EE1FF2E6146FAAA8CF0AA1A93F23BB77BE2EBDA0C4A9D741E97DDB0A8BBF'
+    });
+
+    // Record an event
+    client.recordEvent('pageviews', {
+      title: document.title
+    });
+  });
+</script>
+<header>
+<meta http-equiv="refresh" content="0; url=https://www.yongchoi.com/project/bootstrap/index.html">
+</header>
+<body>
+click <A href="url=https://www.yongchoi.com/project/bootstrap/index.html">here</A> to go to the updated page
+</body>
