@@ -1,5 +1,17 @@
 {
-  "require": {
-	"php": "^7.1.0"
-  }
+    "name": "yongar/free-code-camp",
+    "description": "freecodecamp.com projects and Yong Choi's personal page",
+    "type": "project",
+    "require": {
+        "php":  "^7.1.0",
+        "ext-blackfire": "^1.17",
+        "ext-mcrypt": "^7.1",
+        "keen-io/keen-io": "~2.5"
+    },
+    "authors": [
+        {
+            "name": "Yong Choi",
+            "email": "yongar@gmail.com"
+        }
+    ]
 }
