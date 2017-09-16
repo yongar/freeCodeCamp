@@ -1,0 +1,1 @@
+{"version":3,"sources":["../webpack.config.js"],"names":["path","require","module","exports","entry"],"mappings":";;AAAA,IAAMA,OAAOC,QAAQ,MAAR,CAAb;;AAEAC,OAAOC,OAAP,GAAe;AACdC,QAAO;AADO,CAAf","file":"webpack.config.js","sourcesContent":["const path = require(\"path\");\n\nmodule.exports={\n\tentry: \"script/index.js\"\n}"]}

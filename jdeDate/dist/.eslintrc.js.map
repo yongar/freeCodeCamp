@@ -1,0 +1,1 @@
+{"version":3,"sources":["../.eslintrc.js"],"names":["module","exports"],"mappings":";;AAAAA,OAAOC,OAAP,GAAiB;AACb,eAAW;AADE,CAAjB","file":".eslintrc.js","sourcesContent":["module.exports = {\n    \"extends\": \"./node_modules/eslint-config-google/index.js\"\n};"]}
