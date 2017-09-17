@@ -1,0 +1,1 @@
+{"version":3,"sources":["../start.js"],"names":["document","write"],"mappings":";;AAAAA,SAASC,KAAT,CAAe,eAAf","file":"start.js","sourcesContent":["document.write(\"It's working.\");"]}
