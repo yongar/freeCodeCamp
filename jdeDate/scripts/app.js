@@ -1,3 +1,8 @@
-require('dotenv').config();
 
-console.log("testing");
+var myvm = new Vue({
+	el: '#app',
+	data:{
+		message: "hello there "
+	
+	}
+});

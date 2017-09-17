@@ -1,6 +1,10 @@
 "use strict";
 
-require('dotenv').config();
+var myvm = new Vue({
+	el: '#app',
+	data: {
+		message: "hello there "
 
-console.log("testing");
+	}
+});
 //# sourceMappingURL=app.js.map

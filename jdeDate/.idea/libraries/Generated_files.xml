@@ -2,15 +2,19 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/dist/app.js" />
         <item url="file://$PROJECT_DIR$/dist/webpack.config.js" />
         <item url="file://$PROJECT_DIR$/dist/scripts/app.js" />
         <item url="file://$PROJECT_DIR$/dist/.eslintrc.js" />
+        <item url="file://$PROJECT_DIR$/dist/start.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
+      <root url="file://$PROJECT_DIR$/dist/app.js" />
       <root url="file://$PROJECT_DIR$/dist/webpack.config.js" />
       <root url="file://$PROJECT_DIR$/dist/scripts/app.js" />
       <root url="file://$PROJECT_DIR$/dist/.eslintrc.js" />
+      <root url="file://$PROJECT_DIR$/dist/start.js" />
     </CLASSES>
     <SOURCES />
   </library>

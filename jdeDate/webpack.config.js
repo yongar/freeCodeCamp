@@ -1,5 +1,6 @@
-const path = require("path");
 
-module.exports={
-	entry: "script/index.js"
-}
+
+module.exports = {
+	context: __dirname,
+	entry: './start.js'
+};

@@ -4,7 +4,7 @@
   "description": "JD Edwards Date Translator",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
   },
   "author": "Yong Choi",
   "license": "ISC",

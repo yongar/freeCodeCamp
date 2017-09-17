@@ -1,8 +1,7 @@
-"use strict";
-
-var path = require("path");
+'use strict';
 
 module.exports = {
-	entry: "script/index.js"
+	context: __dirname,
+	entry: './start.js'
 };
 //# sourceMappingURL=webpack.config.js.map
