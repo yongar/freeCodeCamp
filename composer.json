@@ -6,7 +6,8 @@
         "php":  "^7.1.0",
         "ext-blackfire": "^1.17",
         "ext-mcrypt": "^7.1",
-        "keen-io/keen-io": "~2.5"
+        "keen-io/keen-io": "~2.5",
+        "rollbar/rollbar": "~1.1"
     },
     "authors": [
         {

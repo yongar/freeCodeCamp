@@ -11,5 +11,17 @@ else {
 header('Refresh: 0; url=https://www.yongchoi.com/project/bootstrap/index.html');
 }
 
+use \Rollbar\Rollbar;
+use \Rollbar\Payload\Level;
+Rollbar::init(
+	array(
+		'access_token' => 'e8c0c4f199f24d029ac170cc5c3dc244',
+		'environment' => 'development'
+	)
+);
+Rollbar::log(Level::info(), 'Test info message');
+throw new Exception('Test exception');
+
+
 ?>
 
