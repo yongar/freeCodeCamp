@@ -2,68 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7852d66e-29e3-4b16-9633-889a4ede4425" name="Default" comment="">
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/RDP/ND3N4210.txt" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources.local.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/304152a2-3439-46e1-91d9-183fb4b681d7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/304152a2-3439-46e1-91d9-183fb4b681d7/_metadata_/metadata" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/304152a2-3439-46e1-91d9-183fb4b681d7/_metadata_/metadata.keystream" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/304152a2-3439-46e1-91d9-183fb4b681d7/_metadata_/metadata.keystream.len" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/304152a2-3439-46e1-91d9-183fb4b681d7/_metadata_/metadata.len" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/304152a2-3439-46e1-91d9-183fb4b681d7/_metadata_/metadata.values.at" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/304152a2-3439-46e1-91d9-183fb4b681d7/_metadata_/metadata_i" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/304152a2-3439-46e1-91d9-183fb4b681d7/_metadata_/metadata_i.len" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/304152a2-3439-46e1-91d9-183fb4b681d7/_src_/database/master/schema/dbo.zip" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/304152a2-3439-46e1-91d9-183fb4b681d7/storage.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/3847c055-874c-40c4-b17b-d73b870df333.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/3847c055-874c-40c4-b17b-d73b870df333/_metadata_/metadata" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/3847c055-874c-40c4-b17b-d73b870df333/_metadata_/metadata.keystream" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/3847c055-874c-40c4-b17b-d73b870df333/_metadata_/metadata.keystream.len" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/3847c055-874c-40c4-b17b-d73b870df333/_metadata_/metadata.len" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/3847c055-874c-40c4-b17b-d73b870df333/_metadata_/metadata.values.at" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/3847c055-874c-40c4-b17b-d73b870df333/_metadata_/metadata_i" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/3847c055-874c-40c4-b17b-d73b870df333/_metadata_/metadata_i.len" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/3847c055-874c-40c4-b17b-d73b870df333/_src_/schema/CRPDTA.zip" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/3847c055-874c-40c4-b17b-d73b870df333/_src_/schema/Icon&#13;" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/3847c055-874c-40c4-b17b-d73b870df333/storage.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/7d961ee6-709e-466c-a6e9-5d1b97dd50a9.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/81c3a6bf-0d90-4e1b-8bfc-8da030793fad.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/81c3a6bf-0d90-4e1b-8bfc-8da030793fad/_metadata_/metadata" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/81c3a6bf-0d90-4e1b-8bfc-8da030793fad/_metadata_/metadata.keystream" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/81c3a6bf-0d90-4e1b-8bfc-8da030793fad/_metadata_/metadata.keystream.len" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/81c3a6bf-0d90-4e1b-8bfc-8da030793fad/_metadata_/metadata.len" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/81c3a6bf-0d90-4e1b-8bfc-8da030793fad/_metadata_/metadata_i" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/81c3a6bf-0d90-4e1b-8bfc-8da030793fad/_metadata_/metadata_i.len" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/81c3a6bf-0d90-4e1b-8bfc-8da030793fad/storage.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/8799fa74-1c52-4783-94e9-d368af8e55c2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/8799fa74-1c52-4783-94e9-d368af8e55c2/_metadata_/metadata" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/8799fa74-1c52-4783-94e9-d368af8e55c2/_metadata_/metadata.keystream" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/8799fa74-1c52-4783-94e9-d368af8e55c2/_metadata_/metadata.keystream.len" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/8799fa74-1c52-4783-94e9-d368af8e55c2/_metadata_/metadata.len" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/8799fa74-1c52-4783-94e9-d368af8e55c2/_metadata_/metadata.values.at" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/8799fa74-1c52-4783-94e9-d368af8e55c2/_metadata_/metadata_i" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/8799fa74-1c52-4783-94e9-d368af8e55c2/_metadata_/metadata_i.len" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/dataSources/8799fa74-1c52-4783-94e9-d368af8e55c2/storage.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/sqldialects.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/EPP logs 07-25-2017/logs/printManagement.log" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/MEP Copy/RPMEPDEV/DSIMobileClientPCSetup.exe" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/MEP Copy/RPMEPDEV/Data/MobileClient/DSIMobileClientPCSetup.exe" afterPath="" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.gitignore" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.gitignore" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/workspace.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/Hydranautics.sublime-project" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/Hydranautics.sublime-project" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/Hydranautics.sublime-workspace" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/Hydranautics.sublime-workspace" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/Order Fullfilment/FANUC_DEV.sql" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/Order Fullfilment/FANUC_DEV.sql" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/PackHydra.sql" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/PackHydra.sql" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/ReadyPac.iml" afterPath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/ReadyPac.iml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/modules.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/workspace.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/ActivityLogging.sql" afterPath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/ActivityLogging.sql" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/DSIConversionPreProcess.sql" afterPath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/DSIConversionPreProcess.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/bootstrap/index.html" afterPath="$PROJECT_DIR$/project/bootstrap/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -268,7 +207,7 @@
       <workItem from="1505270965376" duration="16000" />
       <workItem from="1506659706442" duration="611000" />
       <workItem from="1507597065421" duration="369000" />
-      <workItem from="1507751081910" duration="163000" />
+      <workItem from="1507751081910" duration="220000" />
     </task>
     <task id="LOCAL-00001" summary="vue router">
       <created>1504934329333</created>
@@ -298,11 +237,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505146724929</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="vue router">
+      <created>1507751281657</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1507751281657</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30147000" />
+    <option name="totallyTimeSpent" value="30204000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1280" height="1338" extended-state="0" />
