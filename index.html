@@ -17,8 +17,21 @@
   });
 </script>
 <header>
-<meta http-equiv="refresh" content="0; url=https://www.yongchoi.com/project/bootstrap/index.html">
-</header>
+<!--<meta http-equiv="refresh" content="5; url=https://www.yongchoi.com/project/bootstrap/index.html">-->
+<!--</header>-->
 <body>
 click <A href="url=https://www.yongchoi.com/project/bootstrap/index.html">here</A> to go to the updated page
+<div id="location"></div>
+<script>
+  var x = location.host;
+  document.getElementById("location").innerHTML = x;
+  if (x.toLowerCase().includes("localhost")){
+    location.replace("https://www.jde.today");
+  }else{
+    location.replace("https://www.yongchoi.com/project/bootstrap/index.html")
+  }
+
+
+</script>
+
 </body>
