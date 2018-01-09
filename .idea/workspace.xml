@@ -2,85 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7852d66e-29e3-4b16-9633-889a4ede4425" name="Default" comment="">
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/DateStringFix 10-05-2017" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/MEP Copy/ReadyPac_Backup_20170614030832.exe" afterPath="" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_metadata_/metadata" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_metadata_/metadata.keystream" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_metadata_/metadata.keystream" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_metadata_/metadata.keystream.len" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_metadata_/metadata.keystream.len" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_metadata_/metadata.len" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_metadata_/metadata.len" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_metadata_/metadata.values" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_metadata_/metadata.values" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_metadata_/metadata.values.at" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_metadata_/metadata.values.at" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_metadata_/metadata.values.s" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_metadata_/metadata.values.s" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_metadata_/metadata_i" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_metadata_/metadata_i" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_metadata_/metadata_i.len" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_metadata_/metadata_i.len" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_src_/schema/CRPCTL.zip" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_src_/schema/CRPCTL.zip" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_src_/schema/CRPDTA.zip" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_src_/schema/CRPDTA.zip" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_src_/schema/SYS.zip" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_src_/schema/SYS.zip" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_src_/schema/SYSTEM.zip" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_src_/schema/SYSTEM.zip" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_src_/schema/TESTCTL.zip" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_src_/schema/TESTCTL.zip" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_src_/schema/TESTDTA.zip" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/_src_/schema/TESTDTA.zip" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/15684146-03dd-4cdc-998f-688a001daf3f/_metadata_/metadata" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/15684146-03dd-4cdc-998f-688a001daf3f/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/15684146-03dd-4cdc-998f-688a001daf3f/_metadata_/metadata.keystream" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/15684146-03dd-4cdc-998f-688a001daf3f/_metadata_/metadata.keystream" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/15684146-03dd-4cdc-998f-688a001daf3f/_metadata_/metadata.keystream.len" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/15684146-03dd-4cdc-998f-688a001daf3f/_metadata_/metadata.keystream.len" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/15684146-03dd-4cdc-998f-688a001daf3f/_metadata_/metadata.len" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/15684146-03dd-4cdc-998f-688a001daf3f/_metadata_/metadata.len" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/15684146-03dd-4cdc-998f-688a001daf3f/_metadata_/metadata.values.at" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/15684146-03dd-4cdc-998f-688a001daf3f/_metadata_/metadata.values.at" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/15684146-03dd-4cdc-998f-688a001daf3f/_metadata_/metadata_i" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/15684146-03dd-4cdc-998f-688a001daf3f/_metadata_/metadata_i" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/15684146-03dd-4cdc-998f-688a001daf3f/_metadata_/metadata_i.len" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/15684146-03dd-4cdc-998f-688a001daf3f/_metadata_/metadata_i.len" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/15684146-03dd-4cdc-998f-688a001daf3f/_src_/schema/CRPCTL.zip" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/15684146-03dd-4cdc-998f-688a001daf3f/_src_/schema/CRPCTL.zip" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/15684146-03dd-4cdc-998f-688a001daf3f/_src_/schema/CRPDTA.zip" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/15684146-03dd-4cdc-998f-688a001daf3f/_src_/schema/CRPDTA.zip" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/15684146-03dd-4cdc-998f-688a001daf3f/_src_/schema/TESTCTL.zip" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/15684146-03dd-4cdc-998f-688a001daf3f/_src_/schema/TESTCTL.zip" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/15684146-03dd-4cdc-998f-688a001daf3f/_src_/schema/TESTDTA.zip" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/15684146-03dd-4cdc-998f-688a001daf3f/_src_/schema/TESTDTA.zip" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b3ef7fe8-29f6-49dc-aa83-13a2a12a4dcf/_metadata_/metadata" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b3ef7fe8-29f6-49dc-aa83-13a2a12a4dcf/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b3ef7fe8-29f6-49dc-aa83-13a2a12a4dcf/_metadata_/metadata.keystream" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b3ef7fe8-29f6-49dc-aa83-13a2a12a4dcf/_metadata_/metadata.keystream" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b3ef7fe8-29f6-49dc-aa83-13a2a12a4dcf/_metadata_/metadata.keystream.len" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b3ef7fe8-29f6-49dc-aa83-13a2a12a4dcf/_metadata_/metadata.keystream.len" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b3ef7fe8-29f6-49dc-aa83-13a2a12a4dcf/_metadata_/metadata.len" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b3ef7fe8-29f6-49dc-aa83-13a2a12a4dcf/_metadata_/metadata.len" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b3ef7fe8-29f6-49dc-aa83-13a2a12a4dcf/_metadata_/metadata.values.at" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b3ef7fe8-29f6-49dc-aa83-13a2a12a4dcf/_metadata_/metadata.values.at" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b3ef7fe8-29f6-49dc-aa83-13a2a12a4dcf/_metadata_/metadata_i" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b3ef7fe8-29f6-49dc-aa83-13a2a12a4dcf/_metadata_/metadata_i" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b3ef7fe8-29f6-49dc-aa83-13a2a12a4dcf/_metadata_/metadata_i.len" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b3ef7fe8-29f6-49dc-aa83-13a2a12a4dcf/_metadata_/metadata_i.len" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b3ef7fe8-29f6-49dc-aa83-13a2a12a4dcf/_src_/schema/CRPCTL.zip" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b3ef7fe8-29f6-49dc-aa83-13a2a12a4dcf/_src_/schema/CRPCTL.zip" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b3ef7fe8-29f6-49dc-aa83-13a2a12a4dcf/_src_/schema/CRPDTA.zip" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b3ef7fe8-29f6-49dc-aa83-13a2a12a4dcf/_src_/schema/CRPDTA.zip" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b3ef7fe8-29f6-49dc-aa83-13a2a12a4dcf/_src_/schema/TESTCTL.zip" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b3ef7fe8-29f6-49dc-aa83-13a2a12a4dcf/_src_/schema/TESTCTL.zip" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b3ef7fe8-29f6-49dc-aa83-13a2a12a4dcf/_src_/schema/TESTDTA.zip" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b3ef7fe8-29f6-49dc-aa83-13a2a12a4dcf/_src_/schema/TESTDTA.zip" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b6700bfa-d13a-4c50-89f4-36cb70a31336/_metadata_/metadata" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b6700bfa-d13a-4c50-89f4-36cb70a31336/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b6700bfa-d13a-4c50-89f4-36cb70a31336/_metadata_/metadata.keystream" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b6700bfa-d13a-4c50-89f4-36cb70a31336/_metadata_/metadata.keystream" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b6700bfa-d13a-4c50-89f4-36cb70a31336/_metadata_/metadata.keystream.len" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b6700bfa-d13a-4c50-89f4-36cb70a31336/_metadata_/metadata.keystream.len" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b6700bfa-d13a-4c50-89f4-36cb70a31336/_metadata_/metadata.len" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b6700bfa-d13a-4c50-89f4-36cb70a31336/_metadata_/metadata.len" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b6700bfa-d13a-4c50-89f4-36cb70a31336/_metadata_/metadata.values.at" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b6700bfa-d13a-4c50-89f4-36cb70a31336/_metadata_/metadata.values.at" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b6700bfa-d13a-4c50-89f4-36cb70a31336/_metadata_/metadata_i" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b6700bfa-d13a-4c50-89f4-36cb70a31336/_metadata_/metadata_i" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b6700bfa-d13a-4c50-89f4-36cb70a31336/_metadata_/metadata_i.len" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b6700bfa-d13a-4c50-89f4-36cb70a31336/_metadata_/metadata_i.len" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/CamelCaseConfig.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/CamelCaseConfig.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/Hydranautics.iml" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/Hydranautics.iml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/codeStyleSettings.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources.local.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/storage.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/11984644-f133-4bdb-b327-94a2b223f486/storage.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/15684146-03dd-4cdc-998f-688a001daf3f/storage.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/15684146-03dd-4cdc-998f-688a001daf3f/storage.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b3ef7fe8-29f6-49dc-aa83-13a2a12a4dcf/storage.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b3ef7fe8-29f6-49dc-aa83-13a2a12a4dcf/storage.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b6700bfa-d13a-4c50-89f4-36cb70a31336/storage.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b6700bfa-d13a-4c50-89f4-36cb70a31336/storage.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b8bb1964-606a-4315-8730-67427954f310.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b8bb1964-606a-4315-8730-67427954f310.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b8bb1964-606a-4315-8730-67427954f310/storage_v2/_src_/schema/FANUC.wSj5Aw.meta" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dataSources/b8bb1964-606a-4315-8730-67427954f310/storage_v2/_src_/schema/FANUC.wSj5Aw.meta" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dbnavigator.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dbnavigator.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dictionaries/yongar.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/dictionaries/yongar.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/encodings.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/modules.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/scopes/Hydranautic.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/scopes/Hydranautic.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/sqldialects.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/sqldialects.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/vcs.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/workspace.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/Hydranautics.sublime-workspace" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/Hydranautics.sublime-workspace" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/Order Fullfilment/Column_DEF.sql" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/Order Fullfilment/Column_DEF.sql" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/Order Fullfilment/FANUC_DEV.sql" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/Order Fullfilment/FANUC_DEV.sql" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/RDP/USHYJDEDEVFC12-1650.rdp" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/RDP/USHYJDEDEVFC12-1650.rdp" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/RDP/USHYJDEDEVFC12.rdp" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/RDP/USHYJDEDEVFC12.rdp" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/Update CRPDTA.F4211 set SDSHPN=900 Where SDDOCO=55" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/Update CRPDTA.F4211 set SDSHPN=900 Where SDDOCO=55" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/Update Test Data in PY.sql" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/Update Test Data in PY.sql" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/VPN information" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/VPN information" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/workspace.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/ActivityLogging.sql" afterPath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/ActivityLogging.sql" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/ReadyPac.sublime-workspace" afterPath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/ReadyPac.sublime-workspace" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/TransLog.sql" afterPath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/TransLog.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/default.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/emailSignature/yongchoi.com" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/emailSignature/yongchoi.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/excercise/convertToRoman.js" />
+      <change beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/encodings.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/encodings.xml" />
+      <change beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/workspace.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/workspace.xml" />
+      <change beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/Order Fullfilment/FANUC_DEV.sql" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/Order Fullfilment/FANUC_DEV.sql" />
+      <change beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/RDP/USHYJDEDEVFC12.rdp" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/RDP/USHYJDEDEVFC12.rdp" />
+      <change beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/workspace.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/workspace.xml" />
+      <change beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/Activity_LoggingonSQL.sql" afterPath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/Activity_LoggingonSQL.sql" />
+      <change beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/MEP Copy/RPMEPDEV/MEPWeb/Documentation/EN/mergedProjects/Develop/whxdata/package_57.xml" afterPath="" />
+      <change beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/MEP Copy/RPMEPDEV/MEPWeb/Scripts/jspm_packages/npm/core-js@2.0.0-beta/fn/object/seal.js" afterPath="" />
+      <change beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/ReadyPac.sublime-workspace" afterPath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/ReadyPac.sublime-workspace" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/emailSignature/yongchoi_NoPhone.com.html" afterPath="$PROJECT_DIR$/emailSignature/yongchoi_NoPhone.com.html" />
+      <change beforePath="$PROJECT_DIR$/excercise/diffTwoArrays.js" afterPath="$PROJECT_DIR$/excercise/diffTwoArrays.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -93,18 +32,65 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="diffTwoArrays.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/excercise/diffTwoArrays.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="995">
-              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="convertToRoman.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/excercise/convertToRoman.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="yongar.com.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/emailSignature/yongar.com.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="yongchoi_NoPhone.com.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/emailSignature/yongchoi_NoPhone.com.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1092">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="yongchoi.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/emailSignature/yongchoi.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="8" column="94" lean-forward="true" selection-start-line="8" selection-start-column="94" selection-end-line="8" selection-end-column="94" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="SYNC" />
@@ -129,6 +115,10 @@
         <option value="$PROJECT_DIR$/jdeDate/sigle-file-component/src/Product.vue" />
         <option value="$PROJECT_DIR$/project/bootstrap/index.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/excercise/diffTwoArrays.js" />
+        <option value="$PROJECT_DIR$/excercise/convertToRoman.js" />
+        <option value="$PROJECT_DIR$/emailSignature/yongchoi.html" />
+        <option value="$PROJECT_DIR$/emailSignature/yongchoi_NoPhone.com.html" />
       </list>
     </option>
   </component>
@@ -142,7 +132,6 @@
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
-    <annotation-enable>false</annotation-enable>
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
@@ -150,10 +139,14 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NamedScopeManager">
+    <scope name="freeCodeCamp" pattern="file[freeCodeCamp]:excercise/*||file[freeCodeCamp]:*/" />
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="24" />
+    <option name="x" value="1280" />
+    <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="1338" />
+    <option name="height" value="1377" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -192,7 +185,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -203,26 +195,21 @@
             <path>
               <item name="freeCodeCamp" type="b2602c69:ProjectViewProjectNode" />
               <item name="freeCodeCamp" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="freeCodeCamp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="freeCodeCamp" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="emailSignature" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
+    <property name="HbShouldOpenHtmlAsHb" value="disabled" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.JavaScript" />
     <property name="excluded.www.directory" value="true" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -231,7 +218,7 @@
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.standard" value="$PROJECT_DIR$/webDev/Section7/pomodoro/node_modules/eslint" />
-    <property name="javascript.nodejs.core.library.configured.version" value="8.4.0" />
+    <property name="javascript.nodejs.core.library.configured.version" value="9.3.0" />
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.selected.package.stylelint" value="" />
@@ -239,9 +226,13 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.tslint" value="" />
     <property name="standardjs.codestyle.accepted" value="true" />
+    <property name="ejs.open.delimiter" value="&lt;%" />
+    <property name="ejs.close.delimiter" value="%&gt;" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/emailSignature" />
       <recent name="$PROJECT_DIR$/jdeDate/sigle-file-component/src" />
       <recent name="$PROJECT_DIR$/jdeDate/sigle-file-component" />
     </key>
@@ -257,6 +248,14 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="convertToRoman.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="convertToRoman.js" working-dir="$PROJECT_DIR$/excercise" />
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.convertToRoman.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -287,7 +286,11 @@
       <workItem from="1506659706442" duration="611000" />
       <workItem from="1507597065421" duration="369000" />
       <workItem from="1507751081910" duration="258000" />
-      <workItem from="1509161734129" duration="1092000" />
+      <workItem from="1509161734129" duration="1164000" />
+      <workItem from="1510368597698" duration="356000" />
+      <workItem from="1514088926059" duration="81000" />
+      <workItem from="1514089017661" duration="4111000" />
+      <workItem from="1515533491588" duration="309000" />
     </task>
     <task id="LOCAL-00001" summary="vue router">
       <created>1504934329333</created>
@@ -335,17 +338,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31334000" />
+    <option name="totallyTimeSpent" value="36263000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1280" height="1338" extended-state="0" />
+    <frame x="1280" y="23" width="1280" height="1377" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.225" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5059571" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.4940429" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942098" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873562" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.4940429" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -384,36 +388,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.flowconfig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jdeDate/virtual-agent.html" />
-    <entry file="file://$PROJECT_DIR$/jdeDate/products.html" />
-    <entry file="file://$PROJECT_DIR$/gitDone.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jdeDate/products.html" />
     <entry file="file://$PROJECT_DIR$/gitDone.sh">
       <provider selected="true" editor-type-id="text-editor">
@@ -550,11 +524,89 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="995">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="1066">
+          <caret line="36" column="7" lean-forward="false" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/excercise/diffTwoArrays.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/excercise/convertToRoman.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/emailSignature/yongar.com.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/emailSignature/yongchoi.com">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/emailSignature/yongchoi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="8" column="94" lean-forward="true" selection-start-line="8" selection-start-column="94" selection-end-line="8" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/emailSignature/yongchoi_NoPhone.com.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="Copyright.UI">
+        <settings>
+          <last-edited>default</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <last-edited>freeCodeCamp</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+          <order>
+            <scope name="freeCodeCamp" />
+          </order>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
