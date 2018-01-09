@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7852d66e-29e3-4b16-9633-889a4ede4425" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/default.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/emailSignature/yongchoi.com" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/emailSignature/yongchoi.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/excercise/convertToRoman.js" />
       <change beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/encodings.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/encodings.xml" />
       <change beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/workspace.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/workspace.xml" />
       <change beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/Order Fullfilment/FANUC_DEV.sql" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/Order Fullfilment/FANUC_DEV.sql" />
@@ -16,10 +11,7 @@
       <change beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/MEP Copy/RPMEPDEV/MEPWeb/Documentation/EN/mergedProjects/Develop/whxdata/package_57.xml" afterPath="" />
       <change beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/MEP Copy/RPMEPDEV/MEPWeb/Scripts/jspm_packages/npm/core-js@2.0.0-beta/fn/object/seal.js" afterPath="" />
       <change beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/ReadyPac.sublime-workspace" afterPath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/ReadyPac.sublime-workspace" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/emailSignature/yongchoi_NoPhone.com.html" afterPath="$PROJECT_DIR$/emailSignature/yongchoi_NoPhone.com.html" />
-      <change beforePath="$PROJECT_DIR$/excercise/diffTwoArrays.js" afterPath="$PROJECT_DIR$/excercise/diffTwoArrays.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -66,8 +58,8 @@
       <file leaf-file-name="yongchoi_NoPhone.com.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/emailSignature/yongchoi_NoPhone.com.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1092">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="868">
+              <caret line="19" column="56" lean-forward="true" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="148" />
               <folding />
             </state>
           </provider>
@@ -290,7 +282,7 @@
       <workItem from="1510368597698" duration="356000" />
       <workItem from="1514088926059" duration="81000" />
       <workItem from="1514089017661" duration="4111000" />
-      <workItem from="1515533491588" duration="309000" />
+      <workItem from="1515533491588" duration="447000" />
     </task>
     <task id="LOCAL-00001" summary="vue router">
       <created>1504934329333</created>
@@ -338,7 +330,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36263000" />
+    <option name="totallyTimeSpent" value="36401000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="23" width="1280" height="1377" extended-state="0" />
@@ -571,8 +563,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/emailSignature/yongchoi_NoPhone.com.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1092">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="868">
+          <caret line="19" column="56" lean-forward="true" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="148" />
           <folding />
         </state>
       </provider>
