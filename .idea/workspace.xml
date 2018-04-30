@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7852d66e-29e3-4b16-9633-889a4ede4425" name="Default" comment="">
+    <list default="true" id="7852d66e-29e3-4b16-9633-889a4ede4425" name="Default" comment="added new project pictures and links">
       <change afterPath="$PROJECT_DIR$/project/bootstrap/img/portfolio/fullsize/github-2-full.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/project/bootstrap/img/portfolio/thumbnails/GitHub-Mark-120px-plus.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/project/bootstrap/img/portfolio/thumbnails/github-2-thumb.png" afterDir="false" />
@@ -34,8 +34,17 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project/bootstrap/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2060">
-              <caret line="247" column="47" selection-start-line="247" selection-start-column="47" selection-end-line="247" selection-end-column="47" />
+            <state relative-caret-position="275">
+              <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="603">
+              <caret line="636" column="6" selection-start-line="636" selection-start-column="6" selection-end-line="636" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -346,7 +355,7 @@
       <workItem from="1514089017661" duration="4111000" />
       <workItem from="1515533491588" duration="799000" />
       <workItem from="1525034337437" duration="79000" />
-      <workItem from="1525107224141" duration="2001000" />
+      <workItem from="1525107224141" duration="2248000" />
     </task>
     <task id="LOCAL-00001" summary="vue router">
       <created>1504934329333</created>
@@ -394,15 +403,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38833000" />
+    <option name="totallyTimeSpent" value="39080000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="23" width="1280" height="1377" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.225" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.225" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info active="true" anchor="bottom" id="Messages" sideWeight="0.49921876" visible="true" weight="0.3292402" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5059571" side_tool="true" visible="true" weight="0.3292402" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50078124" side_tool="true" visible="true" weight="0.3292402" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4940429" weight="0.32954547" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32873562" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.2494043" />
@@ -432,7 +443,8 @@
       <path value="$USER_HOME$/Google Drive/Consulting Info/ReadyPac" />
     </ignored-roots>
     <MESSAGE value="vue router" />
-    <option name="LAST_COMMIT_MESSAGE" value="vue router" />
+    <MESSAGE value="added new project pictures and links" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new project pictures and links" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -597,10 +609,17 @@
     <entry file="file://$PROJECT_DIR$/project/bootstrap/img/portfolio/thumbnails/randomWikiThumb.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="636" column="6" selection-start-line="636" selection-start-column="6" selection-end-line="636" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/project/bootstrap/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2060">
-          <caret line="247" column="47" selection-start-line="247" selection-start-column="47" selection-end-line="247" selection-end-column="47" />
+        <state relative-caret-position="275">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
         </state>
       </provider>
     </entry>
