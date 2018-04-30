@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7852d66e-29e3-4b16-9633-889a4ede4425" name="Default" comment="">
-      <change beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/encodings.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/encodings.xml" />
-      <change beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/workspace.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/.idea/workspace.xml" />
-      <change beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/Order Fullfilment/FANUC_DEV.sql" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/Order Fullfilment/FANUC_DEV.sql" />
-      <change beforePath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/RDP/USHYJDEDEVFC12.rdp" afterPath="$USER_HOME$/Google Drive/Consulting Info/Hydranautics/RDP/USHYJDEDEVFC12.rdp" />
-      <change beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/workspace.xml" afterPath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/.idea/workspace.xml" />
-      <change beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/Activity_LoggingonSQL.sql" afterPath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/Activity_LoggingonSQL.sql" />
-      <change beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/MEP Copy/RPMEPDEV/MEPWeb/Documentation/EN/mergedProjects/Develop/whxdata/package_57.xml" afterPath="" />
-      <change beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/MEP Copy/RPMEPDEV/MEPWeb/Scripts/jspm_packages/npm/core-js@2.0.0-beta/fn/object/seal.js" afterPath="" />
-      <change beforePath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/ReadyPac.sublime-workspace" afterPath="$USER_HOME$/Google Drive/Consulting Info/ReadyPac/ReadyPac.sublime-workspace" />
-      <change beforePath="$PROJECT_DIR$/emailSignature/yongchoi_NoPhone.com.html" afterPath="$PROJECT_DIR$/emailSignature/yongchoi_NoPhone.com.html" />
+      <change afterPath="$PROJECT_DIR$/project/bootstrap/img/portfolio/fullsize/github-2-full.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/bootstrap/img/portfolio/thumbnails/GitHub-Mark-120px-plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/bootstrap/img/portfolio/thumbnails/github-2-thumb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/bootstrap/img/portfolio/thumbnails/github-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/bootstrap/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/bootstrap/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,39 +25,17 @@
       <file leaf-file-name="diffTwoArrays.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/excercise/diffTwoArrays.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="392">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="convertToRoman.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/excercise/convertToRoman.js">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/project/bootstrap/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="yongar.com.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/emailSignature/yongar.com.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="yongchoi_NoPhone.com.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/emailSignature/yongchoi_NoPhone.com.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="868">
-              <caret line="19" column="56" lean-forward="true" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="148" />
-              <folding />
+            <state relative-caret-position="-2060">
+              <caret line="247" column="47" selection-start-line="247" selection-start-column="47" selection-end-line="247" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -68,9 +43,8 @@
       <file leaf-file-name="yongchoi.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/emailSignature/yongchoi.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="8" column="94" lean-forward="true" selection-start-line="8" selection-start-column="94" selection-end-line="8" selection-end-column="94" />
-              <folding />
+            <state relative-caret-position="224">
+              <caret line="8" column="94" selection-start-line="8" selection-start-column="94" selection-end-line="8" selection-end-column="94" />
             </state>
           </provider>
         </entry>
@@ -105,12 +79,12 @@
         <option value="$PROJECT_DIR$/jdeDate/sigle-file-component/src/productlLst.vue" />
         <option value="$PROJECT_DIR$/jdeDate/sigle-file-component/src/ProductListItem.vue" />
         <option value="$PROJECT_DIR$/jdeDate/sigle-file-component/src/Product.vue" />
-        <option value="$PROJECT_DIR$/project/bootstrap/index.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/excercise/diffTwoArrays.js" />
         <option value="$PROJECT_DIR$/excercise/convertToRoman.js" />
         <option value="$PROJECT_DIR$/emailSignature/yongchoi.html" />
         <option value="$PROJECT_DIR$/emailSignature/yongchoi_NoPhone.com.html" />
+        <option value="$PROJECT_DIR$/project/bootstrap/index.html" />
       </list>
     </option>
   </component>
@@ -133,6 +107,72 @@
   </component>
   <component name="NamedScopeManager">
     <scope name="freeCodeCamp" pattern="file[freeCodeCamp]:excercise/*||file[freeCodeCamp]:*/" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/jdeDate/package.json" />
+      <path value="$PROJECT_DIR$/jqueryMobile/package.json" />
+      <path value="$PROJECT_DIR$/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Appendix/Section2/vue-custom-plugin/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Appendix/Section3/shopping-list-single-file-components/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Ch4/04_01/final/single-file-components/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Ch4/04_02/start/single-file-components/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Ch4/04_03/final/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Ch4/04_03/final/single-file-components/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Ch4/04_03/start/single-file-components/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Ch4/04_04/final/single-file-components/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Ch4/04_04/start/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Ch4/04_04/start/single-file-components/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Ch4/04_05/final/single-file-components/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Ch4/04_05/start/single-file-components/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Ch4/04_06/final/single-file-components/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Ch4/04_06/start/single-file-components/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Final/feed/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section2/apps/shopping-list/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section2/different-install/dev-build/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section2/different-install/npm/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section2/different-install/vue-cli/learning-vue/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section2/vue-custom-plugin/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section3/hello/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section3/pomodoro-css-transitions/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section3/pomodoro/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section3/shopping-list/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section3/vue-single-file-components/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section4/beer-time/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section4/pomodoro/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section4/pomodoro2/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section4/pomodoro3/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section4/pomodoro4/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section4/pomodoro5/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section4/shopping-list/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section4/shopping-list2/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section4/shopping-list3/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section4/shopping-list4/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section5/pomodoro/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section5/pomodoro2/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section5/pomodoro3/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section5/pomodoro4/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section5/shopping-list/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section5/shopping-list2/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section5/shopping-list3/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section5/simple-store/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section5/simple-store2/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section5/simple-store3/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section6/pomodoro/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section6/pomodoro2/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section6/pomodoro3/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section6/shopping-list/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section6/shopping-list2/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section7/pomodoro/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section7/pomodoro2/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section7/pomodoro3/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section7/shopping-list/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section7/shopping-list2/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section7/shopping-list3/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section8/pomodoro/package.json" />
+      <path value="$PROJECT_DIR$/webDev/Section8/shopping-list/package.json" />
+      <path value="$PROJECT_DIR$/webDev/package.json" />
+    </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1280" />
@@ -163,20 +203,12 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
+    <navigator proportions="" version="1">
       <autoscrollToSource ProjectPane="true" />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -189,38 +221,71 @@
               <item name="freeCodeCamp" type="462c0819:PsiDirectoryNode" />
               <item name="emailSignature" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="freeCodeCamp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="freeCodeCamp" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="freeCodeCamp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="freeCodeCamp" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="freeCodeCamp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="freeCodeCamp" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="freeCodeCamp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="freeCodeCamp" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="freeCodeCamp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="freeCodeCamp" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
+              <item name="thumbnails" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="disabled" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.JavaScript" />
-    <property name="excluded.www.directory" value="true" />
-    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/webDev/Section7/pomodoro/node_modules/eslint" />
-    <property name="node.js.path.for.package.standard" value="project" />
-    <property name="node.js.detected.package.standard" value="true" />
-    <property name="node.js.selected.package.standard" value="$PROJECT_DIR$/webDev/Section7/pomodoro/node_modules/eslint" />
-    <property name="javascript.nodejs.core.library.configured.version" value="9.3.0" />
-    <property name="node.js.path.for.package.stylelint" value="project" />
-    <property name="node.js.detected.package.stylelint" value="true" />
-    <property name="node.js.selected.package.stylelint" value="" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.tslint" value="" />
-    <property name="standardjs.codestyle.accepted" value="true" />
-    <property name="ejs.open.delimiter" value="&lt;%" />
-    <property name="ejs.close.delimiter" value="%&gt;" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="ejs.close.delimiter" value="%&gt;" />
+    <property name="ejs.open.delimiter" value="&lt;%" />
+    <property name="excluded.www.directory" value="true" />
+    <property name="javascript.nodejs.core.library.configured.version" value="9.3.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/webDev/Section7/pomodoro/node_modules/eslint" />
+    <property name="node.js.selected.package.standard" value="$PROJECT_DIR$/webDev/Section7/pomodoro/node_modules/eslint" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="node.js.selected.package.tslint" value="" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="standardjs.codestyle.accepted" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -244,13 +309,10 @@
   <component name="RunManager">
     <configuration name="convertToRoman.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="convertToRoman.js" working-dir="$PROJECT_DIR$/excercise" />
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.convertToRoman.js" />
+      <list>
+        <item itemvalue="Node.js.convertToRoman.js" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration>$USER_HOME$/.subversion</configuration>
@@ -282,7 +344,9 @@
       <workItem from="1510368597698" duration="356000" />
       <workItem from="1514088926059" duration="81000" />
       <workItem from="1514089017661" duration="4111000" />
-      <workItem from="1515533491588" duration="447000" />
+      <workItem from="1515533491588" duration="799000" />
+      <workItem from="1525034337437" duration="79000" />
+      <workItem from="1525107224141" duration="2001000" />
     </task>
     <task id="LOCAL-00001" summary="vue router">
       <created>1504934329333</created>
@@ -330,30 +394,29 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36401000" />
+    <option name="totallyTimeSpent" value="38833000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="23" width="1280" height="1377" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.225" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5059571" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.4940429" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873562" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.4940429" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="NativeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.225" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5059571" side_tool="true" visible="true" weight="0.3292402" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4940429" weight="0.32954547" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32873562" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.2494043" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4940429" weight="0.32954547" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="NativeScript" order="8" weight="0.32954547" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32954547" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,6 +427,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="PERFORM_UPDATE_IN_BACKGROUND" value="false" />
+    <ignored-roots>
+      <path value="$USER_HOME$/Google Drive/Consulting Info/Hydranautics" />
+      <path value="$USER_HOME$/Google Drive/Consulting Info/ReadyPac" />
+    </ignored-roots>
     <MESSAGE value="vue router" />
     <option name="LAST_COMMIT_MESSAGE" value="vue router" />
   </component>
@@ -377,14 +444,27 @@
       </breakpoints>
       <option name="time" value="1" />
     </breakpoint-manager>
-    <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/excercise/diffTwoArrays.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/emailSignature/yongchoi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="8" column="94" lean-forward="true" selection-start-line="8" selection-start-column="94" selection-end-line="8" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/jdeDate/products.html" />
     <entry file="file://$PROJECT_DIR$/gitDone.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
-          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -399,14 +479,7 @@
     <entry file="file://$PROJECT_DIR$/gitDone.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
-          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -414,21 +487,14 @@
     <entry file="file://$PROJECT_DIR$/gitDone.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
-          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jquery.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
-          <caret line="14" column="55" lean-forward="false" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
         </state>
       </provider>
     </entry>
@@ -437,17 +503,10 @@
     <entry file="file://$PROJECT_DIR$/jdeDate/products.html" />
     <entry file="file://$PROJECT_DIR$/jdeDate/components.html" />
     <entry file="file://$PROJECT_DIR$/jdeDate/components.html" />
-    <entry file="file://$PROJECT_DIR$/freeCodeCamp.sublime-project">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gitDone.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
-          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -464,7 +523,7 @@
     <entry file="file://$PROJECT_DIR$/jdeDate/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
@@ -479,7 +538,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
-          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -507,65 +566,41 @@
     <entry file="file://$PROJECT_DIR$/jdeDate/sigle-file-component/src/productlLst.vue" />
     <entry file="file://$PROJECT_DIR$/jdeDate/sigle-file-component/src/main.js" />
     <entry file="file://$PROJECT_DIR$/jdeDate/sigle-file-component/src/App.vue" />
-    <entry file="file://$PROJECT_DIR$/project/bootstrap/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6236">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1066">
-          <caret line="36" column="7" lean-forward="false" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+          <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/excercise/diffTwoArrays.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/excercise/convertToRoman.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/emailSignature/yongar.com.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/emailSignature/yongchoi.com">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="392">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/emailSignature/yongchoi.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="8" column="94" lean-forward="true" selection-start-line="8" selection-start-column="94" selection-end-line="8" selection-end-column="94" />
-          <folding />
+        <state relative-caret-position="224">
+          <caret line="8" column="94" selection-start-line="8" selection-start-column="94" selection-end-line="8" selection-end-column="94" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/emailSignature/yongchoi_NoPhone.com.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="868">
-          <caret line="19" column="56" lean-forward="true" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="148" />
-          <folding />
+        <state relative-caret-position="672">
+          <caret line="17" selection-start-line="16" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/bootstrap/img/portfolio/thumbnails/randomWikiThumb.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/bootstrap/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2060">
+          <caret line="247" column="47" selection-start-line="247" selection-start-column="47" selection-end-line="247" selection-end-column="47" />
         </state>
       </provider>
     </entry>
